@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-.container {
+.wrapper {
   display: grid;
   grid-template-columns: minmax(170px, 1fr) repeat(8, 1fr);
   grid-template-rows: 100px auto 50px;
@@ -283,7 +283,7 @@ mobile layout
 
 */
 @media (max-width: 1000px) {
-  .container {
+  .wrapper {
     grid-template-rows: 100px auto auto 50px;
   }
   .ol-cnt {
