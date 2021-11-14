@@ -1,7 +1,3 @@
-/*********************
-desktop layout
-*********************/
-
 :root {
   --bg: rgb(217, 241, 198);
   --head-cnt: rgb(191, 248, 184);
@@ -9,8 +5,14 @@ desktop layout
   --tbl-even: rgb(216, 215, 215);
   --tbl-odd: rgb(185, 185, 185);
   --footer: rgb(172, 221, 168);
-  --inha-bg: rgba(255, 255, 255, 0.267);
+  --st-inha-bg: rgba(255, 255, 255, 0.267);
+  --nd-inha-bg: rgb(222, 253, 227);
+  --nd-inha-menu-bg: rgb(174, 226, 168);
 }
+
+/*********************
+desktop layout
+*********************/
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -123,7 +125,7 @@ body {
   margin-left: 1rem;
 }
 
-/* Inhaltsverzeichnis */
+/* st Inhaltsverzeichnis */
 
 .inha {
   position: sticky;
@@ -131,7 +133,7 @@ body {
   padding: 0.5rem;
   height: max-content;
   border-radius: 10px;
-  background-color: var(--inha-bg);
+  background-color: var(--st-inha-bg);
 }
 
 .inha div {
@@ -265,10 +267,9 @@ body {
   text-decoration: none;
 }
 
-/* nd inha */
+/* nd Inhaltsverzeichnis */
 
 .nav {
-  position: relative;
   position: absolute;
   display: none;
   user-select: none;
@@ -304,37 +305,46 @@ mobile layout
     margin-left: auto;
     margin-right: auto;
   }
-  /* nd inha */
+  /* nd Inhaltsverzeichnis */
   .nav {
     position: relative;
-    display: block;
+    display: flex;
     user-select: all;
   }
   .nav label {
     user-select: none;
+    margin-right: .3rem;
+    font-size: 3rem;
+    margin-bottom: auto;
+    margin-top: auto;
   }
-  .nav span,
-  .nav label {
-    font-size: 2rem;
+  .nav span {
+    font-size: 1.5rem;
+    margin-bottom: auto;
+    margin-top: auto;
   }
   #toggle {
     display: none;
   }
   #toggle:checked + .menu {
     display: block;
+
   }
   .menu {
     display: none;
+    top: 100%;
     width: max-content;
     position: absolute;
-    background-color: rgb(170, 170, 170);
-    padding: 0.5rem;
+    background-color: var(--nd-inha-menu-bg);
+    padding: 1rem;
     border-radius: 10px;
+    font-size: 1.5rem;
   }
   .menu a {
     display: block;
     color: black;
-    line-height: 1.3rem;
+    line-height: 2rem;
+    text-decoration: none;
   }
   .menu a:hover,
   .menu a:focus {
@@ -343,7 +353,7 @@ mobile layout
     background-color: rgb(0, 0, 0, 0.2);
     text-decoration: none;
   }
-
+  /************/
   .inha {
     display: none;
     user-select: none;
@@ -352,5 +362,12 @@ mobile layout
   .aside {
     justify-content: flex-start;
     padding-inline: 1rem;
+    height: auto;
+    border-bottom: 3px solid var(--head);
+    margin-bottom: 1rem;
+    background-color: var(--nd-inha-bg);
+  }
+  .head{
+    margin-bottom: 0;
   }
 }
