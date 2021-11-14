@@ -1,0 +1,356 @@
+/*********************
+desktop layout
+*********************/
+
+:root {
+  --bg: rgb(217, 241, 198);
+  --head-cnt: rgb(191, 248, 184);
+  --head: rgb(172, 221, 168);
+  --tbl-even: rgb(216, 215, 215);
+  --tbl-odd: rgb(185, 185, 185);
+  --footer: rgb(172, 221, 168);
+  --inha-bg: rgba(255, 255, 255, 0.267);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  background-color: var(--bg);
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) repeat(8, 1fr);
+  grid-template-rows: 100px auto 50px;
+}
+
+.head {
+  background-color: var(--head);
+  grid-column: 1 / -1;
+  display: flex;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.aside {
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.content {
+  grid-column: 2 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1.5rem;
+  justify-content: left;
+}
+
+.footer {
+  background-color: var(--footer);
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* Unorderd list */
+
+#unorderd-list li {
+  line-height: 1.5rem;
+  padding-left: 5px;
+  list-style-type: "🎂";
+}
+
+/* Table */
+
+.gdp li {
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.gdp caption {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin: 1.7rem 0px 0.7rem 0px;
+}
+
+.gdp .tbl_country {
+  text-align: left;
+  font-weight: bolder;
+}
+
+.gdp th {
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+
+.gdp td {
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+
+.gdp {
+  border-collapse: collapse;
+  border: 4px solid black;
+}
+
+.gdp tr:nth-child(even) {
+  background-color: var(--tbl-even);
+}
+.gdp tr:nth-child(odd) {
+  background-color: var(--tbl-odd);
+}
+
+/* Quelle */
+
+.quelle {
+  text-align: right;
+  margin: 1rem 0 1rem 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Bilder */
+
+.img_zkuchen {
+  width: 400px;
+  margin-left: 1rem;
+}
+
+/* Inhaltsverzeichnis */
+
+.inha {
+  position: sticky;
+  top: 1rem;
+  padding: 0.5rem;
+  height: max-content;
+  border-radius: 10px;
+  background-color: var(--inha-bg);
+}
+
+.inha div {
+  font-weight: bold;
+}
+
+.inha ul {
+  padding-left: 19px;
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+}
+
+.inha a {
+  color: black;
+  line-height: 1.3rem;
+}
+.inha a:hover,
+.inha a:focus {
+  color: white;
+  border-bottom: hidden;
+  background-color: rgb(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* Paragraph */
+
+#paragraph {
+  margin-top: 0;
+}
+.text {
+  max-width: 170ch;
+  line-height: 1.5rem;
+}
+
+/* Ordered list */
+
+.ol-cnt {
+  display: grid;
+  grid-auto-flow: column;
+  margin-bottom: 0px;
+}
+
+.ol-cnt ol {
+  margin-top: 0;
+  max-width: 100ch;
+}
+
+.ol-cnt li {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+.ol-cnt img {
+  justify-self: left;
+}
+
+/* Description list */
+
+#description-list h2 {
+  margin-bottom: 0;
+}
+
+#description-list dt {
+  margin-top: 0.8rem;
+}
+
+#description-list dl :nth-child(1) {
+  background-color: red;
+  color: white;
+  padding: 5px 0px 5px 5px;
+  margin-top: 0;
+  width: 420px;
+}
+
+#description-list dl :nth-child(3) {
+  background-color: green;
+  color: white;
+  padding: 5px 0px 5px 5px;
+  width: 420px;
+}
+
+#description-list dl :nth-child(5) {
+  background-color: blue;
+  color: white;
+  padding: 5px 0px 5px 5px;
+  width: 420px;
+}
+
+/* Footer */
+
+.footer .music {
+  opacity: 0;
+}
+
+.footer .music:hover {
+  opacity: 1;
+}
+
+/* Head */
+
+.head .h1_cnt {
+  background-color: var(--head-cnt);
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.head h1 {
+  align-self: center;
+  font-size: 2.5rem;
+}
+
+/* Links */
+
+#links div {
+  margin-bottom: 2rem;
+}
+
+#links a {
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+}
+
+#links a:hover,
+#links a:focus {
+  color: white;
+  border-bottom: hidden;
+  background-color: rgb(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+/* nd inha */
+
+.nav {
+  position: relative;
+  position: absolute;
+  display: none;
+  user-select: none;
+}
+
+/*********************
+mobile layout
+*********************/
+
+/*
+
+*/
+@media (max-width: 1000px) {
+  .container {
+    grid-template-rows: 100px auto auto 50px;
+  }
+  .ol-cnt {
+    grid-auto-flow: row;
+  }
+  .img_zkuchen {
+    margin-inline: auto;
+    width: 90%;
+  }
+  .aside {
+    grid-column: 1/ -1;
+  }
+  .content {
+    grid-column: 1/ -1;
+    padding-inline: 1rem;
+  }
+  .gdp {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* nd inha */
+  .nav {
+    position: relative;
+    display: block;
+    user-select: all;
+  }
+  .nav label {
+    user-select: none;
+  }
+  .nav span,
+  .nav label {
+    font-size: 2rem;
+  }
+  #toggle {
+    display: none;
+  }
+  #toggle:checked + .menu {
+    display: block;
+  }
+  .menu {
+    display: none;
+    width: max-content;
+    position: absolute;
+    background-color: rgb(170, 170, 170);
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  .menu a {
+    display: block;
+    color: black;
+    line-height: 1.3rem;
+  }
+  .menu a:hover,
+  .menu a:focus {
+    color: white;
+    border-bottom: hidden;
+    background-color: rgb(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+
+  .inha {
+    display: none;
+    user-select: none;
+    position: absolute;
+  }
+  .aside {
+    justify-content: flex-start;
+    padding-inline: 1rem;
+  }
+}
