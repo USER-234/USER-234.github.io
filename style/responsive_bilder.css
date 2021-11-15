@@ -20,7 +20,8 @@ body {
   position: absolute;
 }
 
-.zuruck:hover {
+.zuruck:hover,
+.zuruck:focus {
   background-color: rgb(224, 191, 0);
   text-decoration: underline;
 }
