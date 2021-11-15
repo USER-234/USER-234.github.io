@@ -240,12 +240,14 @@ body {
   align-self: center;
   justify-content: center;
   width: 100%;
-  height: 50px;
+  height: max-content;
 }
 
 .head h1 {
-  align-self: center;
+  text-align: center;
   font-size: 2.5rem;
+  margin: 0;
+  padding: 2px 0px;
 }
 
 /* Links */
@@ -398,7 +400,7 @@ anti overflow */
   #description-list dl :nth-child(5) {
     width: 100%;
   }
-  h1{
-    font-size: 2.5rem;
+  .head h1 {
+    font-size: 2rem;
   }
 }
