@@ -14,8 +14,9 @@ a weboldalon az overflow megoladni firefox ban
 wrap things
 
 az inhaltverzeichnis tartalmat atirni hogy passzoljon a contenthez
+
+a :hover -t a :focus ra is optimaizalni
 **************
 
 label tag et html ben megtanulni mit csinal
 
-fit-content = min(max-content, max(min-content, fill-available))
