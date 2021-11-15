@@ -12,6 +12,10 @@ dropdown menu inhaltverzeichnis a mobil nezetnel
 a weboldalon az overflow megoladni firefox ban
 
 wrap things
+
+az inhaltverzeichnis tartalmat atirni hogy passzoljon a contenthez
 **************
 
 label tag et html ben megtanulni mit csinal
+
+fit-content = min(max-content, max(min-content, fill-available))

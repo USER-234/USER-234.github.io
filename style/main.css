@@ -398,4 +398,7 @@ anti overflow */
   #description-list dl :nth-child(5) {
     width: 100%;
   }
+  h1{
+    font-size: 2.5rem;
+  }
 }
