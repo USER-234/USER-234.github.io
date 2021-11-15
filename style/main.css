@@ -1,11 +1,11 @@
 :root {
-  --bg: rgb(217, 241, 198);
-  --head-cnt: rgb(191, 248, 184);
-  --head: rgb(172, 221, 168);
+  --bg: rgb(209, 247, 178);
+  --head-cnt: rgb(168, 245, 158);
+  --head: rgb(140, 219, 133);
   --tbl-even: rgb(216, 215, 215);
   --tbl-odd: rgb(185, 185, 185);
-  --footer: rgb(172, 221, 168);
-  --inha-bg: rgba(255, 255, 255, 0.267);
+  --footer: rgb(140, 219, 133);
+  --inha-bg: rgba(255, 255, 255, 0.527);
   --nd-inha-menu-bg: rgb(174, 226, 168);
 }
 
@@ -115,6 +115,14 @@ body {
   margin: 1rem 0 1rem 0;
   font-size: 0.8rem;
   opacity: 0.7;
+  color: grey;
+}
+.quelle a {
+  color: grey;
+}
+.quelle a:hover,
+.quelle a:focus {
+  color: blue;
 }
 
 /* Bilder */
@@ -130,9 +138,11 @@ body {
   position: sticky;
   top: 1rem;
   padding: 0.5rem;
-  height: max-content;
+  height: min-content;
   border-radius: 10px;
   background-color: var(--inha-bg);
+  line-height: 1.5rem;
+  margin: 0 0 1rem 0;
 }
 
 .inha div {
@@ -144,8 +154,13 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0rem;
 }
+.inha li{
+  border-bottom: 2px solid rgba(5, 158, 0, 0.699);
+}
+
 
 .inha a {
+  text-decoration: none;
   color: black;
   line-height: 1.3rem;
 }
@@ -154,7 +169,6 @@ body {
   color: white;
   border-bottom: hidden;
   background-color: rgb(0, 0, 0, 0.2);
-  text-decoration: none;
 }
 
 /* Paragraph */
