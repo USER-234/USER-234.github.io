@@ -326,14 +326,14 @@ tablet layout
     border-radius: 10px;
   }
   .menu :nth-child(1) {
-margin-top: 0;
-}
-.menu a {
-    margin-top: .9rem;
+    margin-top: 0;
+  }
+  .menu a {
+    margin-top: 0.9rem;
     display: block;
     color: black;
     font-size: 1.2rem;
-/*     line-height: 1.8rem; */
+    /*     line-height: 1.8rem; */
     text-decoration: none;
   }
   .menu a:hover,
@@ -384,10 +384,9 @@ margin-top: 0;
     margin-bottom: 0;
   }
 
-/*********************
+  /*********************
 mobile layout
 *********************/
-
 }
 @media (max-width: 500px) {
   #description-list dl :nth-child(1) {
@@ -408,10 +407,26 @@ mobile layout
     width: 80vw;
   }
 
+  /* debug content overflow */
+
   .gdp,
+  .gdp caption,
   .img_zkuchen,
   .quelle {
-    position: absolute;
-    display: none;
+    /*     position: absolute;
+    display: none; */
+
+    width: auto;
+    height: auto;
+    width: 50%;
+  }
+
+  .img_zkuchen {
+    width: auto;
+  }
+
+  .gdp,
+  .gdp caption{
+    width: 200px;
   }
 }

@@ -9,6 +9,7 @@ a weboldalon az overflow megoladni firefox ban
 <img src="img_girl.jpg" style="width:100%;">
 <img src="img_girl.jpg" style="max-width:100%;height:auto;">
 
+  /* a table elemet fent megnezni hogy miert nincs bealitva responsive meret */
 **************
 
 label tag et html ben megtanulni mit csinal
