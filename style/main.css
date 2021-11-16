@@ -48,7 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 1.5rem;
+  padding: 0 1.5rem 0 .5rem;
   justify-content: left;
 }
 
@@ -155,13 +155,14 @@ body {
   margin-bottom: 0rem;
 }
 .inha li {
-  border-bottom: 2px solid var(--inha-bot-bord);
+/*   border-bottom: 2px solid var(--inha-bot-bord); */
 }
 
 .inha a {
   text-decoration: none;
   color: black;
-  line-height: 1.3rem;
+  line-height: 1.2rem;
+  font-size: .9rem;
 }
 .inha a:hover,
 .inha a:focus {
@@ -329,14 +330,13 @@ mobile layout
     background-color: var(--nd-inha-menu-bg);
     padding: 1rem;
     border-radius: 10px;
-    font-size: 1.5rem;
   }
   .menu a {
     display: block;
     color: black;
+    font-size: 1.2rem;
     line-height: 1.8rem;
     text-decoration: none;
-    border-bottom: 2px solid var(--inha-bot-bord);
   }
   .menu a:hover,
   .menu a:focus {
@@ -362,6 +362,7 @@ mobile layout
     padding-inline: 1rem;
     overflow-wrap: break-word;
     width: auto;
+
   }
   .gdp {
     width: 90%;
