@@ -154,9 +154,6 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0rem;
 }
-.inha li {
-  /*   border-bottom: 2px solid var(--inha-bot-bord); */
-}
 
 .inha a {
   text-decoration: none;
@@ -291,12 +288,9 @@ body {
 }
 
 /*********************
-mobile layout
+tablet layout
 *********************/
 
-/*
-
-*/
 @media (max-width: 1000px) {
   /* nd Inhaltsverzeichnis */
   .nav {
@@ -390,18 +384,10 @@ margin-top: 0;
     margin-bottom: 0;
   }
 
-  /* aaaaaaaaaaaaaaaaaaaaaaaaa 
-anti overflow */
+/*********************
+mobile layout
+*********************/
 
-  .quelle {
-    text-overflow: clip;
-  }
-  .gdp,
-  .img_zkuchen,
-  .quelle {
-    position: absolute;
-    display: none;
-  }
 }
 @media (max-width: 500px) {
   #description-list dl :nth-child(1) {
@@ -420,5 +406,12 @@ anti overflow */
   }
   .menu {
     width: 80vw;
+  }
+
+  .gdp,
+  .img_zkuchen,
+  .quelle {
+    position: absolute;
+    display: none;
   }
 }
