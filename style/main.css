@@ -7,6 +7,7 @@
   --footer: rgb(140, 219, 133);
   --inha-bg: rgba(255, 255, 255, 0.527);
   --nd-inha-menu-bg: rgb(174, 226, 168);
+  --inha-bot-bord: rgba(5, 158, 0, 0.699);
 }
 
 /*********************
@@ -23,7 +24,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(170px, 1fr) repeat(8, 1fr);
+  grid-template-columns: minmax(300px, 1fr) repeat(8, 1fr);
   grid-template-rows: 100px auto 50px;
 }
 
@@ -139,7 +140,7 @@ body {
   top: 1rem;
   padding: 0.5rem;
   height: min-content;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: var(--inha-bg);
   line-height: 1.5rem;
 }
@@ -153,10 +154,9 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 0rem;
 }
-.inha li{
-  border-bottom: 2px solid rgba(5, 158, 0, 0.699);
+.inha li {
+  border-bottom: 2px solid var(--inha-bot-bord);
 }
-
 
 .inha a {
   text-decoration: none;
@@ -334,8 +334,9 @@ mobile layout
   .menu a {
     display: block;
     color: black;
-    line-height: 2rem;
+    line-height: 1.8rem;
     text-decoration: none;
+    border-bottom: 2px solid var(--inha-bot-bord);
   }
   .menu a:hover,
   .menu a:focus {
@@ -412,5 +413,8 @@ anti overflow */
   }
   .head h1 {
     font-size: 2rem;
+  }
+  .menu {
+    width: 80vw;
   }
 }
