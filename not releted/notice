@@ -1,21 +1,14 @@
 **************
 --weboldalnak
 
-responsive kepek
-nagy, (kozepes?), kicsi
-
 -animatiok
     otletek: https://youtu.be/xoRbkm8XgfQ (az after es resz az nagyon kiraly 8:00 - 11:00)
 
-dropdown menu inhaltverzeichnis a mobil nezetnel
-
 a weboldalon az overflow megoladni firefox ban
 
-wrap things
+<img src="img_girl.jpg" style="width:100%;">
+<img src="img_girl.jpg" style="max-width:100%;height:auto;">
 
-az inhaltverzeichnis tartalmat atirni hogy passzoljon a contenthez
-
-a :hover -t a :focus ra is optimaizalni
 **************
 
 label tag et html ben megtanulni mit csinal
