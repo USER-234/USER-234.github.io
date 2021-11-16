@@ -24,7 +24,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) repeat(8, 1fr);
+  grid-template-columns: minmax(275.984px, 1fr) repeat(8, 1fr);
   grid-template-rows: 100px auto 50px;
 }
 
