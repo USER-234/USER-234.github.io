@@ -8,6 +8,7 @@
   --inha-bg: rgba(255, 255, 255, 0.527);
   --nd-inha-menu-bg: rgb(174, 226, 168);
   --inha-bot-bord: rgba(5, 158, 0, 0.699);
+  --link-hover: rgb(0, 0, 0, 0.2);
 }
 
 /*********************
@@ -165,7 +166,7 @@ body {
 .inha a:focus {
   color: white;
   border-bottom: hidden;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: var(--link-hover);
 }
 
 /* Paragraph */
@@ -275,7 +276,7 @@ body {
 #links a:focus {
   color: white;
   border-bottom: hidden;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: var(--link-hover);
   text-decoration: none;
 }
 
@@ -340,7 +341,7 @@ tablet layout
   .menu a:focus {
     color: white;
     border-bottom: hidden;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: var(--link-hover);
     text-decoration: none;
   }
   /************/
