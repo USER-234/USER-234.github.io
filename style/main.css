@@ -132,6 +132,7 @@ body {
 .img_zkuchen {
   width: 400px;
   margin-left: 1rem;
+  border-radius: 15px;
 }
 
 /* st Inhaltsverzeichnis */
@@ -141,7 +142,6 @@ body {
   top: 1rem;
   padding: 0.5rem;
   height: min-content;
-  border-radius: 15px;
   background-color: var(--inha-bg);
   line-height: 1.5rem;
 }
