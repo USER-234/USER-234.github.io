@@ -409,16 +409,15 @@ mobile layout
   .menu {
     width: 80vw;
   }
-
-  /* debug content overflow */
-
-  .gdp,
-  .gdp caption {
+  .img_zkuchen {
     margin-inline: auto;
     width: 100%;
     height: 100%;
   }
-  .img_zkuchen {
+
+  /* debug content overflow */
+
+  .gdp {
     margin-inline: auto;
     width: 100%;
     height: 100%;
