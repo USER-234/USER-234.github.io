@@ -281,6 +281,10 @@ body {
   text-decoration: none;
 }
 
+#links a:any-link {
+  color: #0000ee;
+}
+
 /* nd Inhaltsverzeichnis */
 
 .nav {
@@ -387,7 +391,7 @@ tablet layout
     margin-bottom: 0;
   }
 
-/*********************
+  /*********************
 mobile layout
 *********************/
 }
