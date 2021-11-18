@@ -421,6 +421,7 @@ mobile layout
     margin-inline: auto;
     width: 100px;
     height: 100%;
+    font-size: 1rem;
   }
 
   .gdp li {
@@ -429,7 +430,7 @@ mobile layout
   }
 
   .gdp caption {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bolder;
     margin: 1.7rem 0px 0.7rem 0px;
   }
@@ -439,6 +440,20 @@ mobile layout
     font-weight: bolder;
   }
 
+  .gdp th {
+    padding: 4px 8px;
+  }
+
+  .gdp td {
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 370px){
+  .gdp{
+    font-size: .7rem;
+    margin: 0 auto 0 auto;
+  }
   .gdp th {
     padding: 2px 4px;
   }
