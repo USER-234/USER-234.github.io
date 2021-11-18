@@ -118,3 +118,8 @@ h2 {
     hsl(0, 100%, 50%) 10deg 30deg
   );
 }
+@media (max-width: 360px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
