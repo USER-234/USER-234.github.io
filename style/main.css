@@ -448,11 +448,3 @@ mobile layout
     padding: 4px 8px;
   }
 }
-@media (max-width: 370px){
-  .gdp th {
-    padding: 2px 4px;
-  }
-
-  .gdp td {
-    padding: 2px 4px;
-  }
