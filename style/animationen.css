@@ -63,3 +63,20 @@ body {
       0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
   }
 }
+
+.anim-1 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 128, 0, 0);
+  animation: anim 1000ms;
+}
+
+@keyframes anim {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: grey;
+  }
+}
