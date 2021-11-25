@@ -35,18 +35,31 @@ body {
   to {
   }
 }
+.wrapper .h1-cnt {
+  display: flex;
+  justify-content: center;
+}
 
-.wrapper h1{
-    padding: 2rem;
-    text-align: center;
-    animation: title 1000ms ease-in 1 forwards;
+.wrapper h1 {
+  font-size: 5rem;
+  padding: 2rem;
+  text-align: center;
+  color: #ffffff;
+  animation: title 1000ms ease-out 1 forwards;
+  display: inline-block;
+  border-radius: 1rem;
 }
 
 @keyframes title {
-    from{
-        background-color: #85b6ff;
-    }
-    to{
-        background-color: blue;
-    }
+  from {
+    color: rgba(255, 255, 255, 0);
+    background-color: #75acff;
+    letter-spacing: -1rem;
+  }
+  to {
+    color: #1ac114;
+    background-color: rgb(62, 62, 253);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+      0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+  }
 }
