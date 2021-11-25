@@ -68,15 +68,21 @@ body {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  background-color: rgba(0, 128, 0, 0);
-  animation: anim 1000ms;
+  background-color: magenta;
+  animation: anim 1500ms infinite;
 }
 
 @keyframes anim {
   from {
-    background-color: green;
+    transform: scale(0.00000001);
+    border-radius: 100%;
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1);
+    border-radius: 0%;
+    opacity: 1;
   }
   to {
-    background-color: grey;
   }
 }
