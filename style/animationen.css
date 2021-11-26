@@ -1,3 +1,7 @@
+:root {
+  --ball-geo: 120px;
+}
+
 body {
   margin: 0;
   background-color: #85b6ff;
@@ -24,7 +28,7 @@ body {
 }
 
 .wrapper .h1-cnt {
-  display: grid;
+  display: flex;
   justify-content: center;
 }
 
@@ -117,6 +121,58 @@ hr {
   animation: anim 1500ms 1000ms infinite;
 }
 
+.box {
+  width: 500px;
+  height: 300px;
+  border: 5px solid black;
+  margin: 2rem auto;
+  background-color: rgba(210, 255, 9, 0.664);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.ball-cnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ball-geo);
+  height: var(--ball-geo);
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  animation: rolling 3000ms ease-in-out infinite alternate;
+}
+
+.ball {
+  font-size: 5rem;
+  line-height: 0rem;
+  font-weight: 100;
+}
+
+@keyframes rolling {
+  from {
+    transform: rotate(0deg);
+    left: -18px;
+    bottom: -18px;
+  }
+  40% {
+    bottom: -17.5px;
+  }
+  50% {
+    bottom: -17px;
+  }
+  60% {
+    bottom: -17.5px;
+  }
+  to {
+    transform: rotate(360deg);
+    left: 400px;
+    bottom: -18px;
+  }
+}
+
 /* mobile layout */
 
 @media (max-width: 700px) {
@@ -124,5 +180,8 @@ hr {
     background-color: green;
     width: 25vw;
     height: 25vw;
+  }
+  .wrapper h1 {
+    font-size: 4rem;
   }
 }
