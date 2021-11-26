@@ -6,8 +6,8 @@
   --tbl-odd: rgb(185, 185, 185);
   --footer: rgb(140, 219, 133);
   --inha-bg: rgba(255, 255, 255, 0.527);
+  --st-inha-a-bot-bord: rgba(0, 0, 0, 0.2);
   --nd-inha-menu-bg: rgb(174, 226, 168);
-  --inha-bot-bord: rgba(5, 158, 0, 0.699);
   --link-hover: rgb(0, 0, 0, 0.2);
 }
 
@@ -162,6 +162,7 @@ body {
   color: black;
   line-height: 1.2rem;
   font-size: 0.9rem;
+  border-bottom: 1px solid var(--st-inha-a-bot-bord)
 }
 .inha a:hover,
 .inha a:focus {
