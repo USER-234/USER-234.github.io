@@ -30,24 +30,13 @@ body {
 
 .wrapper h1 {
   font-size: 5rem;
-  padding: 2rem;
-  text-align: center;
   color: #ffffff;
-  animation: title 1000ms ease-out 1 forwards;
-  display: inline-block;
+  padding: 2rem;
   border-radius: 1rem;
-}
-
-.boxes {
-  display: grid;
-  grid-auto-rows: 1fr;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-  overflow-wrap: break-word;
-}
-
-.boxes :nth-child(1) {
-
+  margin-block: 2rem;
+  text-align: center;
+  display: inline-block;
+  animation: title 1000ms ease-out 1 forwards;
 }
 
 @keyframes title {
@@ -64,11 +53,36 @@ body {
   }
 }
 
+hr {
+  background-color: rgb(255, 255, 255);
+  box-align: center;
+  height: 6px;
+  width: 95vw;
+  border: 0 none;
+  border-radius: 5px;
+}
+.boxes {
+  display: flex;
+  gap: 2rem;
+  margin-block: 2rem;
+}
+
+.boxes :nth-child(1) {
+  margin: 0 0 0 auto;
+}
+.boxes :nth-child(2) {
+  margin: 0;
+}
+
+.boxes :nth-child(3) {
+  margin: 0 auto 0 0;
+}
+
 .anim-1 {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  background-color: magenta;
+  background-color: crimson;
   animation: anim 1500ms infinite;
 }
 
@@ -91,7 +105,7 @@ body {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  background-color: magenta;
+  background-color: darkgoldenrod;
   animation: anim 1500ms 500ms infinite;
 }
 
@@ -99,6 +113,16 @@ body {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  background-color: magenta;
+  background-color: darkolivegreen;
   animation: anim 1500ms 1000ms infinite;
+}
+
+/* mobile layout */
+
+@media (max-width: 700px) {
+  .boxes div {
+    background-color: green;
+    width: 25vw;
+    height: 25vw;
+  }
 }
