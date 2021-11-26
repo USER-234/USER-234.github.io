@@ -1,5 +1,7 @@
 :root {
   --ball-geo: 120px;
+  --anim-del: 100ms;
+  --left-gap: 20px;
 }
 
 body {
@@ -121,7 +123,7 @@ hr {
   animation: anim 1500ms 1000ms infinite;
 }
 
-.box {
+.football {
   width: 500px;
   height: 300px;
   border: 5px solid black;
@@ -173,11 +175,85 @@ hr {
   }
 }
 
+.circle-cnt {
+  height: 100px;
+  width: 400px;
+  display: flex;
+  padding-left: 60px;
+  margin: 0 auto;
+  transform: translate(0, 20px);
+}
+
+.circle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: turquoise;
+  animation: circle-movement 1000ms infinite;
+}
+
+.circle:nth-child(1) {
+  left: calc(1 * var(--left-gap));
+}
+
+.circle:nth-child(2) {
+  left: calc(2 * var(--left-gap));
+  animation-delay: calc(2 * var(--anim-del));
+}
+
+.circle:nth-child(3) {
+  left: calc(3 * var(--left-gap));
+  animation-delay: calc(3 * var(--anim-del));
+}
+
+.circle:nth-child(4) {
+  left: calc(4 * var(--left-gap));
+  animation-delay: calc(4 * var(--anim-del));
+}
+
+.circle:nth-child(5) {
+  left: calc(5 * var(--left-gap));
+  animation-delay: calc(5 * var(--anim-del));
+}
+
+.circle:nth-child(6) {
+  left: calc(6 * var(--left-gap));
+  animation-delay: calc(6 * var(--anim-del));
+}
+
+.circle:nth-child(7) {
+  left: calc(7 * var(--left-gap));
+  animation-delay: calc(7 * var(--anim-del));
+}
+
+.circle:nth-child(8) {
+  left: calc(8 * var(--left-gap));
+  animation-delay: calc(8 * var(--anim-del));
+}
+
+@keyframes circle-movement {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: #f1931b;
+  }
+  50% {
+    transform: translate(0, 50px) scale(0.4);
+    opacity: 0.5;
+    background-color: #c0334d;
+  }
+  to {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    background-color: #f1931b;
+  }
+}
+
 /* mobile layout */
 
 @media (max-width: 700px) {
   .boxes div {
-    background-color: green;
     width: 25vw;
     height: 25vw;
   }
