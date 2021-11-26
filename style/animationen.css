@@ -23,18 +23,6 @@ body {
   text-decoration: underline;
 }
 
-.wrapper {
-  width: 100%;
-  height: 100%;
-  animation: wrapper 1000ms ease-in 1 forwards;
-}
-
-@keyframes wrapper {
-  form {
-  }
-  to {
-  }
-}
 .wrapper .h1-cnt {
   display: flex;
   justify-content: center;
@@ -48,6 +36,18 @@ body {
   animation: title 1000ms ease-out 1 forwards;
   display: inline-block;
   border-radius: 1rem;
+}
+
+.boxes {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  overflow-wrap: break-word;
+}
+
+.boxes :nth-child(1) {
+
 }
 
 @keyframes title {
@@ -85,4 +85,20 @@ body {
   }
   to {
   }
+}
+
+.anim-2 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  animation: anim 1500ms 500ms infinite;
+}
+
+.anim-3 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  animation: anim 1500ms 1000ms infinite;
 }
