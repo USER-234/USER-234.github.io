@@ -24,7 +24,7 @@ body {
 }
 
 .wrapper .h1-cnt {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -42,7 +42,7 @@ body {
 @keyframes title {
   from {
     color: rgba(255, 255, 255, 0);
-    background-color: #75acff;
+    background-color: #75acff00;
     letter-spacing: -1rem;
   }
   to {
