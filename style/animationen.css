@@ -67,6 +67,7 @@ hr {
   border: 0 none;
   border-radius: 5px;
 }
+
 .boxes {
   display: flex;
   gap: 2rem;
@@ -76,6 +77,7 @@ hr {
 .boxes :nth-child(1) {
   margin: 0 0 0 auto;
 }
+
 .boxes :nth-child(2) {
   margin: 0;
 }
@@ -257,6 +259,7 @@ hr {
     width: 25vw;
     height: 25vw;
   }
+
   .wrapper h1 {
     font-size: 4rem;
   }
