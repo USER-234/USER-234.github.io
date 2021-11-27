@@ -94,21 +94,6 @@ hr {
   animation: anim 1500ms infinite;
 }
 
-@keyframes anim {
-  from {
-    transform: scale(0.00000001);
-    border-radius: 100%;
-    opacity: 0;
-  }
-  30% {
-    transform: scale(1);
-    border-radius: 0%;
-    opacity: 1;
-  }
-  to {
-  }
-}
-
 .anim-2 {
   margin: 0 auto;
   width: 200px;
@@ -123,6 +108,21 @@ hr {
   height: 200px;
   background-color: darkolivegreen;
   animation: anim 1500ms 1000ms infinite;
+}
+
+@keyframes anim {
+  from {
+    transform: scale(0.00000001);
+    border-radius: 100%;
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1);
+    border-radius: 0%;
+    opacity: 1;
+  }
+  to {
+  }
 }
 
 .football {
