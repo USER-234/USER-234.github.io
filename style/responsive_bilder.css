@@ -7,7 +7,7 @@ body {
   position: relative;
 }
 
-.zuruck {
+.btn-home {
   background-color: gold;
   color: black;
   text-decoration: none;
@@ -20,8 +20,8 @@ body {
   position: absolute;
 }
 
-.zuruck:hover,
-.zuruck:focus {
+.btn-home:hover,
+.btn-home:focus {
   background-color: rgb(224, 191, 0);
   text-decoration: underline;
 }
@@ -54,13 +54,6 @@ h1 {
   align-items: center;
 }
 
-.img_cnt img {
-  width: 500px;
-  height: 625px;
-  border: 3px solid white;
-  border-radius: 45px;
-}
-
 .img_cnt {
   display: flex;
   justify-content: space-evenly;
@@ -68,6 +61,13 @@ h1 {
   flex-wrap: wrap;
   align-self: center;
   margin: 0 0 20vh 0;
+}
+
+.img_cnt img {
+  width: 500px;
+  height: 625px;
+  border: 3px solid white;
+  border-radius: 45px;
 }
 
 /* tablet/mobile */
