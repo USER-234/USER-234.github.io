@@ -378,7 +378,7 @@ body {
 
   .content {
     grid-column: 1/ -1;
-    padding-inline: 1rem;
+    padding-inline: .5rem;
     overflow-wrap: break-word;
     width: auto;
   }
@@ -415,15 +415,15 @@ body {
 }
 @media (max-width: 500px) {
   #description-list dl :nth-child(1) {
-    width: 100%;
+    width: 98%;
   }
 
   #description-list dl :nth-child(3) {
-    width: 100%;
+    width: 98%;
   }
 
   #description-list dl :nth-child(5) {
-    width: 100%;
+    width: 98%;
   }
 
   .head h1 {
@@ -464,18 +464,18 @@ body {
   }
 
   .gdp th {
-    padding: 2px 4px;
+    padding: 4px 4px;
   }
 
   .gdp td {
-    padding: 2px 4px;
+    padding: 4px 4px;
   }
 
   .ol-cnt ol {
-    padding-left: 20px;
+    padding-left: 25px;
   }
 
-  #unorderd-list li {
-    padding-left: 20px;
+  #unorderd-list ul {
+    padding-left: 25px;
   }
 }
