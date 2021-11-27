@@ -11,7 +11,7 @@ body {
   position: relative;
 }
 
-.zuruck {
+.btn-home {
   background-color: gold;
   color: black;
   text-decoration: none;
@@ -23,8 +23,8 @@ body {
   width: max-content;
 }
 
-.zuruck:hover,
-.zuruck:focus {
+.btn-home:hover,
+.btn-home:focus {
   background-color: rgb(224, 191, 0);
   text-decoration: underline;
 }
@@ -67,6 +67,7 @@ hr {
   border: 0 none;
   border-radius: 5px;
 }
+
 .boxes {
   display: flex;
   gap: 2rem;
@@ -76,6 +77,7 @@ hr {
 .boxes :nth-child(1) {
   margin: 0 0 0 auto;
 }
+
 .boxes :nth-child(2) {
   margin: 0;
 }
@@ -257,6 +259,7 @@ hr {
     width: 25vw;
     height: 25vw;
   }
+
   .wrapper h1 {
     font-size: 4rem;
   }

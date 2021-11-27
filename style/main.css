@@ -12,7 +12,7 @@
 }
 
 /*********************
-desktop layout
+    desktop layout
 *********************/
 
 body {
@@ -106,6 +106,7 @@ body {
 .gdp tr:nth-child(even) {
   background-color: var(--tbl-even);
 }
+
 .gdp tr:nth-child(odd) {
   background-color: var(--tbl-odd);
 }
@@ -123,6 +124,7 @@ body {
   color: grey;
   overflow-wrap: anywhere;
 }
+
 .quelle a:hover,
 .quelle a:focus {
   color: blue;
@@ -162,8 +164,9 @@ body {
   color: black;
   line-height: 1.2rem;
   font-size: 0.9rem;
-  border-bottom: 1px solid var(--st-inha-a-bot-bord)
+  border-bottom: 1px solid var(--st-inha-a-bot-bord);
 }
+
 .inha a:hover,
 .inha a:focus {
   color: white;
@@ -176,8 +179,9 @@ body {
 #paragraph {
   margin-top: 0;
 }
+
 .text {
-  max-width: 170ch;
+  max-width: 150ch;
   line-height: 1.5rem;
 }
 
@@ -295,7 +299,7 @@ body {
 }
 
 /*********************
-tablet layout
+    tablet layout
 *********************/
 
 @media (max-width: 1000px) {
@@ -305,6 +309,7 @@ tablet layout
     display: flex;
     user-select: all;
   }
+
   .nav label {
     user-select: none;
     margin-right: 0.3rem;
@@ -312,17 +317,21 @@ tablet layout
     margin-bottom: auto;
     margin-top: auto;
   }
+
   .nav span {
     font-size: 1.5rem;
     margin-bottom: auto;
     margin-top: auto;
   }
+
   #toggle {
     display: none;
   }
+
   #toggle:checked + .menu {
     display: block;
   }
+
   .menu {
     display: none;
     top: 100%;
@@ -335,14 +344,15 @@ tablet layout
   .menu :nth-child(1) {
     margin-top: 0;
   }
+
   .menu a {
     margin-top: 0.9rem;
     display: block;
     color: black;
     font-size: 1.2rem;
-    /*     line-height: 1.8rem; */
     text-decoration: none;
   }
+
   .menu a:hover,
   .menu a:focus {
     color: white;
@@ -350,35 +360,41 @@ tablet layout
     background-color: var(--link-hover);
     text-decoration: none;
   }
-  /************/
+
   .wrapper {
     grid-template-rows: 100px auto auto 50px;
     grid-template-columns: 100%;
   }
+
   .ol-cnt {
     grid-auto-flow: row;
   }
+
   .img_zkuchen {
     margin-inline: auto;
     width: 90%;
     height: 90%;
   }
+
   .content {
     grid-column: 1/ -1;
-    padding-inline: 1rem;
+    padding-inline: .5rem;
     overflow-wrap: break-word;
     width: auto;
   }
+
   .gdp {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
+
   .inha {
     display: none;
     user-select: none;
     position: absolute;
   }
+
   .aside {
     justify-content: flex-start;
     padding-inline: 1rem;
@@ -388,32 +404,36 @@ tablet layout
     background-color: var(--inha-bg);
     grid-column: 1 / -1;
   }
+
   .head {
     margin-bottom: 0;
   }
 
   /*********************
-mobile layout
+    mobile layout
 *********************/
 }
 @media (max-width: 500px) {
   #description-list dl :nth-child(1) {
-    width: 100%;
+    width: 98%;
   }
 
   #description-list dl :nth-child(3) {
-    width: 100%;
+    width: 98%;
   }
 
   #description-list dl :nth-child(5) {
-    width: 100%;
+    width: 98%;
   }
+
   .head h1 {
     font-size: 2rem;
   }
+
   .menu {
     width: 80vw;
   }
+
   .img_zkuchen {
     margin-inline: auto;
     width: 100%;
@@ -421,11 +441,10 @@ mobile layout
   }
 
   .gdp {
-    margin-inline: auto;
-    width: 100px;
+    width: 100%;
     height: 100%;
     font-size: 4vw;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
   }
 
   .gdp li {
@@ -445,9 +464,18 @@ mobile layout
   }
 
   .gdp th {
-    padding: 4px 8px;
+    padding: 4px 4px;
   }
+
   .gdp td {
-    padding: 4px 8px;
+    padding: 4px 4px;
+  }
+
+  .ol-cnt ol {
+    padding-left: 25px;
+  }
+
+  #unorderd-list ul {
+    padding-left: 25px;
   }
 }
