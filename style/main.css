@@ -162,7 +162,7 @@ body {
   color: black;
   line-height: 1.2rem;
   font-size: 0.9rem;
-  border-bottom: 1px solid var(--st-inha-a-bot-bord)
+  border-bottom: 1px solid var(--st-inha-a-bot-bord);
 }
 .inha a:hover,
 .inha a:focus {
@@ -445,9 +445,15 @@ mobile layout
   }
 
   .gdp th {
-    padding: 4px 8px;
+    padding: 2px 4px;
   }
   .gdp td {
-    padding: 4px 8px;
+    padding: 2px 4px;
+  }
+  .ol-cnt ol {
+    padding-left: 20px;
+  }
+  #unorderd-list li {
+    padding-left: 20px;
   }
 }
