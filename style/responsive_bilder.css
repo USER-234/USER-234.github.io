@@ -18,12 +18,15 @@ body {
   justify-content: center;
   width: max-content;
   position: absolute;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 150ms;
+  text-decoration: underline grey;
 }
 
 .btn-home:hover,
 .btn-home:focus {
   background-color: rgb(224, 191, 0);
-  text-decoration: underline;
+  text-decoration: underline transparent;
 }
 
 .header_bg_img {

@@ -1,12 +1,12 @@
 :root {
-  --bg: rgb(209, 247, 178);
+  --bg: rgb(199, 247, 160);
   --head-cnt: rgb(168, 245, 158);
   --head: rgb(140, 219, 133);
   --tbl-even: rgb(216, 215, 215);
   --tbl-odd: rgb(185, 185, 185);
   --footer: rgb(140, 219, 133);
   --inha-bg: rgb(221, 255, 217);
-  --inha-a-bot-bord: rgba(0, 0, 0, 0.2);
+  --inha-a-bot-bord: rgba(0, 0, 0, 0.15);
   --link-hover: #6fb06b;
 }
 /* 
@@ -149,6 +149,7 @@ body {
   height: min-content;
   background-color: var(--inha-bg);
   line-height: 1.5rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.20);
 }
 
 .inha div {
@@ -309,7 +310,7 @@ body {
   .nav {
     position: relative;
     display: flex;
-    user-select: all;
+    user-select: none;
   }
 
   .nav label {
