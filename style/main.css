@@ -5,12 +5,14 @@
   --tbl-even: rgb(216, 215, 215);
   --tbl-odd: rgb(185, 185, 185);
   --footer: rgb(140, 219, 133);
-  --inha-bg: rgba(255, 255, 255, 0.527);
-  --st-inha-a-bot-bord: rgba(0, 0, 0, 0.2);
-  --nd-inha-menu-bg: rgb(174, 226, 168);
-  --link-hover: rgb(0, 0, 0, 0.2);
+  --inha-bg: rgb(221, 255, 217);
+  --inha-a-bot-bord: rgba(0, 0, 0, 0.2);
+  --link-hover: #6fb06b;
 }
-
+/* 
+#6fb06bL
+rgb(0, 0, 0, 0.2)
+*/
 /*********************
     desktop layout
 *********************/
@@ -164,7 +166,7 @@ body {
   color: black;
   line-height: 1.2rem;
   font-size: 0.9rem;
-  border-bottom: 1px solid var(--st-inha-a-bot-bord);
+  border-bottom: 1px solid var(--inha-a-bot-bord);
 }
 
 .inha a:hover,
@@ -280,7 +282,7 @@ body {
 
 #links a:hover,
 #links a:focus {
-  color: white;
+  color: white !important;
   border-bottom: hidden;
   background-color: var(--link-hover);
   text-decoration: none;
@@ -350,6 +352,7 @@ body {
     color: black;
     font-size: 1.2rem;
     text-decoration: none;
+    border-bottom: 1px solid var(--inha-a-bot-bord);
   }
 
   .menu a:hover,
@@ -358,6 +361,7 @@ body {
     border-bottom: hidden;
     background-color: var(--link-hover);
     text-decoration: none;
+    border-bottom: 1px solid transparent;
   }
 
   .wrapper {
@@ -431,6 +435,11 @@ body {
 
   .menu {
     width: 80vw;
+    font-size: 1rem;
+  }
+
+  .menu a{
+    font-size: 1.1rem;
   }
 
   .img_zkuchen {
