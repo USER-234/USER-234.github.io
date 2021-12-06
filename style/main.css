@@ -9,10 +9,7 @@
   --inha-a-bot-bord: rgba(0, 0, 0, 0.15);
   --link-hover: rgb(116, 193, 111);
 }
-/* 
-#6fb06bL
-rgb(0, 0, 0, 0.2)
-*/
+
 /*********************
     desktop layout
 *********************/
@@ -134,7 +131,7 @@ body {
 
 /* Bilder */
 
-.img_zkuchen {
+.img_cake {
   width: 400px;
   margin-left: 1rem;
   border-radius: 15px;
@@ -266,6 +263,7 @@ body {
 .head h1 {
   text-align: center;
   font-size: 2.5rem;
+  font-size: clamp(2rem, 10vw, 2.5rem); 
   margin: 0;
   padding: 2px 0px;
 }
@@ -374,10 +372,9 @@ body {
     grid-auto-flow: row;
   }
 
-  .img_zkuchen {
+  .img_cake {
     margin-inline: auto;
-    width: 90%;
-    height: 90%;
+    width: 80%;
   }
 
   .content {
@@ -412,11 +409,12 @@ body {
   .head {
     margin-bottom: 0;
   }
+}
 
-  /*********************
+/*********************
     mobile layout
 *********************/
-}
+
 @media (max-width: 500px) {
   #description-list dl :nth-child(1) {
     width: 98%;
@@ -432,6 +430,7 @@ body {
 
   .head h1 {
     font-size: 2rem;
+    font-size: clamp(2rem, 10vw, 2.5rem); 
   }
 
   .menu {
@@ -443,7 +442,7 @@ body {
     font-size: 1.1rem;
   }
 
-  .img_zkuchen {
+  .img_cake {
     margin-inline: auto;
     width: 100%;
     height: 100%;
