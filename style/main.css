@@ -313,13 +313,14 @@ body {
   }
   .icon-burgermenu {
     font-size: 3rem;
-    margin: auto 0;
-    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.13);
+
   }
   .btn-nd-inha > span:nth-child(2) {
     font-size: 1.5rem;
     display: inline-flex;
     transform: translateY(-32%);
+    margin-left: -.5rem;
   }
   .nd_inha-menu {
     display: none;
