@@ -15,7 +15,7 @@
 *********************/
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   margin: 0;
   font-size: 1rem;
   background-color: var(--bg);
@@ -293,7 +293,7 @@ body {
 
 /* nd Inhaltsverzeichnis */
 
-.nav {
+.nd_inha {
   position: absolute;
   display: none;
   user-select: none;
@@ -305,47 +305,32 @@ body {
 
 @media (max-width: 1000px) {
   /* nd Inhaltsverzeichnis */
-  .nav {
+
+  .nd_inha {
     position: relative;
     display: flex;
-    user-select: none;
   }
 
-  .nav label {
-    user-select: none;
-    margin-right: 0.3rem;
+  .icon-burgermenu {
     font-size: 3rem;
-    margin-bottom: auto;
-    margin-top: auto;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.13);
   }
 
-  .nav span {
+  .btn-nd-inha > span:nth-child(2) {
     font-size: 1.5rem;
-    margin-bottom: auto;
-    margin-top: auto;
+    display: inline-flex;
+    transform: translateY(-32%);
+    margin-left: -0.5rem;
   }
 
-  #toggle {
+  .nd_inha-menu {
     display: none;
-  }
-
-  #toggle:checked + .menu {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    top: 100%;
     width: max-content;
-    position: absolute;
     background-color: var(--head);
     padding: 1rem;
   }
-  .menu :nth-child(1) {
-    margin-top: 0;
-  }
 
-  .menu a {
+  .nd_inha-menu a {
     margin-top: 0.9rem;
     display: block;
     color: black;
@@ -354,13 +339,42 @@ body {
     border-bottom: 1px solid var(--inha-a-bot-bord);
   }
 
-  .menu a:hover,
-  .menu a:focus {
+  .nd_inha-menu :nth-child(1) {
+    margin-top: 0;
+  }
+
+  .nd_inha-menu a:hover,
+  .nd_inha-menu a:focus {
     color: white;
     border-bottom: hidden;
     background-color: var(--link-hover);
     text-decoration: none;
     border-bottom: 1px solid transparent;
+  }
+
+  .nd_inha {
+    position: relative;
+  }
+
+  button {
+    all: unset;
+  }
+
+  .btn-nd-inha {
+    display: inline-block;
+    background-color: var(--inha-bg);
+    cursor: pointer;
+  }
+
+  .nd_inha-menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+  }
+
+  .nd_inha:focus-within .nd_inha-menu {
+    display: block;
   }
 
   .wrapper {
@@ -433,12 +447,13 @@ body {
     font-size: clamp(2rem, 10vw, 2.5rem);
   }
 
-  .menu {
+  .nd_inha-menu {
     width: 80vw;
+    max-width: max-content;
     font-size: 1rem;
   }
 
-  .menu a {
+  .nd_inha-menu a {
     font-size: 1.1rem;
   }
 
