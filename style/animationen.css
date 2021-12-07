@@ -1,5 +1,5 @@
 :root {
-  --ball-geo: 120px;
+  --ball-size: 120px;
   --anim-del: 100ms;
   --left-gap: 20px;
 }
@@ -144,8 +144,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--ball-geo);
-  height: var(--ball-geo);
+  width: var(--ball-size);
+  height: var(--ball-size);
   position: absolute;
   bottom: -18px;
   left: -18px;
