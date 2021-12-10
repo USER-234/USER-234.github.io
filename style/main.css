@@ -6,6 +6,7 @@
   --tbl-odd: rgb(185, 185, 185);
   --footer: rgb(140, 219, 133);
   --inha-bg: rgb(221, 255, 217);
+  --inha-bg-dark: rgb(209, 240, 205);
   --inha-a-bot-bord: rgba(0, 0, 0, 0.15);
   --link-hover: rgb(116, 193, 111);
 }
@@ -364,6 +365,10 @@ body {
     display: inline-block;
     background-color: var(--inha-bg);
     cursor: pointer;
+    padding: 0 1rem;
+  }
+  .btn-nd-inha:focus{
+    background-color: var(--inha-bg-dark);
   }
 
   .nd_inha-menu {
@@ -412,7 +417,6 @@ body {
 
   .aside {
     justify-content: flex-start;
-    padding-inline: 1rem;
     height: auto;
     border-bottom: 4px solid var(--head);
     margin-bottom: 1rem;
