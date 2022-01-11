@@ -114,7 +114,8 @@ input[type="number"] {
   background-color: var(--red-1);
 }
 .author {
-  margin-left: 2vw;
+  float: right;
+  margin-right: 2vw;
   color: var(--grey-2);
 }
 @media (max-width: 350px) {
