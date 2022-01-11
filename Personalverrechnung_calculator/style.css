@@ -113,6 +113,10 @@ input[type="number"] {
 .delete {
   background-color: var(--red-1);
 }
+.author {
+  margin-left: 2vw;
+  color: var(--grey-2);
+}
 @media (max-width: 350px) {
   h1 {
     font-size: 28px;
