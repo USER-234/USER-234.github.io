@@ -1,0 +1,120 @@
+:root {
+  --grey-1: rgb(163, 163, 163);
+  --grey-2: rgb(94, 94, 94);
+  --grey-3: rgb(85, 85, 85);
+  --grey-4: rgb(209, 209, 209);
+  --blue-1: rgb(82, 119, 243);
+  --blue-2: rgb(111, 144, 252);
+  --red-1: rgb(241, 55, 55);
+}
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--grey-4);
+}
+h1 {
+  text-align: center;
+  text-shadow: 2px 2px rgba(119, 119, 119, 0.384);
+  margin-bottom: 0.5rem;
+}
+h2 {
+  margin: 0.5rem 0 0.5rem 0;
+}
+.lst-calc {
+  margin: 0 auto;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  row-gap: 5px;
+}
+.desc {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.input-field-text {
+  width: 150px;
+  background-color: var(--grey-1);
+  border: 2px solid black;
+  box-shadow: -3px 0px var(--blue-1);
+  font-size: 16px;
+}
+.submit-btn {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  min-width: 170px;
+  transform: translateX(50%);
+  background-color: var(--blue-2);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.075);
+}
+.nonIntValue {
+  height: 15px;
+  background-color: var(--grey-1);
+  display: flex;
+  padding-left: 4px;
+  justify-self: left;
+  width: 150px;
+  padding: 2px;
+  border: 2px solid black;
+}
+.radAA,
+.radLeh {
+  width: 13px;
+}
+.bot-border {
+  border-bottom: var(--grey-3) solid 1px;
+}
+.netto-calculator {
+  margin: 0 auto;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  row-gap: 5px;
+}
+.centered-text {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.besch-menu {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+.besch-tit {
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.137);
+}
+.besch-text {
+  font-size: 0.9rem;
+  display: none;
+}
+.visible {
+  display: block;
+}
+.white-space {
+  grid-column: 1 / -1;
+  margin: 1rem 0 0 0;
+}
+.delete {
+  background-color: var(--red-1);
+}
+@media (max-width: 350px) {
+  h1 {
+    font-size: 28px;
+  }
+}
