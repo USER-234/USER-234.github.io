@@ -1,11 +1,12 @@
 :root {
-  --grey-1: rgb(163, 163, 163);
-  --grey-2: rgb(94, 94, 94);
-  --grey-3: rgb(85, 85, 85);
-  --grey-4: rgb(209, 209, 209);
-  --blue-1: rgb(82, 119, 243);
-  --blue-2: rgb(111, 144, 252);
-  --red-1: rgb(241, 55, 55);
+  --grey-1: #a3a3a3;
+  --grey-2: #5e5e5e;
+  --grey-3: #555555;
+  --grey-4: #d1d1d1;
+  --grey-5: #77777762;
+  --blue-1: #5277f3;
+  --blue-2: #6f90fc;
+  --red-1: #f14848;
 }
 body {
   margin: 0;
@@ -14,7 +15,7 @@ body {
 }
 h1 {
   text-align: center;
-  text-shadow: 2px 2px rgba(119, 119, 119, 0.384);
+  text-shadow: 2px 2px var(--grey-5);
   margin-bottom: 0.5rem;
 }
 h2 {
@@ -121,5 +122,8 @@ input[type="number"] {
 @media (max-width: 350px) {
   h1 {
     font-size: 28px;
+  }
+  .centered-text {
+font-size: 1.4rem;
   }
 }

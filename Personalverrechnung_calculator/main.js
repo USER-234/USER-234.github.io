@@ -473,4 +473,7 @@ deleteAll.addEventListener("click", function () {
   SEnetCalc.textContent = "";
   GBnetCalc.textContent = "";
   NettoEntg.textContent = "";
+  // radio button
+  btnRadVoll.checked = false;
+  btnRadHalb.checked = false;
 });
