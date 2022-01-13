@@ -74,7 +74,7 @@ function noZero(num) {
 }
 
 // prevents a value to be "NaN" and instead returns 0
-function noneToZero(num) {
+function nanToZero(num) {
   if (num === "NaN") {
     return (num.textContent = 0);
   }
@@ -108,7 +108,7 @@ function uezFrei50Rech(halbInEur, halb) {
 
 // if the 50% fee free overtime pay bigger than the max 50% fee free overtime pay it returns the max 50% fee free overtime pay
 function usMaxBetrRech(betr50Prou, maxBetr) {
-  if (betr50Prou <= maxBetr) {
+  if (Number(betr50Prou) <= maxBetr) {
     return betr50Prou;
   }
   return maxBetr.toFixed(2);
@@ -133,7 +133,7 @@ function uzPfliRech(halbInEur, halb, restBetr) {
 // sv calculator Arbeiter/Angestellte
 function svRechAA(num) {
   if (num < 0) {
-    return alert("error svRechAA");
+    return alert("error Sozialversischerung Arbeiter/Angestellte");
   }
   if (num >= 0 && num < 475.86) {
     return 0;
@@ -156,7 +156,7 @@ function svRechAA(num) {
 // sv calculator Lehrling
 function svRechLeh(num) {
   if (num < 0) {
-    return alert("error svRechLeh");
+    return alert("error Sozialversischerung Lehrling");
   }
   if (num >= 0 && num < 475.86) {
     return 0;
@@ -189,7 +189,7 @@ function lstBgRech(a, b, c, d, e, f, g) {
 // Lst-BG prozent calculator
 function LstProz(num) {
   if (num < 0) {
-    return alert("error LstProz");
+    return alert("error Lohnstreuerbemessungsgrundlage Prozet");
   }
   if (num <= 927.67) {
     return 0;
@@ -280,17 +280,17 @@ function lstRech(a, b, c, d) {
 // button lst calc
 btnSubLstCalc.addEventListener("click", function () {
   // overtime pay base calculator
-  ug.textContent = noneToZero(
+  ug.textContent = nanToZero(
     uegRech(brutEnt.value, usTeil.value, usHalf.value, usFull.value).toFixed(2)
   );
 
   // extra overtime pay fee free calulator
-  uzFrei.textContent = noneToZero(
+  uzFrei.textContent = nanToZero(
     (
       Number(uezFrei100Rech(brutEnt.value, usTeil.value, usFull.value)) +
       Number(
         usMaxBetrRech(
-          uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value)),
+          uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value), usHalf.value),
           86
         )
       )
@@ -298,26 +298,26 @@ btnSubLstCalc.addEventListener("click", function () {
   );
 
   // extra overtime pay with fee calulator
-  uzPfli.textContent = noneToZero(
+  uzPfli.textContent = nanToZero(
     uzPfliRech(
       halfUbersRech(brutEnt.value, usTeil.value),
       usHalf.value,
       restBetrRech(
         uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value), usHalf.value),
         usMaxBetrRech(
-          uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value)),
+          uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value), usHalf.value),
           86
         )
       )
     )
-  );
+  ).toFixed(2);
 
   if (uzPfli.textContent === "NaN") {
     uzPfli.textContent = 0;
   } else uzPfli.textContent = uzPfli.textContent;
 
   // passing uzFrei value to steuFreiBe
-  steuFreiBe.textContent = noneToZero(uzFrei.textContent);
+  steuFreiBe.textContent = nanToZero(uzFrei.textContent);
 
   // decides if the overtime has to be added to the brutto wage
   // calculates total wage
