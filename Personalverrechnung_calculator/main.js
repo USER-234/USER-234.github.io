@@ -81,6 +81,14 @@ function nanToZero(num) {
   return num;
 }
 
+// turns "0.00" to ""
+function nullToEmpty(num) {
+  if (num == 0.0 || num == 0) {
+    return "";
+  }
+  return num;
+}
+
 // ÜG calculator
 function uegRech(entg, uesT, halb, voll) {
   return (
@@ -280,37 +288,54 @@ function lstRech(a, b, c, d) {
 // button lst calc
 btnSubLstCalc.addEventListener("click", function () {
   // overtime pay base calculator
-  ug.textContent = nanToZero(
-    uegRech(brutEnt.value, usTeil.value, usHalf.value, usFull.value).toFixed(2)
+  ug.textContent = nullToEmpty(
+    nanToZero(
+      uegRech(brutEnt.value, usTeil.value, usHalf.value, usFull.value).toFixed(
+        2
+      )
+    )
   );
 
   // extra overtime pay fee free calulator
-  uzFrei.textContent = nanToZero(
-    (
-      Number(uezFrei100Rech(brutEnt.value, usTeil.value, usFull.value)) +
-      Number(
-        usMaxBetrRech(
-          uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value), usHalf.value),
-          86
+  uzFrei.textContent = nullToEmpty(
+    nanToZero(
+      (
+        Number(uezFrei100Rech(brutEnt.value, usTeil.value, usFull.value)) +
+        Number(
+          usMaxBetrRech(
+            uezFrei50Rech(
+              halfUbersRech(brutEnt.value, usTeil.value),
+              usHalf.value
+            ),
+            86
+          )
         )
-      )
-    ).toFixed(2)
+      ).toFixed(2)
+    )
   );
 
   // extra overtime pay with fee calulator
-  uzPfli.textContent = nanToZero(
-    uzPfliRech(
-      halfUbersRech(brutEnt.value, usTeil.value),
-      usHalf.value,
-      restBetrRech(
-        uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value), usHalf.value),
-        usMaxBetrRech(
-          uezFrei50Rech(halfUbersRech(brutEnt.value, usTeil.value), usHalf.value),
-          86
+  if (brutEnt.value != "") {
+    uzPfli.textContent = nanToZero(
+      uzPfliRech(
+        halfUbersRech(brutEnt.value, usTeil.value),
+        usHalf.value,
+        restBetrRech(
+          uezFrei50Rech(
+            halfUbersRech(brutEnt.value, usTeil.value),
+            usHalf.value
+          ),
+          usMaxBetrRech(
+            uezFrei50Rech(
+              halfUbersRech(brutEnt.value, usTeil.value),
+              usHalf.value
+            ),
+            86
+          )
         )
       )
-    )
-  ).toFixed(2);
+    ).toFixed(2);
+  } else uzPfli.textContent = "";
 
   if (uzPfli.textContent === "NaN") {
     uzPfli.textContent = 0;
@@ -361,13 +386,15 @@ btnSubLstCalc.addEventListener("click", function () {
     AVABTable[steSatz.textContent][AVABcontrol(abzAnzKind.value)];
 
   // fabo plus calculator
-  faboErg.textContent = faboPlusReh(
-    Number(faboPlusKind(anzMindKind.value)),
-    Number(faboPlusKind(anzVollKind.value))
-  ).toFixed(2);
+  faboErg.textContent = nullToEmpty(
+    faboPlusReh(
+      Number(faboPlusKind(anzMindKind.value)),
+      Number(faboPlusKind(anzVollKind.value))
+    ).toFixed(2)
+  );
 
   // PE calculator
-  PEBetr.textContent = pendeurRech(PEkm.value).toFixed(2);
+  PEBetr.textContent = nullToEmpty(pendeurRech(PEkm.value).toFixed(2));
 
   // AA or Leh rad btn interaction
   // Lst calculator
