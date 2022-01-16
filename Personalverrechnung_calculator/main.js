@@ -315,7 +315,7 @@ btnSubLstCalc.addEventListener("click", function () {
   );
 
   // extra overtime pay with fee calulator
-  if (usTeil.value != "") {
+  if (usHalf.value != "") {
     uzPfli.textContent = nanToZero(
       uzPfliRech(
         halfUbersRech(brutEnt.value, usTeil.value),
