@@ -33,23 +33,26 @@
         <input name="radBtnBeruf" type="radio" class="radAA" checked />
         <span class="bot-border desc">Lehrling: &nbsp;</span>
         <input name="radBtnBeruf" type="radio" class="radLeh" />
+        <!-- Jahressechstel berechnen -->
+        <button class="btn-expand-content">Jahressechstel</button>
+        <!-- lehrlingseinkommen berechnen -->
+        <button class="btn-expand-content">Lehrlingseinkommen</button>
         <!-- überstunden berechnen -->
-        <span class="desc">Überstunden anzeigen</span>
-        <span class="plus-sign">+</span>
-        <span class="desc">Brutto Entgelt: &nbsp;</span>
-        <input type="number" class="brutEnt input-field-text" />
-        <span class="desc">Überstunden 50%: &nbsp;</span>
-        <input type="number" class="usHalf input-field-text" />
-        <span class="desc">Überstunden 100%: &nbsp;</span>
-        <input type="number" class="usFull input-field-text" />
-        <span class="desc">Überstundenteiler: &nbsp;</span>
-        <input type="number" class="usTeil input-field-text" />
-        <span class="desc">ÜG: &nbsp;</span>
-        <span class="ug nonIntValue"></span>
-        <span class="desc">ÜZ steuerfrei: &nbsp;</span>
-        <span class="uz-frei nonIntValue"></span>
-        <span class="bot-border desc">ÜZ steuerpflichtig: &nbsp;</span>
-        <span class="uz-pfli nonIntValue"></span>
+        <button class="btn-ubers-anz btn-expand-content">Überstunden</button>
+        <span class="hidden desc text-brutEnt">Brutto Entgelt: &nbsp;</span>
+        <input type="number" class="hidden brutEnt input-field-text" />
+        <span class="hidden desc text-usHalf">Überstunden 50%: &nbsp;</span>
+        <input type="number" class="hidden usHalf input-field-text" />
+        <span class="hidden desc text-usFull">Überstunden 100%: &nbsp;</span>
+        <input type="number" class="hidden usFull input-field-text" />
+        <span class="hidden desc text-usTeil">Überstundenteiler: &nbsp;</span>
+        <input type="number" class="hidden usTeil input-field-text" />
+        <span class="hidden desc text-ug">ÜG: &nbsp;</span>
+        <span class="hidden ug nonIntValue"></span>
+        <span class="hidden desc text-uz-frei">ÜZ steuerfrei: &nbsp;</span>
+        <span class="hidden uz-frei nonIntValue"></span>
+        <span class="hidden bot-border desc text-uz-pfli">ÜZ steuerpflichtig: &nbsp;</span>
+        <span class="hidden uz-pfli nonIntValue"></span>
         <!-- sv/brutto -->
         <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
         <input type="number" class="gesBruEnt input-field-text" />
@@ -155,4 +158,5 @@
 </html>
 <!-- 
   überstunden anzeigen/verstecken
+  nemet kommentet angolra atirni
  -->

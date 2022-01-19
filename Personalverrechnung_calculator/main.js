@@ -7,6 +7,8 @@ const svBetLstCalc = document.querySelector(".sv-betrag");
 const steuFreiBe = document.querySelector(".steuFreiBe");
 
 //HTML and JS connection lst-calc interactive
+const btnUsAnze = document.querySelector(".btn-ubers-anz");
+
 const brutEnt = document.querySelector(".brutEnt");
 const usHalf = document.querySelector(".usHalf");
 const usFull = document.querySelector(".usFull");
@@ -21,6 +23,14 @@ const SE = document.querySelector(".SE");
 
 // ### Lst calculator connentions
 //HTML and JS connection lst-calc non interactive
+const textBrutEnt = document.querySelector(".text-brutEnt");
+const textUsHalf = document.querySelector(".text-usHalf");
+const textUsFull = document.querySelector(".text-usFull");
+const textUsTeil = document.querySelector(".text-usTeil");
+const textUg = document.querySelector(".text-ug");
+const textUzFrei = document.querySelector(".text-uz-frei");
+const textUzPfli = document.querySelector(".text-uz-pfli");
+
 const ug = document.querySelector(".ug");
 const uzFrei = document.querySelector(".uz-frei");
 const uzPfli = document.querySelector(".uz-pfli");
@@ -503,4 +513,24 @@ deleteAll.addEventListener("click", function () {
   // radio button
   btnRadVoll.checked = false;
   btnRadHalb.checked = false;
+});
+
+btnUsAnze.addEventListener("click", function () {
+  textBrutEnt.classList.toggle("hidden");
+  textUsHalf.classList.toggle("hidden");
+  textUsFull.classList.toggle("hidden");
+  textUsTeil.classList.toggle("hidden");
+  textUg.classList.toggle("hidden");
+  textUzFrei.classList.toggle("hidden");
+  textUzPfli.classList.toggle("hidden");
+  brutEnt.classList.toggle("hidden");
+  usHalf.classList.toggle("hidden");
+  usFull.classList.toggle("hidden");
+  usTeil.classList.toggle("hidden");
+  ug.classList.toggle("hidden");
+  uzFrei.classList.toggle("hidden");
+  uzPfli.classList.toggle("hidden");
+  
+
+/*   btnUsAnze.textContent = "Überstunden verstecken" */
 });
