@@ -52,6 +52,7 @@ h2 {
   background-color: var(--blue-2);
   border-radius: 6px;
   font-size: 1.1rem;
+  font-weight: bold;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.075);
 }
 .nonIntValue {
@@ -145,29 +146,24 @@ input[type="number"] {
   justify-content: center;
   grid-column: 1 / -1;
   border: 1px solid black;
-  width: 310px;
+  width: 250px;
+  border-radius: 7px;
   margin: 0 auto;
   box-shadow: 2px 2px var(--grey-1);
 }
 .blue-1 {
   background-color: var(--blue-1);
 }
-
 .ignore-value {
   position: relative;
   cursor: pointer;
   font-size: 16px;
   margin: 0 0px;
 }
-
-/* Hide the default checkbox */
 input[type="checkbox"] {
   visibility: hidden;
   margin: 0;
 }
-
-/* Creating a custom checkbox
-based on demand */
 .ignore-value-sybol {
   position: absolute;
   top: 0;
@@ -179,32 +175,18 @@ based on demand */
   display: flex;
   transform: translate(-15%, -5%);
 }
-
-/* Specify the background color to be
-shown when checkbox is checked */
 .ignore-value input:checked ~ .ignore-value-sybol {
   background-color: var(--red-1);
 }
-
-/* Checkmark to be shown in checkbox */
-/* It is not be shown when not checked */
 .ignore-value-sybol:after {
   content: "X";
   position: absolute;
   display: none;
 }
-
-/* Display checkmark when checked */
 .ignore-value input:checked ~ .ignore-value-sybol:after {
   display: inline;
 }
-
-/* Styling the checkmark using webkit */
-/* Rotated the rectangle by 45 degree and
-showing only two border to make it look
-like a tickmark */
 .ignore-value .ignore-value-sybol:after {
-  /*   text-align: center; */
   left: 3px;
   font-size: 14px;
   font-weight: bold;
