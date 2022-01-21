@@ -10,9 +10,9 @@
 
   <body>
     <div class="wrapper">
-      <!-- überschrift -->
+      <!-- heading -->
       <h1>Personalverrechnung Rechner</h1>
-      <!-- beschreibung -->
+      <!-- description -->
       <div class="besch-menu">
         <button onclick="description()" class="besch-tit">
           nützliche Infos
@@ -26,56 +26,80 @@
         </div>
       </div>
       <div class="lst-calc">
-        <!-- zwischenüberschrift -->
+        <!-- subheading -->
         <h2 class="centered-text">Lohnsteuer berechnen</h2>
         <!-- radio box AA/Leh-->
-        <span class="desc">Arbeiter/Angestelle: &nbsp;</span
-        ><input name="radBtnBeruf" type="radio" class="radAA" checked />
-        <span class="bot-border desc">Lehrling: &nbsp;</span
-        ><input name="radBtnBeruf" type="radio" class="radLeh" />
-        <!-- überstunden berechnen -->
-        <span class="desc">Brutto Entgelt: &nbsp;</span
-        ><input type="number" class="brutEnt input-field-text" />
-        <span class="desc">Überstunden 50%: &nbsp;</span
-        ><input type="number" class="usHalf input-field-text" />
-        <span class="desc">Überstunden 100%: &nbsp;</span
-        ><input type="number" class="usFull input-field-text" />
-        <span class="desc">Überstundenteiler: &nbsp;</span
-        ><input type="number" class="usTeil input-field-text" />
-        <span class="desc">ÜG: &nbsp;</span
-        ><span class="ug nonIntValue"></span>
-        <span class="desc">ÜZ steuerfrei: &nbsp;</span
-        ><span class="uz-frei nonIntValue"></span>
-        <span class="bot-border desc">ÜZ steuerpflichtig: &nbsp;</span
-        ><span class="uz-pfli nonIntValue"></span>
+        <span class="desc">Arbeiter/Angestelle: &nbsp;</span>
+        <input name="radBtnBeruf" type="radio" class="radAA" checked />
+        <span class="bot-border desc">Lehrling: &nbsp;</span>
+        <input name="radBtnBeruf" type="radio" class="radLeh" />
+        <!-- apprenticeincome -->
+        <!--         
+        <button
+          class="btn-expand-content"
+          style="text-decoration: line-through">
+          Lehrlingseinkommen
+        </button> -->
+        <!-- overtime -->
+        <button class="btn-ubers-anz btn-expand-content">Überstunden</button>
+        <span class="hidden desc text-brutEnt">Brutto Entgelt: &nbsp;</span>
+        <input type="number" class="hidden brutEnt input-field-text" />
+        <span class="hidden desc text-usHalf">Überstunden 50%: &nbsp;</span>
+        <input type="number" class="hidden usHalf input-field-text" />
+        <span class="hidden desc text-usFull">Überstunden 100%: &nbsp;</span>
+        <input type="number" class="hidden usFull input-field-text" />
+        <span class="hidden desc text-usTeil">Überstundenteiler: &nbsp;</span>
+        <input type="number" class="hidden usTeil input-field-text" />
+        <span class="hidden desc text-ug">ÜG
+          &nbsp;
+        <label class="ignore-value">
+          <input type="checkbox" class="ignValUG">
+          <span class="ignore-value-sybol"></span>: &nbsp;</span>
+        <span class="hidden ug nonIntValue"></span>
+        <span class="hidden desc text-uz-frei">ÜZ steuerfrei
+          &nbsp;
+        <label class="ignore-value">
+          <input type="checkbox" class="ignValUZf">
+          <span class="ignore-value-sybol"></span>
+        : &nbsp;</span>
+        <span class="hidden uz-frei nonIntValue"></span>
+        <span class="hidden desc text-uz-pfli"
+          >ÜZ steuerpflichtig
+          &nbsp;
+        <label class="ignore-value">
+          <input type="checkbox" class="ignValUZs">
+          <span class="ignore-value-sybol"></span>: &nbsp;</span>
+        <span class="hidden uz-pfli nonIntValue"></span>
+        <span class="bot-border desc hidden text-sonsZusch">sonstige Zuschläge: &nbsp;</span>
+        <input type="number" class="hidden sonsZusch input-field-text" />
         <!-- sv/brutto -->
-        <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span
-        ><input type="number" class="gesBruEnt input-field-text" />
-        <span class="desc">SV: &nbsp;</span
-        ><span class="sv-betrag nonIntValue"></span>
-        <span class="desc">Frei Betrag: &nbsp;</span
-        ><input type="number" class="FB input-field-text" />
-        <span class="desc">Pendler Pauschale: &nbsp;</span
-        ><input type="number" class="PP input-field-text" />
-        <span class="desc">Gewerkschaftsbeitrag: &nbsp;</span
-        ><input type="number" class="GB input-field-text" />
-        <span class="desc">Service Entgelt: &nbsp;</span
-        ><input type="number" class="SE input-field-text" />
-        <span class="bot-border desc">ÜZ frei: &nbsp;</span
-        ><span class="steuFreiBe nonIntValue"></span>
-        <!-- lst bemessung -->
-        <span class="bot-border desc">Lst-BG: &nbsp;</span
-        ><span class="Lst-BG nonIntValue"></span>
-        <span class="desc"
-          ><span class="Lst-BG-teil">________</span>,&nbsp;<span class="bg-proz"
+        <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
+        <input type="number" class="gesBruEnt input-field-text" />
+        <span class="desc">SV: &nbsp;</span>
+        <span class="sv-betrag nonIntValue"></span>
+        <span class="desc">Frei Betrag: &nbsp;</span>
+        <input type="number" class="FB input-field-text" />
+        <span class="desc">Pendler Pauschale: &nbsp;</span>
+        <input type="number" class="PP input-field-text" />
+        <span class="desc">Gewerkschaftsbeitrag: &nbsp;</span>
+        <input type="number" class="GB input-field-text" />
+        <span class="desc">Service Entgelt: &nbsp;</span>
+        <input type="number" class="SE input-field-text" />
+        <span class="bot-border desc">ÜZ frei: &nbsp;</span>
+        <span class="steuFreiBe nonIntValue"></span>
+        <!-- income tax measurement -->
+        <span class="bot-border desc">Lst-BG: &nbsp;</span>
+        <span class="Lst-BG nonIntValue"></span>
+        <span class="desc">
+          <span class="Lst-BG-teil">________</span>,&nbsp;<span class="bg-proz"
             >__</span
           >%: &nbsp;</span
         >
         <span class="Lst-BG-redu nonIntValue"></span>
-        <span class="desc">AV(E)AB/Anz. Kinder: &nbsp;</span
-        ><input type="number" class="anz-kind input-field-text" />
-        <span class="desc">Abzug: &nbsp;</span
-        ><span class="abzug nonIntValue"></span>
+        <span class="desc">AV(E)AB/Anz. Kinder: &nbsp;</span>
+        <input type="number" class="anz-kind input-field-text" />
+        <span class="desc">Abzug: &nbsp;</span>
+        <span class="abzug nonIntValue"></span>
         <span class="desc">Fabo+: &nbsp;</span>
         <span>
           <input
@@ -83,7 +107,8 @@
             type="radio"
             name="faboVH"
             id="faboplus_voll_text"
-          /><label for="faboplus_voll_text">voll</label>
+          />
+          <label for="faboplus_voll_text">voll</label>
           <input
             class="radio-btn fabo-btn-halb"
             type="radio"
@@ -91,52 +116,52 @@
             id="faboplus_halb_text"
           /><label for="faboplus_halb_text">halb</label>
         </span>
-        <span class="desc">Anz. mindj. Kinder: &nbsp;</span
-        ><input type="number" class="anz-mind-kind input-field-text" />
-        <span class="desc">Anz. vollj. Kinder: &nbsp;</span
-        ><input type="number" class="anz-voll-kind input-field-text" />
-        <span class="desc">Fabo+ Betrag: &nbsp;</span
-        ><span class="faboErg nonIntValue"></span>
-        <span class="desc">PE in km: &nbsp;</span
-        ><input type="number" class="pe-km input-field-text" />
-        <span class="bot-border desc">PE Betrag: &nbsp;</span
-        ><span class="pe-betr nonIntValue"></span>
-        <span class="desc">Lst: &nbsp;</span
-        ><span class="lst nonIntValue"></span>
+        <span class="desc">Anz. mindj. Kinder: &nbsp;</span>
+        <input type="number" class="anz-mind-kind input-field-text" />
+        <span class="desc">Anz. vollj. Kinder: &nbsp;</span>
+        <input type="number" class="anz-voll-kind input-field-text" />
+        <span class="desc">Fabo+ Betrag: &nbsp;</span>
+        <span class="faboErg nonIntValue"></span>
+        <span class="desc">PE in km: &nbsp;</span>
+        <input type="number" class="pe-km input-field-text" />
+        <span class="bot-border desc">PE Betrag: &nbsp;</span>
+        <span class="pe-betr nonIntValue"></span>
+        <span class="desc">Lst: &nbsp;</span>
+        <span class="lst nonIntValue"></span>
         <!-- button -->
         <button class="submit-lstCalc submit-btn">Bestätigen</button>
       </div>
       <br />
       <br />
       <div class="netto-calculator">
-        <!-- zwischenüberschrift -->
+        <!-- subheading -->
         <h2 class="centered-text">Brutto Engelt ==> netto Engelt</h2>
-        <!-- brutto entgelt -->
-        <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span
-        ><span class="gesBruEnt-netCalc nonIntValue"></span>
-        <!-- gesetzliche abzuge -->
-        <span class="desc">SV: &nbsp;</span
-        ><span class="sv-betrag-netCalc nonIntValue"></span>
-        <span class="desc">KU und WF: &nbsp;</span
-        ><input type="number" class="KU-WF-netCalc input-field-text" />
-        <span class="desc">Lst: &nbsp;</span
-        ><span class="lst-netCalc nonIntValue"></span>
-        <span class="bot-border desc">Service Entgelt: &nbsp;</span
-        ><span class="SE-netCalc nonIntValue"></span>
-        <!-- freiwillige abzuge -->
-        <span class="desc">Gewerkschaftsbeitrag: &nbsp;</span
-        ><span class="GB-netCalc nonIntValue"></span>
-        <span class="desc">Betriebsratsumlage: &nbsp;</span
-        ><input type="number" class="bet-uml-netCalc input-field-text" />
-        <span class="bot-border desc">sonstige Abzüge: &nbsp;</span
-        ><input type="number" class="sont-abz-netCalc input-field-text" />
-        <!-- sonstige abzuge -->
-        <span class="desc">Akontozahlung: &nbsp;</span
-        ><input type="number" class="akZ-netCalc input-field-text" />
-        <span class="bot-border desc">Rückzahlung: &nbsp;</span
-        ><input type="number" class="ruckZ-netCalc input-field-text" />
-        <span class="desc">Netto Entgelt: &nbsp;</span
-        ><span class="nettoEntgelt-netCalc nonIntValue"></span>
+        <!-- brutto income -->
+        <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
+        <span class="gesBruEnt-netCalc nonIntValue"></span>
+        <!-- legal proof -->
+        <span class="desc">SV: &nbsp;</span>
+        <span class="sv-betrag-netCalc nonIntValue"></span>
+        <span class="desc">KU und WF: &nbsp;</span>
+        <input type="number" class="KU-WF-netCalc input-field-text" />
+        <span class="desc">Lst: &nbsp;</span>
+        <span class="lst-netCalc nonIntValue"></span>
+        <span class="bot-border desc">Service Entgelt: &nbsp;</span>
+        <span class="SE-netCalc nonIntValue"></span>
+        <!-- voluntary proof -->
+        <span class="desc">Gewerkschaftsbeitrag: &nbsp;</span>
+        <span class="GB-netCalc nonIntValue"></span>
+        <span class="desc">Betriebsratsumlage: &nbsp;</span>
+        <input type="number" class="bet-uml-netCalc input-field-text" />
+        <span class="bot-border desc">sonstige Abzüge: &nbsp;</span>
+        <input type="number" class="sont-abz-netCalc input-field-text" />
+        <!-- other proof -->
+        <span class="desc">Akontozahlung: &nbsp;</span>
+        <input type="number" class="akZ-netCalc input-field-text" />
+        <span class="bot-border desc">Rückzahlung: &nbsp;</span>
+        <input type="number" class="ruckZ-netCalc input-field-text" />
+        <span class="desc">Netto Entgelt: &nbsp;</span>
+        <span class="nettoEntgelt-netCalc nonIntValue"></span>
         <!-- button -->
         <button class="submit-netCalc submit-btn">Bestätigen</button>
         <div class="white-space"></div>
@@ -150,3 +175,7 @@
     </div>
   </body>
 </html>
+<!-- 
+  nemet kommentet angolra atirni
+ -->
+<!-- sonstige Abzüge (ezt is hozzaadni, ki tudja hogy kellene e a jovoben) -->
