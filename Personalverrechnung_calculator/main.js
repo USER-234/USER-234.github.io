@@ -547,6 +547,8 @@ deleteAll.addEventListener("click", function () {
   // radio button
   btnRadVoll.checked = false;
   btnRadHalb.checked = false;
+  btnRadAA.checked = true;
+  btnRadLeh.checked = false;
   // checkbox
   ignValUG.checked = false;
   ignValUZf.checked = false;
