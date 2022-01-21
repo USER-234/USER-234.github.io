@@ -8,11 +8,14 @@ const steuFreiBe = document.querySelector(".steuFreiBe");
 
 //HTML and JS connection lst-calc interactive
 const btnUsAnze = document.querySelector(".btn-ubers-anz");
-
 const brutEnt = document.querySelector(".brutEnt");
 const usHalf = document.querySelector(".usHalf");
 const usFull = document.querySelector(".usFull");
 const usTeil = document.querySelector(".usTeil");
+const ignValUG = document.querySelector(".ignValUG");
+const ignValUZf = document.querySelector(".ignValUZf");
+const ignValUZs = document.querySelector(".ignValUZs");
+const sonsZusch = document.querySelector(".sonsZusch");
 const btnRadAA = document.querySelector(".radAA");
 const btnRadLeh = document.querySelector(".radLeh");
 const gesBruEnt = document.querySelector(".gesBruEnt");
@@ -30,6 +33,7 @@ const textUsTeil = document.querySelector(".text-usTeil");
 const textUg = document.querySelector(".text-ug");
 const textUzFrei = document.querySelector(".text-uz-frei");
 const textUzPfli = document.querySelector(".text-uz-pfli");
+const textSonsZusch = document.querySelector(".text-sonsZusch");
 
 const ug = document.querySelector(".ug");
 const uzFrei = document.querySelector(".uz-frei");
@@ -146,6 +150,13 @@ function uzPfliRech(halbInEur, halb, restBetr) {
     );
   }
   return 0 + Number(restBetr);
+}
+
+// decides if the value overstepps the max value
+function maxZuschBetrRech(betr, maxBetr) {
+  if (Number(betr) < maxBetr) {
+    return Number(betr);
+  } else return 0;
 }
 
 // sv calculator Arbeiter/Angestellte
@@ -306,6 +317,11 @@ btnSubLstCalc.addEventListener("click", function () {
     )
   );
 
+  // this can turn off overtime pay calculator and returns 0
+  if (ignValUG.checked === true) {
+    ug.textContent = 0;
+  }
+
   // extra overtime pay fee free calulator
   uzFrei.textContent = nullToEmpty(
     nanToZero(
@@ -323,6 +339,11 @@ btnSubLstCalc.addEventListener("click", function () {
       ).toFixed(2)
     )
   );
+
+  // this can turn off extra overtime pay fee free calulator and returns 0
+  if (ignValUZf.checked === true) {
+    uzFrei.textContent = 0;
+  }
 
   // extra overtime pay with fee calulator
   if (usHalf.value != "") {
@@ -347,12 +368,23 @@ btnSubLstCalc.addEventListener("click", function () {
     ).toFixed(2);
   } else uzPfli.textContent = "";
 
+  // prevents value to return "NaN"
   if (uzPfli.textContent === "NaN") {
     uzPfli.textContent = 0;
   } else uzPfli.textContent = uzPfli.textContent;
 
+  // this can turn off extra overtime pay with fee calulator and returns 0
+  if (ignValUZs.checked === true) {
+    uzPfli.textContent = 0;
+  }
+
   // passing uzFrei value to steuFreiBe
-  steuFreiBe.textContent = nanToZero(uzFrei.textContent);
+  steuFreiBe.textContent = nullToEmpty(
+    nanToZero(
+      Number(uzFrei.textContent) +
+        Number(maxZuschBetrRech(sonsZusch.value, 360))
+    )
+  );
 
   // decides if the overtime has to be added to the brutto wage
   // calculates total wage
@@ -361,7 +393,8 @@ btnSubLstCalc.addEventListener("click", function () {
       Number(brutEnt.value) +
       Number(ug.textContent) +
       Number(uzFrei.textContent) +
-      Number(uzPfli.textContent)
+      Number(uzPfli.textContent) +
+      Number(sonsZusch.value)
     ).toFixed(2);
   } else gesBruEnt.value = gesBruEnt.value;
 
@@ -472,6 +505,7 @@ deleteAll.addEventListener("click", function () {
   usHalf.value = "";
   usFull.value = "";
   usTeil.value = "";
+  sonsZusch.value = "";
   btnRadAA.value = "";
   btnRadLeh.value = "";
   gesBruEnt.value = "";
@@ -513,6 +547,10 @@ deleteAll.addEventListener("click", function () {
   // radio button
   btnRadVoll.checked = false;
   btnRadHalb.checked = false;
+  // checkbox
+  ignValUG.checked = false;
+  ignValUZf.checked = false;
+  ignValUZs.checked = false;
 });
 
 btnUsAnze.addEventListener("click", function () {
@@ -523,6 +561,7 @@ btnUsAnze.addEventListener("click", function () {
   textUg.classList.toggle("hidden");
   textUzFrei.classList.toggle("hidden");
   textUzPfli.classList.toggle("hidden");
+  textSonsZusch.classList.toggle("hidden");
   brutEnt.classList.toggle("hidden");
   usHalf.classList.toggle("hidden");
   usFull.classList.toggle("hidden");
@@ -530,7 +569,6 @@ btnUsAnze.addEventListener("click", function () {
   ug.classList.toggle("hidden");
   uzFrei.classList.toggle("hidden");
   uzPfli.classList.toggle("hidden");
-  
-
-/*   btnUsAnze.textContent = "Überstunden verstecken" */
+  sonsZusch.classList.toggle("hidden");
+  btnUsAnze.classList.toggle("blue-1");
 });
