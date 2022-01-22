@@ -147,7 +147,7 @@ input[type="number"] {
   grid-column: 1 / -1;
   border: 1px solid black;
   width: 250px;
-  border-radius: 7px;
+  border-radius: 4px;
   margin: 0 auto;
   box-shadow: 2px 2px var(--grey-1);
 }
