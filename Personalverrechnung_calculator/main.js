@@ -19,6 +19,7 @@ const sonsZusch = document.querySelector(".sonsZusch");
 const btnRadAA = document.querySelector(".radAA");
 const btnRadLeh = document.querySelector(".radLeh");
 const gesBruEnt = document.querySelector(".gesBruEnt");
+const ignSvBetrag = document.querySelector(".ignSvBetrag");
 const FB = document.querySelector(".FB");
 const PP = document.querySelector(".PP");
 const GB = document.querySelector(".GB");
@@ -54,6 +55,7 @@ const btnRadHalb = document.querySelector(".fabo-btn-halb");
 const anzMindKind = document.querySelector(".anz-mind-kind");
 const anzVollKind = document.querySelector(".anz-voll-kind");
 const PEkm = document.querySelector(".pe-km");
+const ignLst = document.querySelector(".ignLst");
 // lst-calc button
 const btnSubLstCalc = document.querySelector(".submit-lstCalc");
 
@@ -404,6 +406,11 @@ btnSubLstCalc.addEventListener("click", function () {
     svBetLstCalc.textContent = svRechAA(gesBruEnt.value).toFixed(2);
   } else svBetLstCalc.textContent = svRechLeh(gesBruEnt.value).toFixed(2);
 
+  // this can turn off overtime pay calculator and returns 0
+  if (ignSvBetrag.checked === true) {
+    svBetLstCalc.textContent = 0;
+  }
+
   // Lst-BG calculator
   lstBg.textContent = lstBgRech(
     gesBruEnt.value,
@@ -451,6 +458,11 @@ btnSubLstCalc.addEventListener("click", function () {
       ).toFixed(2)
     );
   } else lst.textContent = 0;
+
+  // this can turn off Lst calculator and returns 0
+  if (ignLst.checked === true) {
+    lst.textContent = 0;
+  }
 
   // passing Lst calculator values to Netto Entgelt calculator
   (brutEntNetCalc.textContent = gesBruEnt.value),

@@ -75,7 +75,11 @@
         <!-- sv/brutto -->
         <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
         <input type="number" class="gesBruEnt input-field-text" />
-        <span class="desc">SV: &nbsp;</span>
+        <span class="desc">SV &nbsp;
+          <label class="ignore-value">
+            <input type="checkbox" class="ignSvBetrag">
+            <span class="ignore-value-sybol"></span>
+          : &nbsp;</span>
         <span class="sv-betrag nonIntValue"></span>
         <span class="desc">Frei Betrag: &nbsp;</span>
         <input type="number" class="FB input-field-text" />
@@ -126,7 +130,10 @@
         <input type="number" class="pe-km input-field-text" />
         <span class="bot-border desc">PE Betrag: &nbsp;</span>
         <span class="pe-betr nonIntValue"></span>
-        <span class="desc">Lst: &nbsp;</span>
+        <span class="desc">Lst &nbsp;
+          <label class="ignore-value">
+          <input type="checkbox" class="ignLst">
+          <span class="ignore-value-sybol"></span>: &nbsp;</span>
         <span class="lst nonIntValue"></span>
         <!-- button -->
         <button class="submit-lstCalc submit-btn">Bestätigen</button>
@@ -172,3 +179,7 @@
     </div>
   </body>
 </html>
+<!-- 
+  elmagyarazni: uberstunden gomb mit csinal, a kicsi kipipalhoto negyzet mit csinal
+  lst kikapcsolasa gombal
+ -->
