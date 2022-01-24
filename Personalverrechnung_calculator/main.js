@@ -344,7 +344,7 @@ btnSubLstCalc.addEventListener("click", function () {
     )
   );
 
-  // this can turn off extra overtime pay fee free calulator and returns 0
+  // this can turn off extra overtime pay fee free calulator and forces 0
   if (ignValUZf.checked === true) {
     uzFrei.textContent = 0;
   }
@@ -377,7 +377,7 @@ btnSubLstCalc.addEventListener("click", function () {
     uzPfli.textContent = 0;
   } else uzPfli.textContent = uzPfli.textContent;
 
-  // this can turn off extra overtime pay with fee calulator and returns 0
+  // this can turn off extra overtime pay with fee calulator and forces 0
   if (ignValUZs.checked === true) {
     uzPfli.textContent = 0;
   }
@@ -408,7 +408,7 @@ btnSubLstCalc.addEventListener("click", function () {
     svBetLstCalc.textContent = svRechAA(gesBruEnt.value).toFixed(2);
   } else svBetLstCalc.textContent = svRechLeh(gesBruEnt.value).toFixed(2);
 
-  // this can turn off overtime pay calculator and returns 0
+  // this can turn off overtime pay calculator and forces 0
   if (ignSvBetrag.checked === true) {
     svBetLstCalc.textContent = 0;
   }
@@ -461,7 +461,7 @@ btnSubLstCalc.addEventListener("click", function () {
     );
   } else lst.textContent = 0;
 
-  // this can turn off Lst calculator and returns 0
+  // this can turn off Lst calculator and forces 0
   if (ignLst.checked === true) {
     lst.textContent = 0;
   }
@@ -492,15 +492,16 @@ function nettoEntRech(a, b, c, d, e, f, g, h, i, j) {
 
 // button netto calc
 btnSubNettoCalc.addEventListener("click", function () {
-  // returns 0 at SV netto wage calculator
+  // forces 0 at SV netto wage calculator
   if (ignSvBetragNetCalc.checked === true) {
     svNetCalc.textContent = 0;
   }
 
-  // returns 0 at Lst netto wage calculator
+  // forces 0 at Lst netto wage calculator
   if (ignLstNetCalc.checked === true) {
     lstNetCalc.textContent = 0;
   }
+
   // netto wage calculator
   NettoEntg.textContent = nettoEntRech(
     brutEntNetCalc.textContent,
@@ -577,6 +578,10 @@ deleteAll.addEventListener("click", function () {
   ignValUG.checked = false;
   ignValUZf.checked = false;
   ignValUZs.checked = false;
+  ignLstNetCalc.checked = false;
+  ignSvBetragNetCalc.checked = false;
+  ignLst.checked = false;
+  ignSvBetrag.checked = false;
 });
 
 btnUsAnze.addEventListener("click", function () {
