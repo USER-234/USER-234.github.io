@@ -74,6 +74,8 @@ const betUmlNetCalc = document.querySelector(".bet-uml-netCalc");
 const sonsAbzNetCalc = document.querySelector(".sont-abz-netCalc");
 const akZNetCalc = document.querySelector(".akZ-netCalc");
 const ruckZNetCalc = document.querySelector(".ruckZ-netCalc");
+const ignSvBetragNetCalc = document.querySelector(".ignSvBetragNetCalc");
+const ignLstNetCalc = document.querySelector(".ignLstNetCalc");
 
 // netto-calc button
 const btnSubNettoCalc = document.querySelector(".submit-netCalc");
@@ -490,6 +492,15 @@ function nettoEntRech(a, b, c, d, e, f, g, h, i, j) {
 
 // button netto calc
 btnSubNettoCalc.addEventListener("click", function () {
+  // returns 0 at SV netto wage calculator
+  if (ignSvBetragNetCalc.checked === true) {
+    svNetCalc.textContent = 0;
+  }
+
+  // returns 0 at Lst netto wage calculator
+  if (ignLstNetCalc.checked === true) {
+    lstNetCalc.textContent = 0;
+  }
   // netto wage calculator
   NettoEntg.textContent = nettoEntRech(
     brutEntNetCalc.textContent,
@@ -503,6 +514,7 @@ btnSubNettoCalc.addEventListener("click", function () {
     akZNetCalc.value,
     ruckZNetCalc.value
   ).toFixed(2);
+
 });
 
 // shows/hides the description text
