@@ -515,7 +515,6 @@ btnSubNettoCalc.addEventListener("click", function () {
     akZNetCalc.value,
     ruckZNetCalc.value
   ).toFixed(2);
-
 });
 
 // shows/hides the description text
@@ -603,3 +602,10 @@ btnUsAnze.addEventListener("click", function () {
   sonsZusch.classList.toggle("hidden");
   btnUsAnze.classList.toggle("blue-1");
 });
+
+/* 
+// reduced the brutto wage for social insurance free bonus(es)
+function brutSvRed(a, b, c, d, e) {
+  return Number(a) - (Number(b) + Number(c) + Number(d) + Number(e));
+}
+*/
