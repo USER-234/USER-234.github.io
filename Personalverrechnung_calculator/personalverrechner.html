@@ -34,7 +34,7 @@
         <span class="bot-border desc">Lehrling: &nbsp;</span>
         <input name="radBtnBeruf" type="radio" class="radLeh" />
         <!-- overtime -->
-        <button class="btn-ubers-anz btn-expand-content">Überstunden</button>
+        <button class="btn-ubers-anz btn-expand-content">Überstunden, Zulagen</button>
         <span class="hidden desc text-brutEnt">Brutto Entgelt: &nbsp;</span>
         <input type="number" class="hidden brutEnt input-field-text" />
         <span class="hidden desc text-usHalf">Überstunden 50%: &nbsp;</span>
@@ -56,15 +56,20 @@
           <span class="ignore-value-sybol"></span>
         : &nbsp;</span>
         <span class="hidden uz-frei nonIntValue"></span>
-        <span class="hidden desc text-uz-pfli"
+        <span class="hidden desc text-uz-pfli bot-border"
           >ÜZ steuerpflichtig
           &nbsp;
         <label class="ignore-value">
           <input type="checkbox" class="ignValUZs">
           <span class="ignore-value-sybol"></span>: &nbsp;</span>
         <span class="hidden uz-pfli nonIntValue"></span>
-        <span class="bot-border desc hidden text-sonsZusch">SFN, SEG: &nbsp;</span>
+        <span class="desc hidden text-sonsZusch">SFN, SEG: &nbsp;</span>
         <input type="number" class="hidden sonsZusch input-field-text" />
+        <!-- radio box 360/560 -->
+        <span class="desc text-freiZulLow hidden">Frei Zulagen 360,- : &nbsp;</span>
+        <input name="radBtnFrZul" type="radio" class="freiZulLow hidden" checked />
+        <span class="bot-border desc text-freiZulHigh hidden">Frei Zulagen 540,- : &nbsp;</span>
+        <input name="radBtnFrZul" type="radio" class="freiZulHigh hidden" />
         <!-- sv/brutto -->
         <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
         <input type="number" class="gesBruEnt input-field-text" />

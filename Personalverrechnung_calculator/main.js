@@ -3,6 +3,14 @@ const descTit = document.querySelector(".besch-tit");
 const descText = document.querySelector(".besch-text");
 // ### Lst-BG calculator connentions
 //HTML and JS connection lst-calc non interactive
+const textBrutEnt = document.querySelector(".text-brutEnt");
+const textUsHalf = document.querySelector(".text-usHalf");
+const textUsFull = document.querySelector(".text-usFull");
+const textUsTeil = document.querySelector(".text-usTeil");
+const textUg = document.querySelector(".text-ug");
+const textUzFrei = document.querySelector(".text-uz-frei");
+const textUzPfli = document.querySelector(".text-uz-pfli");
+const textSonsZusch = document.querySelector(".text-sonsZusch");
 const svBetLstCalc = document.querySelector(".sv-betrag");
 const steuFreiBe = document.querySelector(".steuFreiBe");
 
@@ -16,6 +24,13 @@ const ignValUG = document.querySelector(".ignValUG");
 const ignValUZf = document.querySelector(".ignValUZf");
 const ignValUZs = document.querySelector(".ignValUZs");
 const sonsZusch = document.querySelector(".sonsZusch");
+
+const freiZulLow = document.querySelector(".freiZulLow");
+const freiZulHigh = document.querySelector(".freiZulHigh");
+
+const textFreiZulLow = document.querySelector(".text-freiZulLow");
+const textFreiZulHigh = document.querySelector(".text-freiZulHigh");
+
 const btnRadAA = document.querySelector(".radAA");
 const btnRadLeh = document.querySelector(".radLeh");
 const gesBruEnt = document.querySelector(".gesBruEnt");
@@ -27,15 +42,6 @@ const SE = document.querySelector(".SE");
 
 // ### Lst calculator connentions
 //HTML and JS connection lst-calc non interactive
-const textBrutEnt = document.querySelector(".text-brutEnt");
-const textUsHalf = document.querySelector(".text-usHalf");
-const textUsFull = document.querySelector(".text-usFull");
-const textUsTeil = document.querySelector(".text-usTeil");
-const textUg = document.querySelector(".text-ug");
-const textUzFrei = document.querySelector(".text-uz-frei");
-const textUzPfli = document.querySelector(".text-uz-pfli");
-const textSonsZusch = document.querySelector(".text-sonsZusch");
-
 const ug = document.querySelector(".ug");
 const uzFrei = document.querySelector(".uz-frei");
 const uzPfli = document.querySelector(".uz-pfli");
@@ -156,11 +162,18 @@ function uzPfliRech(halbInEur, halb, restBetr) {
   return 0 + Number(restBetr);
 }
 
+// decides the height of max free payment
+function twoStatesOfmaxZusch() {
+  if (freiZulLow.checked === true) {
+    return 360;
+  } else return 540;
+}
+
 // decides if the value overstepps the max value
 function maxZuschBetrRech(betr, maxBetr) {
   if (Number(betr) < maxBetr) {
     return Number(betr);
-  } else return 0;
+  } else return maxBetr;
 }
 
 // sv calculator Arbeiter/Angestellte
@@ -385,8 +398,12 @@ btnSubLstCalc.addEventListener("click", function () {
   // passing uzFrei value to steuFreiBe
   steuFreiBe.textContent = nullToEmpty(
     nanToZero(
-      Number(uzFrei.textContent) +
-        Number(maxZuschBetrRech(sonsZusch.value, 360))
+      Number(
+        maxZuschBetrRech(
+          Number(sonsZusch.value) + Number(uzFrei.textContent),
+          twoStatesOfmaxZusch()
+        )
+      )
     )
   );
 
@@ -584,6 +601,7 @@ deleteAll.addEventListener("click", function () {
 });
 
 btnUsAnze.addEventListener("click", function () {
+  btnUsAnze.classList.toggle("blue-1");
   textBrutEnt.classList.toggle("hidden");
   textUsHalf.classList.toggle("hidden");
   textUsFull.classList.toggle("hidden");
@@ -600,7 +618,10 @@ btnUsAnze.addEventListener("click", function () {
   uzFrei.classList.toggle("hidden");
   uzPfli.classList.toggle("hidden");
   sonsZusch.classList.toggle("hidden");
-  btnUsAnze.classList.toggle("blue-1");
+  freiZulLow.classList.toggle("hidden");
+  freiZulHigh.classList.toggle("hidden");
+  textFreiZulLow.classList.toggle("hidden");
+  textFreiZulHigh.classList.toggle("hidden");
 });
 
 /* 
