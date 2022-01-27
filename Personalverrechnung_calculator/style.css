@@ -65,9 +65,8 @@ h2 {
   padding: 2px;
   border: 2px solid black;
 }
-.radAA,
-.radLeh {
-  width: 13px;
+.radBtn {
+  width: 16px;
 }
 .bot-border {
   border-bottom: var(--grey-3) solid 1px;
@@ -183,7 +182,7 @@ input[type="checkbox"] {
   display: inline;
 }
 .ignore-value .ignore-value-sybol:after {
-  left: 3px;
+  left: 3.75px;
   font-size: 14px;
   font-weight: bold;
 }

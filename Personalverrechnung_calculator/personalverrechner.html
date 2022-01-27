@@ -30,9 +30,9 @@
         <h2 class="centered-text">Lohnsteuer berechnen</h2>
         <!-- radio box AA/Leh-->
         <span class="desc">Arbeiter/Angestelle: &nbsp;</span>
-        <input name="radBtnBeruf" type="radio" class="radAA" checked />
+        <input name="radBtnBeruf" type="radio" class="radAA radBtn" checked />
         <span class="bot-border desc">Lehrling: &nbsp;</span>
-        <input name="radBtnBeruf" type="radio" class="radLeh" />
+        <input name="radBtnBeruf" type="radio" class="radLeh radBtn" />
         <!-- overtime -->
         <button class="btn-ubers-anz btn-expand-content">Überstunden, Zulagen</button>
         <span class="hidden desc text-brutEnt">Brutto Entgelt: &nbsp;</span>
@@ -67,9 +67,9 @@
         <input type="number" class="hidden sonsZusch input-field-text" />
         <!-- radio box 360/560 -->
         <span class="desc text-freiZulLow hidden">Frei Zulagen 360,- : &nbsp;</span>
-        <input name="radBtnFrZul" type="radio" class="freiZulLow hidden" checked />
+        <input name="radBtnFrZul" type="radio" class="freiZulLow hidden radBtn" checked />
         <span class="bot-border desc text-freiZulHigh hidden">Frei Zulagen 540,- : &nbsp;</span>
-        <input name="radBtnFrZul" type="radio" class="freiZulHigh hidden" />
+        <input name="radBtnFrZul" type="radio" class="freiZulHigh hidden radBtn" />
         <!-- sv/brutto -->
         <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
         <input type="number" class="gesBruEnt input-field-text" />
@@ -105,14 +105,14 @@
         <span class="desc">Fabo+: &nbsp;</span>
         <span>
           <input
-            class="radio-btn fabo-btn-voll"
+            class="radio-btn fabo-btn-voll radBtn"
             type="radio"
             name="faboVH"
             id="faboplus_voll_text"
           />
           <label for="faboplus_voll_text">voll</label>
           <input
-            class="radio-btn fabo-btn-halb"
+            class="radio-btn fabo-btn-halb radBtn"
             type="radio"
             name="faboVH"
             id="faboplus_halb_text"
