@@ -623,10 +623,3 @@ btnUsAnze.addEventListener("click", function () {
   textFreiZulLow.classList.toggle("hidden");
   textFreiZulHigh.classList.toggle("hidden");
 });
-
-/* 
-// reduced the brutto wage for social insurance free bonus(es)
-function brutSvRed(a, b, c, d, e) {
-  return Number(a) - (Number(b) + Number(c) + Number(d) + Number(e));
-}
-*/
