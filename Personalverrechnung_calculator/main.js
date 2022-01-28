@@ -1,8 +1,10 @@
 // description
 const descTit = document.querySelector(".besch-tit");
 const descText = document.querySelector(".besch-text");
-// ### Lst-BG calculator connentions
+// ################################################
+// overtime pay calculator connentions
 //HTML and JS connection lst-calc non interactive
+const btnUsAnze = document.querySelector(".btn-ubers-anz");
 const textBrutEnt = document.querySelector(".text-brutEnt");
 const textUsHalf = document.querySelector(".text-usHalf");
 const textUsFull = document.querySelector(".text-usFull");
@@ -11,26 +13,34 @@ const textUg = document.querySelector(".text-ug");
 const textUzFrei = document.querySelector(".text-uz-frei");
 const textUzPfli = document.querySelector(".text-uz-pfli");
 const textSonsZusch = document.querySelector(".text-sonsZusch");
-const svBetLstCalc = document.querySelector(".sv-betrag");
-const steuFreiBe = document.querySelector(".steuFreiBe");
+const ug = document.querySelector(".ug");
+const uzFrei = document.querySelector(".uz-frei");
+const uzPfli = document.querySelector(".uz-pfli");
 
 //HTML and JS connection lst-calc interactive
-const btnUsAnze = document.querySelector(".btn-ubers-anz");
 const brutEnt = document.querySelector(".brutEnt");
 const usHalf = document.querySelector(".usHalf");
 const usFull = document.querySelector(".usFull");
 const usTeil = document.querySelector(".usTeil");
-const ignValUG = document.querySelector(".ignValUG");
-const ignValUZf = document.querySelector(".ignValUZf");
-const ignValUZs = document.querySelector(".ignValUZs");
-const sonsZusch = document.querySelector(".sonsZusch");
 
-const freiZulLow = document.querySelector(".freiZulLow");
-const freiZulHigh = document.querySelector(".freiZulHigh");
-
+// ################################################
+// bonuses calculator connentions
+//HTML and JS connection lst-calc non interactive
 const textFreiZulLow = document.querySelector(".text-freiZulLow");
 const textFreiZulHigh = document.querySelector(".text-freiZulHigh");
 
+//HTML and JS connection lst-calc interactive
+const freiZulLow = document.querySelector(".freiZulLow");
+const freiZulHigh = document.querySelector(".freiZulHigh");
+const sonsZusch = document.querySelector(".sonsZusch");
+
+// ################################################
+// Lst-BG calculator connentions
+//HTML and JS connection lst-calc non interactive
+const svBetLstCalc = document.querySelector(".sv-betrag");
+const steuFreiBe = document.querySelector(".steuFreiBe");
+
+//HTML and JS connection lst-calc interactive
 const btnRadAA = document.querySelector(".radAA");
 const btnRadLeh = document.querySelector(".radLeh");
 const gesBruEnt = document.querySelector(".gesBruEnt");
@@ -40,11 +50,9 @@ const PP = document.querySelector(".PP");
 const GB = document.querySelector(".GB");
 const SE = document.querySelector(".SE");
 
-// ### Lst calculator connentions
+// ################################################
+// Lst calculator connentions
 //HTML and JS connection lst-calc non interactive
-const ug = document.querySelector(".ug");
-const uzFrei = document.querySelector(".uz-frei");
-const uzPfli = document.querySelector(".uz-pfli");
 const lstBg = document.querySelector(".Lst-BG");
 const lstBgTe = document.querySelector(".Lst-BG-teil");
 const lstBgRe = document.querySelector(".Lst-BG-redu");
@@ -62,10 +70,9 @@ const anzMindKind = document.querySelector(".anz-mind-kind");
 const anzVollKind = document.querySelector(".anz-voll-kind");
 const PEkm = document.querySelector(".pe-km");
 const ignLst = document.querySelector(".ignLst");
-// lst-calc button
-const btnSubLstCalc = document.querySelector(".submit-lstCalc");
 
-// ### Netto Entgelt calculator connections
+// ################################################
+// Netto Entgelt calculator connections
 //HTML and JS connection netto-calc non interactive
 const brutEntNetCalc = document.querySelector(".gesBruEnt-netCalc");
 const svNetCalc = document.querySelector(".sv-betrag-netCalc");
@@ -83,11 +90,13 @@ const ruckZNetCalc = document.querySelector(".ruckZ-netCalc");
 const ignSvBetragNetCalc = document.querySelector(".ignSvBetragNetCalc");
 const ignLstNetCalc = document.querySelector(".ignLstNetCalc");
 
-// netto-calc button
+// buttons
+const btnSubLstCalc = document.querySelector(".submit-lstCalc");
 const btnSubNettoCalc = document.querySelector(".submit-netCalc");
-
-// delete everything button
 const deleteAll = document.querySelector(".delete");
+const ignValUG = document.querySelector(".ignValUG");
+const ignValUZf = document.querySelector(".ignValUZf");
+const ignValUZs = document.querySelector(".ignValUZs");
 
 // prevents minus value
 function noZero(num) {

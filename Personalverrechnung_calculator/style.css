@@ -8,6 +8,7 @@
   --blue-2: #6f90fc;
   --red-1: #f14848;
   --red-2: #c50d0d;
+  --red-3: #ec8181;
 }
 body {
   margin: 0;
@@ -165,7 +166,7 @@ input[type="checkbox"] {
   left: 0;
   height: 16px;
   width: 16px;
-  background-color: var(--grey-1);
+  background-color: var(--red-3);
   border: 2px solid black;
   display: flex;
   transform: translate(-15%, -5%);

@@ -19,10 +19,18 @@
         </button>
         <div class="besch-text">
           Zahlen können in folgenden Formen eingegeben werden:
-          <b>18301,50</b> oder <b>18301.50</b>. Die Daten zur
-          Personalverrechnung stammen aus dem Jahr 2021. Wenn man den Abzug ohne
+          <b>18301,50</b> oder <b>18301.50</b>. 
+          <br>
+          Die Daten zur
+          Personalverrechnung stammen aus dem Jahr 2021. 
+          <br>
+          Wenn man den Abzug ohne
           AV(E)AB erhält, dann muss man bei <i>AV(E)AB/Anz. Kinder</i> &nbsp;0
-          eingeben. Wenn man auf dem <i>Überstunden</i> klickt, dann kann die Überstunden berechnen. Wenn das graue Viereck aktiviert ist, dann wird die Zahl im selben Zeile ingoriert.
+          eingeben. 
+          <br>
+          Wenn man auf dem <i>Überstunden</i> klickt, dann kann die Überstunden berechnen. 
+          <br>
+          Wenn das rote Viereck aktiviert ist, dann wird die Zahl im selben Zeile ingoriert.
         </div>
       </div>
       <div class="lst-calc">
@@ -34,7 +42,7 @@
         <span class="bot-border desc">Lehrling: &nbsp;</span>
         <input name="radBtnBeruf" type="radio" class="radLeh radBtn" />
         <!-- overtime -->
-        <button class="btn-ubers-anz btn-expand-content">Überstunden, Zulagen</button>
+        <button class="btn-ubers-anz btn-expand-content">Überstunden</button>
         <span class="hidden desc text-brutEnt">Brutto Entgelt: &nbsp;</span>
         <input type="number" class="hidden brutEnt input-field-text" />
         <span class="hidden desc text-usHalf">Überstunden 50%: &nbsp;</span>
@@ -63,13 +71,16 @@
           <input type="checkbox" class="ignValUZs">
           <span class="ignore-value-sybol"></span>: &nbsp;</span>
         <span class="hidden uz-pfli nonIntValue"></span>
-        <span class="desc hidden text-sonsZusch">SFN, SEG: &nbsp;</span>
-        <input type="number" class="hidden sonsZusch input-field-text" />
+        <!-- bonuses -->
+        <button class="btn-zu-anz btn-expand-content">Zuschläge und Zulagen</button>
         <!-- radio box 360/560 -->
-        <span class="desc text-freiZulLow hidden">Frei Zulagen 360,- : &nbsp;</span>
+        <span class="desc text-freiZulLow hidden">Frei Betrag 360,- : &nbsp;</span>
         <input name="radBtnFrZul" type="radio" class="freiZulLow hidden radBtn" checked />
-        <span class="bot-border desc text-freiZulHigh hidden">Frei Zulagen 540,- : &nbsp;</span>
+        <span class="desc text-freiZulHigh hidden">Frei Betrag 540,- : &nbsp;</span>
         <input name="radBtnFrZul" type="radio" class="freiZulHigh hidden radBtn" />
+        <!-- bunuses inputs -->
+        <span class="desc hidden text-sonsZusch">sonstige Zuschläge: &nbsp;</span>
+        <input type="number" class="hidden sonsZusch input-field-text" />
         <!-- sv/brutto -->
         <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
         <input type="number" class="gesBruEnt input-field-text" />
