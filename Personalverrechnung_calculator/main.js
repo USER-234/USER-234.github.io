@@ -26,13 +26,81 @@ const usTeil = document.querySelector(".usTeil");
 // ################################################
 // bonuses calculator connentions
 //HTML and JS connection lst-calc non interactive
+const btnZuAnze = document.querySelector(".btn-zu-anz");
 const textFreiZulLow = document.querySelector(".text-freiZulLow");
 const textFreiZulHigh = document.querySelector(".text-freiZulHigh");
+
+const textNutDefBon1 = document.querySelector(".text-nutDefBon1");
+const textNutDefBon2 = document.querySelector(".text-nutDefBon2");
+const textNutDefBon3 = document.querySelector(".text-nutDefBon3");
+const textNutDefBon4 = document.querySelector(".text-nutDefBon4");
+const textNutDefBon5 = document.querySelector(".text-nutDefBon5");
+const textNutDefBon6 = document.querySelector(".text-nutDefBon6");
+const textNutDefBon7 = document.querySelector(".text-nutDefBon7");
+const textNutDefBon8 = document.querySelector(".text-nutDefBon8");
+
+const textNutDefBonBetr1 = document.querySelector(".text-nutDefBonBetr1");
+const textNutDefBonBetr2 = document.querySelector(".text-nutDefBonBetr2");
+const textNutDefBonBetr3 = document.querySelector(".text-nutDefBonBetr3");
+const textNutDefBonBetr4 = document.querySelector(".text-nutDefBonBetr4");
+const textNutDefBonBetr5 = document.querySelector(".text-nutDefBonBetr5");
+const textNutDefBonBetr6 = document.querySelector(".text-nutDefBonBetr6");
+const textNutDefBonBetr7 = document.querySelector(".text-nutDefBonBetr7");
+const textNutDefBonBetr8 = document.querySelector(".text-nutDefBonBetr8");
 
 //HTML and JS connection lst-calc interactive
 const freiZulLow = document.querySelector(".freiZulLow");
 const freiZulHigh = document.querySelector(".freiZulHigh");
 const sonsZusch = document.querySelector(".sonsZusch");
+
+const ignoreLst1 = document.querySelector(".ignoreLst1");
+const ignoreLst2 = document.querySelector(".ignoreLst2");
+const ignoreLst3 = document.querySelector(".ignoreLst3");
+const ignoreLst4 = document.querySelector(".ignoreLst4");
+const ignoreLst5 = document.querySelector(".ignoreLst5");
+const ignoreLst6 = document.querySelector(".ignoreLst6");
+const ignoreLst7 = document.querySelector(".ignoreLst7");
+const ignoreLst8 = document.querySelector(".ignoreLst8");
+
+const ignoreLst8 = document.querySelector(".ignore-lst-symbol1");
+
+const ignoreSv1 = document.querySelector(".ignoreSv1");
+const ignoreSv2 = document.querySelector(".ignoreSv2");
+const ignoreSv3 = document.querySelector(".ignoreSv3");
+const ignoreSv4 = document.querySelector(".ignoreSv4");
+const ignoreSv5 = document.querySelector(".ignoreSv5");
+const ignoreSv6 = document.querySelector(".ignoreSv6");
+const ignoreSv7 = document.querySelector(".ignoreSv7");
+const ignoreSv8 = document.querySelector(".ignoreSv8");
+
+const nutDefProz1 = document.querySelector(".nutDefProz1");
+const nutDefProz2 = document.querySelector(".nutDefProz2");
+const nutDefProz3 = document.querySelector(".nutDefProz3");
+const nutDefProz4 = document.querySelector(".nutDefProz4");
+const nutDefProz5 = document.querySelector(".nutDefProz5");
+const nutDefProz6 = document.querySelector(".nutDefProz6");
+const nutDefProz7 = document.querySelector(".nutDefProz7");
+const nutDefProz8 = document.querySelector(".nutDefProz8");
+
+const nutDefStu1 = document.querySelector(".nutDefStu1");
+const nutDefStu2 = document.querySelector(".nutDefStu2");
+const nutDefStu3 = document.querySelector(".nutDefStu3");
+const nutDefStu4 = document.querySelector(".nutDefStu4");
+const nutDefStu5 = document.querySelector(".nutDefStu5");
+const nutDefStu6 = document.querySelector(".nutDefStu6");
+const nutDefStu7 = document.querySelector(".nutDefStu7");
+const nutDefStu8 = document.querySelector(".nutDefStu8");
+
+const NutDefBonBetr1 = document.querySelector(".nutDefBonBetr1");
+const NutDefBonBetr2 = document.querySelector(".nutDefBonBetr2");
+const NutDefBonBetr3 = document.querySelector(".nutDefBonBetr3");
+const NutDefBonBetr4 = document.querySelector(".nutDefBonBetr4");
+const NutDefBonBetr5 = document.querySelector(".nutDefBonBetr5");
+const NutDefBonBetr6 = document.querySelector(".nutDefBonBetr6");
+const NutDefBonBetr7 = document.querySelector(".nutDefBonBetr7");
+const NutDefBonBetr8 = document.querySelector(".nutDefBonBetr8");
+
+
 
 // ################################################
 // Lst-BG calculator connentions
@@ -609,6 +677,7 @@ deleteAll.addEventListener("click", function () {
   ignSvBetrag.checked = false;
 });
 
+// shows/hides overtime pay section
 btnUsAnze.addEventListener("click", function () {
   btnUsAnze.classList.toggle("blue-1");
   textBrutEnt.classList.toggle("hidden");
@@ -618,7 +687,6 @@ btnUsAnze.addEventListener("click", function () {
   textUg.classList.toggle("hidden");
   textUzFrei.classList.toggle("hidden");
   textUzPfli.classList.toggle("hidden");
-  textSonsZusch.classList.toggle("hidden");
   brutEnt.classList.toggle("hidden");
   usHalf.classList.toggle("hidden");
   usFull.classList.toggle("hidden");
@@ -626,9 +694,92 @@ btnUsAnze.addEventListener("click", function () {
   ug.classList.toggle("hidden");
   uzFrei.classList.toggle("hidden");
   uzPfli.classList.toggle("hidden");
+});
+
+// shows/hides bonuses section
+btnZuAnze.addEventListener("click", function () {
+  btnZuAnze.classList.toggle("blue-1");
+  textSonsZusch.classList.toggle("hidden");
   sonsZusch.classList.toggle("hidden");
   freiZulLow.classList.toggle("hidden");
   freiZulHigh.classList.toggle("hidden");
   textFreiZulLow.classList.toggle("hidden");
   textFreiZulHigh.classList.toggle("hidden");
+
+  textNutDefBon1.classList.toggle("hidden");
+  textNutDefBon2.classList.toggle("hidden");
+  textNutDefBon3.classList.toggle("hidden");
+  textNutDefBon4.classList.toggle("hidden");
+  textNutDefBon5.classList.toggle("hidden");
+  textNutDefBon6.classList.toggle("hidden");
+  textNutDefBon7.classList.toggle("hidden");
+  textNutDefBon8.classList.toggle("hidden");
+
+  textNutDefBonBetr1.classList.toggle("hidden");
+  textNutDefBonBetr2.classList.toggle("hidden");
+  textNutDefBonBetr3.classList.toggle("hidden");
+  textNutDefBonBetr4.classList.toggle("hidden");
+  textNutDefBonBetr5.classList.toggle("hidden");
+  textNutDefBonBetr6.classList.toggle("hidden");
+  textNutDefBonBetr7.classList.toggle("hidden");
+  textNutDefBonBetr8.classList.toggle("hidden");
+
+  ignoreLst1.classList.toggle("hidden");
+  ignoreLst2.classList.toggle("hidden");
+  ignoreLst3.classList.toggle("hidden");
+  ignoreLst4.classList.toggle("hidden");
+  ignoreLst5.classList.toggle("hidden");
+  ignoreLst6.classList.toggle("hidden");
+  ignoreLst7.classList.toggle("hidden");
+  ignoreLst8.classList.toggle("hidden");
+
+  ignoreSv1.classList.toggle("hidden");
+  ignoreSv2.classList.toggle("hidden");
+  ignoreSv3.classList.toggle("hidden");
+  ignoreSv4.classList.toggle("hidden");
+  ignoreSv5.classList.toggle("hidden");
+  ignoreSv6.classList.toggle("hidden");
+  ignoreSv7.classList.toggle("hidden");
+  ignoreSv8.classList.toggle("hidden");
+
+  nutDefProz1.classList.toggle("hidden");
+  nutDefProz2.classList.toggle("hidden");
+  nutDefProz3.classList.toggle("hidden");
+  nutDefProz4.classList.toggle("hidden");
+  nutDefProz5.classList.toggle("hidden");
+  nutDefProz6.classList.toggle("hidden");
+  nutDefProz7.classList.toggle("hidden");
+  nutDefProz8.classList.toggle("hidden");
+
+  nutDefStu1.classList.toggle("hidden");
+  nutDefStu2.classList.toggle("hidden");
+  nutDefStu3.classList.toggle("hidden");
+  nutDefStu4.classList.toggle("hidden");
+  nutDefStu5.classList.toggle("hidden");
+  nutDefStu6.classList.toggle("hidden");
+  nutDefStu7.classList.toggle("hidden");
+  nutDefStu8.classList.toggle("hidden");
+
+  NutDefBonBetr1.classList.toggle("hidden");
+  NutDefBonBetr2.classList.toggle("hidden");
+  NutDefBonBetr3.classList.toggle("hidden");
+  NutDefBonBetr4.classList.toggle("hidden");
+  NutDefBonBetr5.classList.toggle("hidden");
+  NutDefBonBetr6.classList.toggle("hidden");
+  NutDefBonBetr7.classList.toggle("hidden");
+  NutDefBonBetr8.classList.toggle("hidden");
+  
+  ignSvSymbol1.classList.toggle("hidden");
+  ignSvSymbol2.classList.toggle("hidden");
+  ignSvSymbol3.classList.toggle("hidden");
+  ignSvSymbol4.classList.toggle("hidden");
+  ignSvSymbol5.classList.toggle("hidden");
+  ignSvSymbol6.classList.toggle("hidden");
+  ignSvSymbol7.classList.toggle("hidden");
+  ignSvSymbol8.classList.toggle("hidden");
+
+  ignSvSymbol.classList.toggle("hidden");
+  ignLstSymbol.classList.toggle("hidden");
+  freiBtnCnt.classList.toggle("hidden");
+  ignLstBtn.classList.toggle("hidden");
 });
