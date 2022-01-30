@@ -8,6 +8,9 @@
   --blue-2: #6f90fc;
   --red-1: #f14848;
   --red-2: #c50d0d;
+  --red-3: #ec8181;
+  --green-1: rgb(101, 204, 101);
+  --green-2: rgb(0, 182, 0);
 }
 body {
   margin: 0;
@@ -91,6 +94,7 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+/* beschreibung */
 .besch-menu {
   margin: 0 auto;
   max-width: 500px;
@@ -110,11 +114,12 @@ input[type="number"] {
   font-size: 0.9rem;
   display: none;
 }
+/****************/
 .visible {
   display: block;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .white-space {
   grid-column: 1 / -1;
@@ -149,6 +154,7 @@ input[type="number"] {
 .blue-1 {
   background-color: var(--blue-1);
 }
+/* ignore value btn */
 .ignore-value {
   position: relative;
   cursor: pointer;
@@ -159,30 +165,116 @@ input[type="checkbox"] {
   visibility: hidden;
   margin: 0;
 }
-.ignore-value-sybol {
+.ignore-value-symbol {
   position: absolute;
   top: 0;
   left: 0;
   height: 16px;
   width: 16px;
-  background-color: var(--grey-1);
+  background-color: var(--red-3);
   border: 2px solid black;
   display: flex;
   transform: translate(-15%, -5%);
 }
-.ignore-value input:checked ~ .ignore-value-sybol {
+.ignore-value input:checked ~ .ignore-value-symbol {
   background-color: var(--red-1);
 }
-.ignore-value-sybol:after {
+.ignore-value-symbol:after {
   content: "X";
   position: absolute;
   display: none;
 }
-.ignore-value input:checked ~ .ignore-value-sybol:after {
+.ignore-value input:checked ~ .ignore-value-symbol:after {
   display: inline;
 }
-.ignore-value .ignore-value-sybol:after {
+.ignore-value .ignore-value-symbol:after {
   left: 3.75px;
   font-size: 14px;
   font-weight: bold;
+}
+/* ignore lst btn */
+.ignore-lst {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 0px;
+}
+.ignore-lst-symbol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--green-1);
+  border: 2px solid black;
+  transform: translate(-15%, -5%);
+}
+.ignore-lst input:checked ~ .ignore-lst-symbol {
+  background-color: var(--green-2);
+}
+.ignore-lst-symbol:after {
+  content: "L";
+  position: absolute;
+  display: none;
+}
+.ignore-lst input:checked ~ .ignore-lst-symbol:after {
+  display: inline;
+}
+.ignore-lst .ignore-lst-symbol:after {
+  left: 3.75px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* ignore sv btn */
+.ignore-sv {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 0px;
+}
+.ignore-sv-symbol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--green-1);
+  border: 2px solid black;
+  transform: translate(-15%, -5%);
+}
+.ignore-sv input:checked ~ .ignore-sv-symbol {
+  background-color: var(--green-2);
+}
+.ignore-sv-symbol:after {
+  content: "S";
+  position: absolute;
+  display: none;
+}
+.ignore-sv input:checked ~ .ignore-sv-symbol:after {
+  display: inline;
+}
+.ignore-sv .ignore-sv-symbol:after {
+  left: 3.75px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* input prozent */
+.inputProz {
+  width: 1.5rem;
+  text-align: center;
+}
+.inputProz::placeholder {
+  color: var(--grey-3);
+  text-align: center;
+}
+/* input stunden */
+.inputStun {
+  width: 3.8rem;
+}
+.inputStun::placeholder {
+  color: var(--grey-3);
+  text-align: center;
+}
+.margin-rigth{
+  margin-right: 6.25px;
 }

@@ -19,10 +19,18 @@
         </button>
         <div class="besch-text">
           Zahlen können in folgenden Formen eingegeben werden:
-          <b>18301,50</b> oder <b>18301.50</b>. Die Daten zur
-          Personalverrechnung stammen aus dem Jahr 2021. Wenn man den Abzug ohne
+          <b>18301,50</b> oder <b>18301.50</b>. 
+          <br>
+          Die Daten zur
+          Personalverrechnung stammen aus dem Jahr 2021. 
+          <br>
+          Wenn man den Abzug ohne
           AV(E)AB erhält, dann muss man bei <i>AV(E)AB/Anz. Kinder</i> &nbsp;0
-          eingeben. Wenn man auf dem <i>Überstunden</i> klickt, dann kann die Überstunden berechnen. Wenn das graue Viereck aktiviert ist, dann wird die Zahl im selben Zeile ingoriert.
+          eingeben. 
+          <br>
+          Wenn man auf dem <i>Überstunden</i> klickt, dann kann die Überstunden berechnen. 
+          <br>
+          Wenn das rote Viereck aktiviert ist, dann wird die Zahl im selben Zeile ingoriert.
         </div>
       </div>
       <div class="lst-calc">
@@ -34,7 +42,7 @@
         <span class="bot-border desc">Lehrling: &nbsp;</span>
         <input name="radBtnBeruf" type="radio" class="radLeh radBtn" />
         <!-- overtime -->
-        <button class="btn-ubers-anz btn-expand-content">Überstunden, Zulagen</button>
+        <button class="btn-ubers-anz btn-expand-content">Überstunden</button>
         <span class="hidden desc text-brutEnt">Brutto Entgelt: &nbsp;</span>
         <input type="number" class="hidden brutEnt input-field-text" />
         <span class="hidden desc text-usHalf">Überstunden 50%: &nbsp;</span>
@@ -47,13 +55,13 @@
           &nbsp;
         <label class="ignore-value">
           <input type="checkbox" class="ignValUG">
-          <span class="ignore-value-sybol"></span>: &nbsp;</span>
+          <span class="ignore-value-symbol"></span>: &nbsp;</span>
         <span class="hidden ug nonIntValue"></span>
         <span class="hidden desc text-uz-frei">ÜZ steuerfrei
           &nbsp;
         <label class="ignore-value">
           <input type="checkbox" class="ignValUZf">
-          <span class="ignore-value-sybol"></span>
+          <span class="ignore-value-symbol"></span>
         : &nbsp;</span>
         <span class="hidden uz-frei nonIntValue"></span>
         <span class="hidden desc text-uz-pfli bot-border"
@@ -61,22 +69,185 @@
           &nbsp;
         <label class="ignore-value">
           <input type="checkbox" class="ignValUZs">
-          <span class="ignore-value-sybol"></span>: &nbsp;</span>
+          <span class="ignore-value-symbol"></span>: &nbsp;</span>
         <span class="hidden uz-pfli nonIntValue"></span>
-        <span class="desc hidden text-sonsZusch">SFN, SEG: &nbsp;</span>
-        <input type="number" class="hidden sonsZusch input-field-text" />
+        <!-- bonuses -->
+        <button class="btn-zu-anz btn-expand-content">Zuschläge und Zulagen</button>
         <!-- radio box 360/560 -->
-        <span class="desc text-freiZulLow hidden">Frei Zulagen 360,- : &nbsp;</span>
+        <span class="desc text-freiZulLow hidden">Frei Betrag 360,- : &nbsp;</span>
         <input name="radBtnFrZul" type="radio" class="freiZulLow hidden radBtn" checked />
-        <span class="bot-border desc text-freiZulHigh hidden">Frei Zulagen 540,- : &nbsp;</span>
+        <span class="desc text-freiZulHigh hidden">Frei Betrag 540,- : &nbsp;</span>
         <input name="radBtnFrZul" type="radio" class="freiZulHigh hidden radBtn" />
+        <!-- bunuses inputs -->
+        <span class="desc hidden text-sonsZusch">sonstige Zuschläge: &nbsp;</span>
+        <input type="number" class="hidden sonsZusch input-field-text" />
+
+
+
+
+
+
+
+
+
+
+
+        <span class="desc text-nutDefBon1 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst1 hidden" />
+            <span class="ignore-lst-symbol1 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv1 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol1 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz1 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu1 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr1 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr1 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon2 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst2 hidden" />
+            <span class="ignore-lst-symbol2 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv2 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol2 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz2 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu2 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr2 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr2 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon3 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst3 hidden" />
+            <span class="ignore-lst-symbol3 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv3 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol3 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz3 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu3 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr3 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr3 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon4 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst4 hidden" />
+            <span class="ignore-lst-symbol4 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv4 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol4 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz4 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu4 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr4 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr4 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon5 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst5 hidden" />
+            <span class="ignore-lst-symbol5 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv5 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol5 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz5 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu5 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr5 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr5 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon6 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst6 hidden" />
+            <span class="ignore-lst-symbol6 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv6 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol6 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz6 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu6 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr6 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr6 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon7 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst7 hidden" />
+            <span class="ignore-lst-symbol7 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv7 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol7 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz7 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu7 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr7 hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr7 input-field-text hidden" />
+        
+
+        <span class="desc text-nutDefBon8 hidden">Nutzerdefinierte Bonus: &nbsp;</span>
+        <span class="freiBtnCnt hidden">
+          <label class="ignore-lst margin-rigth">
+            <input type="checkbox" class="ignoreLst8 hidden" />
+            <span class="ignore-lst-symbol8 ignore-lst-symbol hidden"></span
+              ></label>
+              <label class="ignore-sv margin-rigth">
+                <input type="checkbox" class="ignoreSv8 hidden" />
+                <span class="ignore-sv-symbol ignSvSymbol8 hidden"></span
+                  ></label>
+                  <input type="number" placeholder="%" class="nutDefProz8 inputProz input-field-text margin-rigth hidden" />
+                  <input type="number" placeholder="Stunden" class="nutDefStu8 inputStun input-field-text margin-rigth hidden" />
+                </span>
+          <span class="desc text-nutDefBonBetr8 bot-border hidden">Betrag: &nbsp;</span>
+          <input type="number" class="nutDefBonBetr8 input-field-text hidden" />
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- sv/brutto -->
         <span class="bot-border desc">Gesamt brutto Entgelt: &nbsp;</span>
         <input type="number" class="gesBruEnt input-field-text" />
         <span class="desc">SV &nbsp;
           <label class="ignore-value">
             <input type="checkbox" class="ignSvBetrag">
-            <span class="ignore-value-sybol"></span>
+            <span class="ignore-value-symbol"></span>
           : &nbsp;</span>
         <span class="sv-betrag nonIntValue"></span>
         <span class="desc">Frei Betrag: &nbsp;</span>
@@ -131,7 +302,7 @@
         <span class="desc">Lst &nbsp;
           <label class="ignore-value">
           <input type="checkbox" class="ignLst">
-          <span class="ignore-value-sybol"></span>: &nbsp;</span>
+          <span class="ignore-value-symbol"></span>: &nbsp;</span>
         <span class="lst nonIntValue"></span>
         <!-- button -->
         <button class="submit-lstCalc submit-btn">Bestätigen</button>
@@ -148,7 +319,7 @@
         <span class="desc">SV &nbsp;
           <label class="ignore-value">
             <input type="checkbox" class="ignSvBetragNetCalc">
-            <span class="ignore-value-sybol"></span>
+            <span class="ignore-value-symbol"></span>
           : &nbsp;</span>
         <span class="sv-betrag-netCalc nonIntValue"></span>
         <span class="desc">KU und WF: &nbsp;</span>
@@ -156,7 +327,7 @@
         <span class="desc">Lst &nbsp;
           <label class="ignore-value">
             <input type="checkbox" class="ignLstNetCalc">
-            <span class="ignore-value-sybol"></span>
+            <span class="ignore-value-symbol"></span>
           : &nbsp;</span>
         <span class="lst-netCalc nonIntValue"></span>
         <span class="bot-border desc">Service Entgelt: &nbsp;</span>
