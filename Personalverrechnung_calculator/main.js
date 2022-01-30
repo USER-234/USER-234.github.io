@@ -53,6 +53,17 @@ const freiZulLow = document.querySelector(".freiZulLow");
 const freiZulHigh = document.querySelector(".freiZulHigh");
 const sonsZusch = document.querySelector(".sonsZusch");
 
+const freiBtnCnt = document.querySelectorAll(".freiBtnCnt");
+
+const ignLstSymbol1 = document.querySelector(".ignore-lst-symbol1");
+const ignLstSymbol2 = document.querySelector(".ignore-lst-symbol2");
+const ignLstSymbol3 = document.querySelector(".ignore-lst-symbol3");
+const ignLstSymbol4 = document.querySelector(".ignore-lst-symbol4");
+const ignLstSymbol5 = document.querySelector(".ignore-lst-symbol5");
+const ignLstSymbol6 = document.querySelector(".ignore-lst-symbol6");
+const ignLstSymbol7 = document.querySelector(".ignore-lst-symbol7");
+const ignLstSymbol8 = document.querySelector(".ignore-lst-symbol8");
+
 const ignoreLst1 = document.querySelector(".ignoreLst1");
 const ignoreLst2 = document.querySelector(".ignoreLst2");
 const ignoreLst3 = document.querySelector(".ignoreLst3");
@@ -62,7 +73,14 @@ const ignoreLst6 = document.querySelector(".ignoreLst6");
 const ignoreLst7 = document.querySelector(".ignoreLst7");
 const ignoreLst8 = document.querySelector(".ignoreLst8");
 
-const ignoreLst8 = document.querySelector(".ignore-lst-symbol1");
+const ignSvSymbol1 = document.querySelector(".ignSvSymbol1");
+const ignSvSymbol2 = document.querySelector(".ignSvSymbol2");
+const ignSvSymbol3 = document.querySelector(".ignSvSymbol3");
+const ignSvSymbol4 = document.querySelector(".ignSvSymbol4");
+const ignSvSymbol5 = document.querySelector(".ignSvSymbol5");
+const ignSvSymbol6 = document.querySelector(".ignSvSymbol6");
+const ignSvSymbol7 = document.querySelector(".ignSvSymbol7");
+const ignSvSymbol8 = document.querySelector(".ignSvSymbol8");
 
 const ignoreSv1 = document.querySelector(".ignoreSv1");
 const ignoreSv2 = document.querySelector(".ignoreSv2");
@@ -776,8 +794,21 @@ btnZuAnze.addEventListener("click", function () {
   ignSvSymbol7.classList.toggle("hidden");
   ignSvSymbol8.classList.toggle("hidden");
 
-  ignSvSymbol.classList.toggle("hidden");
-  ignLstSymbol.classList.toggle("hidden");
-  freiBtnCnt.classList.toggle("hidden");
-  ignLstBtn.classList.toggle("hidden");
+  ignLstSymbol1.classList.toggle("hidden");
+  ignLstSymbol2.classList.toggle("hidden");
+  ignLstSymbol3.classList.toggle("hidden");
+  ignLstSymbol4.classList.toggle("hidden");
+  ignLstSymbol5.classList.toggle("hidden");
+  ignLstSymbol6.classList.toggle("hidden");
+  ignLstSymbol7.classList.toggle("hidden");
+  ignLstSymbol8.classList.toggle("hidden");
+
+  freiBtnCnt[0].classList.toggle("hidden");
+  freiBtnCnt[1].classList.toggle("hidden");
+  freiBtnCnt[2].classList.toggle("hidden");
+  freiBtnCnt[3].classList.toggle("hidden");
+  freiBtnCnt[4].classList.toggle("hidden");
+  freiBtnCnt[5].classList.toggle("hidden");
+  freiBtnCnt[6].classList.toggle("hidden");
+  freiBtnCnt[7].classList.toggle("hidden");
 });
