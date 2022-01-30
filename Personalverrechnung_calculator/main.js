@@ -100,8 +100,6 @@ const NutDefBonBetr6 = document.querySelector(".nutDefBonBetr6");
 const NutDefBonBetr7 = document.querySelector(".nutDefBonBetr7");
 const NutDefBonBetr8 = document.querySelector(".nutDefBonBetr8");
 
-
-
 // ################################################
 // Lst-BG calculator connentions
 //HTML and JS connection lst-calc non interactive
@@ -768,7 +766,7 @@ btnZuAnze.addEventListener("click", function () {
   NutDefBonBetr6.classList.toggle("hidden");
   NutDefBonBetr7.classList.toggle("hidden");
   NutDefBonBetr8.classList.toggle("hidden");
-  
+
   ignSvSymbol1.classList.toggle("hidden");
   ignSvSymbol2.classList.toggle("hidden");
   ignSvSymbol3.classList.toggle("hidden");
