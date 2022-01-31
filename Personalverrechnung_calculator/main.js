@@ -43,7 +43,7 @@ const ignSvSymbol = document.querySelectorAll(".ignSvSymbol");
 const ignoreSv = document.querySelectorAll(".ignoreSv");
 const nutDefProz = document.querySelectorAll(".nutDefProz");
 const nutDefStu = document.querySelectorAll(".nutDefStu");
-const NutDefBonBetr = document.querySelectorAll(".nutDefBonBetr");
+const nutDefBonBetr = document.querySelectorAll(".nutDefBonBetr");
 
 // ################################################
 // Lst-BG calculator connentions
@@ -194,6 +194,11 @@ function maxZuschBetrRech(betr, maxBetr) {
   if (Number(betr) < maxBetr) {
     return Number(betr);
   } else return maxBetr;
+}
+
+// calculats the pay per hour
+function payPerHour() {
+  return Number((Number(brutEnt.value) / Number(usTeil.value)).toFixed(2));
 }
 
 // sv calculator Arbeiter/Angestellte
@@ -657,7 +662,7 @@ btnZuAnze.addEventListener("click", function () {
     ignoreSv[i].classList.toggle("hidden");
     nutDefProz[i].classList.toggle("hidden");
     nutDefStu[i].classList.toggle("hidden");
-    NutDefBonBetr[i].classList.toggle("hidden");
+    nutDefBonBetr[i].classList.toggle("hidden");
     ignSvSymbol[i].classList.toggle("hidden");
     ignLstSymbol[i].classList.toggle("hidden");
   }
