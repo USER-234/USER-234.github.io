@@ -205,6 +205,8 @@ function payPerHour() {
 let lstFreiBetr = 0;
 //  social insurance free value
 let svFreiBetr = 0;
+// custom bonuses value
+let nutDefBonSum = 0;
 
 // sv calculator Arbeiter/Angestellte
 function svRechAA(num) {
@@ -359,6 +361,8 @@ btnSubLstCalc.addEventListener("click", function () {
   lstFreiBetr = 0;
   // setting social insurance free value to 0
   svFreiBetr = 0;
+  // setting custom bonuses value to 0
+  nutDefBonSum = 0;
 
   // overtime pay base calculator
   ug.textContent = nullToEmpty(
@@ -430,18 +434,6 @@ btnSubLstCalc.addEventListener("click", function () {
     uzPfli.textContent = 0;
   }
 
-  // passing uzFrei value to steuFreiBe
-  steuFreiBe.textContent = nullToEmpty(
-    nanToZero(
-      Number(
-        maxZuschBetrRech(
-          Number(sonsZusch.value) + Number(uzFrei.textContent),
-          twoStatesOfmaxZusch()
-        )
-      )
-    )
-  );
-
   // custom bonuses calculator
   // decides if the values are incoma tax and/or social insurance free
   for (let i = 0; i < 8; i++) {
@@ -455,6 +447,8 @@ btnSubLstCalc.addEventListener("click", function () {
       ).toFixed(2);
     }
 
+    nutDefBonSum += Number(nutDefBonBetr[i].value);
+
     if (ignoreLst[i].checked === true) {
       lstFreiBetr += Number(nutDefBonBetr[i].value);
     }
@@ -464,6 +458,18 @@ btnSubLstCalc.addEventListener("click", function () {
     }
   }
 
+  // passing uzFrei value to steuFreiBe
+  steuFreiBe.textContent = nullToEmpty(
+    nanToZero(
+      Number(
+        maxZuschBetrRech(
+          Number(sonsZusch.value) + Number(uzFrei.textContent) + lstFreiBetr,
+          twoStatesOfmaxZusch()
+        )
+      )
+    )
+  );
+
   // decides if the overtime has to be added to the brutto wage
   // calculates total wage
   if (Number(brutEnt.value) != 0) {
@@ -472,15 +478,18 @@ btnSubLstCalc.addEventListener("click", function () {
       Number(ug.textContent) +
       Number(uzFrei.textContent) +
       Number(uzPfli.textContent) +
-      Number(sonsZusch.value)
+      Number(sonsZusch.value) +
+      nutDefBonSum
     ).toFixed(2);
   } else gesBruEnt.value = gesBruEnt.value;
 
   // AA or Leh rad btn interaction
   // SV calculator result
   if (btnRadAA.checked === true) {
-    svBetLstCalc.textContent = svRechAA(gesBruEnt.value).toFixed(2);
-  } else svBetLstCalc.textContent = svRechLeh(gesBruEnt.value).toFixed(2);
+    svBetLstCalc.textContent = svRechAA(gesBruEnt.value - svFreiBetr).toFixed(
+      2
+    );
+  } else svBetLstCalc.textContent = svRechLeh(gesBruEnt.value - svFreiBetr).toFixed(2);
 
   // this can turn off overtime pay calculator and forces 0
   if (ignSvBetrag.checked === true) {
