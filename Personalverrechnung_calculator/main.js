@@ -201,6 +201,11 @@ function payPerHour() {
   return Number((Number(brutEnt.value) / Number(usTeil.value)).toFixed(2));
 }
 
+// incoma tax free value
+let lstFreiBetr = 0;
+//  social insurance free value
+let svFreiBetr = 0;
+
 // sv calculator Arbeiter/Angestellte
 function svRechAA(num) {
   if (num < 0) {
@@ -350,6 +355,11 @@ function lstRech(a, b, c, d) {
 
 // button lst calc
 btnSubLstCalc.addEventListener("click", function () {
+  // setting incoma tax free value to 0
+  lstFreiBetr = 0;
+  // setting social insurance free value to 0
+  svFreiBetr = 0;
+
   // overtime pay base calculator
   ug.textContent = nullToEmpty(
     nanToZero(
@@ -431,6 +441,28 @@ btnSubLstCalc.addEventListener("click", function () {
       )
     )
   );
+
+  // custom bonuses calculator
+  // decides if the values are incoma tax and/or social insurance free
+  for (let i = 0; i < 8; i++) {
+    if (nutDefProz[i].value === "" && nutDefStu[i].value === "") {
+      nutDefBonBetr[i].value = nutDefBonBetr[i].value;
+    } else {
+      nutDefBonBetr[i].value = (
+        (payPerHour() / 100) *
+        Number(nutDefProz[i].value) *
+        Number(nutDefStu[i].value)
+      ).toFixed(2);
+    }
+
+    if (ignoreLst[i].checked === true) {
+      lstFreiBetr += Number(nutDefBonBetr[i].value);
+    }
+
+    if (ignoreSv[i].checked === true) {
+      svFreiBetr += Number(nutDefBonBetr[i].value);
+    }
+  }
 
   // decides if the overtime has to be added to the brutto wage
   // calculates total wage
