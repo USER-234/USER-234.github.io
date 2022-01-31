@@ -46,6 +46,7 @@ h2 {
   box-shadow: -2px 0px var(--blue-1), 2px 0px var(--blue-1),
     0px 2px var(--blue-1), 0px -2px var(--blue-1);
   font-size: 16px;
+  font-family: Bahnschrift, Helvetica, Arial, sans-serif;
 }
 .submit-btn {
   grid-column: 1 / -1;
@@ -275,6 +276,6 @@ input[type="checkbox"] {
   color: var(--grey-3);
   text-align: center;
 }
-.margin-rigth{
-  margin-right: 6.25px;
+.margin-rigth {
+  margin-right: 5.5px;
 }
