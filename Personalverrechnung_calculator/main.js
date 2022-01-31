@@ -29,48 +29,21 @@ const usTeil = document.querySelector(".usTeil");
 const btnZuAnze = document.querySelector(".btn-zu-anz");
 const textFreiZulLow = document.querySelector(".text-freiZulLow");
 const textFreiZulHigh = document.querySelector(".text-freiZulHigh");
-
 const textNutDefBon = document.querySelectorAll(".text-nutDefBon");
-
-
 const textNutDefBonBetr = document.querySelectorAll(".text-nutDefBonBetr");
-
-
 
 //HTML and JS connection lst-calc interactive
 const freiZulLow = document.querySelector(".freiZulLow");
 const freiZulHigh = document.querySelector(".freiZulHigh");
 const sonsZusch = document.querySelector(".sonsZusch");
-
 const freiBtnCnt = document.querySelectorAll(".freiBtnCnt");
-
 const ignLstSymbol = document.querySelectorAll(".ignore-lst-symbol");
-
-
-
 const ignoreLst = document.querySelectorAll(".ignoreLst");
-
-
-
 const ignSvSymbol = document.querySelectorAll(".ignSvSymbol");
-
-
-
 const ignoreSv = document.querySelectorAll(".ignoreSv");
-
-
-
 const nutDefProz = document.querySelectorAll(".nutDefProz");
-
-
-
 const nutDefStu = document.querySelectorAll(".nutDefStu");
-
-
-
 const NutDefBonBetr = document.querySelectorAll(".nutDefBonBetr");
-
-
 
 // ################################################
 // Lst-BG calculator connentions
@@ -675,10 +648,6 @@ btnZuAnze.addEventListener("click", function () {
   freiZulHigh.classList.toggle("hidden");
   textFreiZulLow.classList.toggle("hidden");
   textFreiZulHigh.classList.toggle("hidden");
-
-
-
-
 
   for (let i = 0; i < 8; i++) {
     freiBtnCnt[i].classList.toggle("hidden");
