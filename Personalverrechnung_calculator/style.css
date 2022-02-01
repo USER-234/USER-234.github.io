@@ -155,7 +155,6 @@ input[type="number"] {
 .blue-1 {
   background-color: var(--blue-1);
 }
-
 /* ignore value btn */
 .ignore-value {
   position: relative;
@@ -195,7 +194,6 @@ input[type="checkbox"] {
   font-size: 14px;
   font-weight: bold;
 }
-
 /* ignore lst btn */
 .ignore-lst {
   position: relative;
