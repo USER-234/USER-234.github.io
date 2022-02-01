@@ -660,6 +660,21 @@ deleteAll.addEventListener("click", function () {
   ignSvBetragNetCalc.checked = false;
   ignLst.checked = false;
   ignSvBetrag.checked = false;
+  // multiple decleration
+  for (let i = 0; i < 8; i++) {
+    // interactive fields
+    freiBtnCnt[i].value = "";
+    textNutDefBon[i].value = "";
+    textNutDefBonBetr[i].value = "";
+    nutDefProz[i].value = "";
+    nutDefStu[i].value = "";
+    nutDefBonBetr[i].value = "";
+    ignSvSymbol[i].value = "";
+    ignLstSymbol[i].value = "";
+    // checkbox
+    ignoreLst[i].checked = false;
+    ignoreSv[i].checked = false;
+  }
 });
 
 // shows/hides overtime pay section
