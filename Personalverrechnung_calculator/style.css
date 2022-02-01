@@ -155,6 +155,7 @@ input[type="number"] {
 .blue-1 {
   background-color: var(--blue-1);
 }
+
 /* ignore value btn */
 .ignore-value {
   position: relative;
@@ -183,16 +184,18 @@ input[type="checkbox"] {
 .ignore-value-symbol:after {
   content: "X";
   position: absolute;
-  display: none;
+  color: var(--grey-2);
 }
 .ignore-value input:checked ~ .ignore-value-symbol:after {
   display: inline;
+  color: black;
 }
 .ignore-value .ignore-value-symbol:after {
   left: 3.75px;
   font-size: 14px;
   font-weight: bold;
 }
+
 /* ignore lst btn */
 .ignore-lst {
   position: relative;
@@ -216,10 +219,11 @@ input[type="checkbox"] {
 .ignore-lst-symbol:after {
   content: "L";
   position: absolute;
-  display: none;
+  color: var(--grey-2);
 }
 .ignore-lst input:checked ~ .ignore-lst-symbol:after {
   display: inline;
+  color: black;
 }
 .ignore-lst .ignore-lst-symbol:after {
   left: 3.75px;
@@ -249,10 +253,11 @@ input[type="checkbox"] {
 .ignore-sv-symbol:after {
   content: "S";
   position: absolute;
-  display: none;
+  color: var(--grey-2);
 }
 .ignore-sv input:checked ~ .ignore-sv-symbol:after {
   display: inline;
+  color: black;
 }
 .ignore-sv .ignore-sv-symbol:after {
   left: 3.75px;
