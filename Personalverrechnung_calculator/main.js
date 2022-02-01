@@ -12,7 +12,6 @@ const textUsTeil = document.querySelector(".text-usTeil");
 const textUg = document.querySelector(".text-ug");
 const textUzFrei = document.querySelector(".text-uz-frei");
 const textUzPfli = document.querySelector(".text-uz-pfli");
-const textSonsZusch = document.querySelector(".text-sonsZusch");
 const ug = document.querySelector(".ug");
 const uzFrei = document.querySelector(".uz-frei");
 const uzPfli = document.querySelector(".uz-pfli");
@@ -35,7 +34,6 @@ const textNutDefBonBetr = document.querySelectorAll(".text-nutDefBonBetr");
 //HTML and JS connection lst-calc interactive
 const freiZulLow = document.querySelector(".freiZulLow");
 const freiZulHigh = document.querySelector(".freiZulHigh");
-const sonsZusch = document.querySelector(".sonsZusch");
 const freiBtnCnt = document.querySelectorAll(".freiBtnCnt");
 const ignLstSymbol = document.querySelectorAll(".ignore-lst-symbol");
 const ignoreLst = document.querySelectorAll(".ignoreLst");
@@ -463,7 +461,7 @@ btnSubLstCalc.addEventListener("click", function () {
     nanToZero(
       Number(
         maxZuschBetrRech(
-          Number(sonsZusch.value) + Number(uzFrei.textContent) + lstFreiBetr,
+          Number(uzFrei.textContent) + lstFreiBetr,
           twoStatesOfmaxZusch()
         )
       )
@@ -478,7 +476,6 @@ btnSubLstCalc.addEventListener("click", function () {
       Number(ug.textContent) +
       Number(uzFrei.textContent) +
       Number(uzPfli.textContent) +
-      Number(sonsZusch.value) +
       nutDefBonSum
     ).toFixed(2);
   } else gesBruEnt.value = gesBruEnt.value;
@@ -612,7 +609,6 @@ deleteAll.addEventListener("click", function () {
   usHalf.value = "";
   usFull.value = "";
   usTeil.value = "";
-  sonsZusch.value = "";
   btnRadAA.value = "";
   btnRadLeh.value = "";
   gesBruEnt.value = "";
@@ -688,8 +684,6 @@ btnUsAnze.addEventListener("click", function () {
 // shows/hides bonuses section
 btnZuAnze.addEventListener("click", function () {
   btnZuAnze.classList.toggle("blue-1");
-  textSonsZusch.classList.toggle("hidden");
-  sonsZusch.classList.toggle("hidden");
   freiZulLow.classList.toggle("hidden");
   freiZulHigh.classList.toggle("hidden");
   textFreiZulLow.classList.toggle("hidden");
