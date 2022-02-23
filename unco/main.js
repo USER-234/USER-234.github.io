@@ -81,6 +81,33 @@ const PEkm = document.querySelector(".pe-km");
 const ignLst = document.querySelector(".ignLst");
 
 // ################################################
+// employer tax connentions
+// _DG
+const btnGgAnz = document.querySelector(".btn-dg-anz");
+const svDgaDg = document.querySelector(".sv-dga_DG");
+const bvDg = document.querySelector(".bv_DG");
+const dbDg = document.querySelector(".db_DG");
+const dzProzDg = document.querySelector(".dz-proz_DG");
+const dzDg = document.querySelector(".dz_DG");
+const kommDG = document.querySelector(".komms_DG");
+const wDgaWDg = document.querySelector(".w-dga-W_DG");
+const wDgaDg = document.querySelector(".w-dga_DG");
+const btnDgAbg = document.querySelector(".submit-DG-Abgaben");
+// _GK
+const svDnaGk = document.querySelector(".sv-dna_GK");
+const svDgaGk = document.querySelector(".sv-dga_GK");
+const bvGk = document.querySelector(".bv_GK");
+const sumGk = document.querySelector(".summe_GK");
+// _FA
+const lstFa = document.querySelector(".lst_FA");
+const dbFa = document.querySelector(".db_FA");
+const dzFA = document.querySelector(".dz_FA");
+const sumFA = document.querySelector(".summe_FA");
+// _GE
+const kommGe = document.querySelector(".komms_GE");
+const wDgaGe = document.querySelector(".w-dga_GE");
+
+// ################################################
 // Netto Entgelt calculator connections
 //HTML and JS connection netto-calc non interactive
 const brutEntNetCalc = document.querySelector(".gesBruEnt-netCalc");
@@ -129,6 +156,14 @@ function nullToEmpty(num) {
     return "";
   }
   return num;
+}
+
+function sumAll(...nums) {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result += nums[i];
+  }
+  return result;
 }
 
 // ÜG calculator
@@ -716,4 +751,96 @@ btnZuAnze.addEventListener("click", function () {
     ignSvSymbol[i].classList.toggle("hidden");
     ignLstSymbol[i].classList.toggle("hidden");
   }
+});
+
+// DZ calculator
+function dzRech(bund, num) {
+  let result = 0;
+  switch (bund) {
+    case "Wien  0,38 %":
+      result = num * 0.0038;
+      break;
+    case "Burg. 0,42 %":
+      result = num * 0.0042;
+      break;
+    case "Ober. 0,34 %":
+      result = num * 0.0034;
+      break;
+    case "Kärn. 0,39 %":
+      result = num * 0.0039;
+      break;
+    case "Nied. 0,38 %":
+      result = num * 0.0038;
+      break;
+    case "Salz. 0,39 %":
+      result = num * 0.0039;
+      break;
+    case "Stei. 0,37 %":
+      result = num * 0.0037;
+      break;
+    case "Tiro. 0,41 %":
+      result = num * 0.0041;
+      break;
+    case "Vora. 0,37 %":
+      result = num * 0.0037;
+      break;
+    default:
+      alert("Error. Wähl einen Bundesland aus!");
+      break;
+  }
+  return result.toFixed(2);
+}
+
+// Wien-DGA calculator
+function wDgaRech(wochen) {
+  return Number(wochen) * 2;
+}
+
+// SV-DGA calculator
+function svDgaRech(num) {
+  return Number(num) * 0.2113;
+}
+
+// BV calculator
+function bvRech(num) {
+  return Number(num) * 0.0153;
+}
+
+// DB calculator
+function dbRech(num) {
+  return Number(num) * 0.039;
+}
+
+// Kommst calculator
+function kommRech(num) {
+  return Number(num) * 0.03;
+}
+
+btnDgAbg.addEventListener("click", () => {
+  svDgaDg.textContent = svDgaRech(gesBruEnt.value).toFixed(2);
+  bvDg.textContent = bvRech(gesBruEnt.value).toFixed(2);
+  dbDg.textContent = dbRech(gesBruEnt.value).toFixed(2);
+  dzDg.textContent = dzRech(dzProzDg.value, gesBruEnt.value);
+  kommDG.textContent = kommRech(gesBruEnt.value).toFixed(2);
+  wDgaDg.textContent = nullToEmpty(wDgaRech(wDgaWDg.value).toFixed(2));
+  // Gesundheitskassa
+  svDnaGk.textContent = svBetLstCalc.textContent;
+  svDgaGk.textContent = svDgaDg.textContent;
+  bvGk.textContent = bvDg.textContent;
+  sumGk.textContent = sumAll(
+    Number(svDnaGk.textContent),
+    Number(svDgaGk.textContent),
+    Number(bvGk.textContent)
+  );
+  // Finanzamt
+  dbFa.textContent = dbDg.textContent;
+  dzFA.textContent = dzDg.textContent;
+  sumFA.textContent = sumAll(
+    Number(lstFa.value),
+    Number(dbFa.textContent),
+    Number(dzFA.textContent)
+  );
+  // Gemeinde
+  kommGe.textContent = kommDG.textContent;
+  wDgaGe.textContent = wDgaDg.textContent;
 });

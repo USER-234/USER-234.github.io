@@ -282,3 +282,11 @@ input[type="checkbox"] {
 .margin-rigth {
   margin-right: 5.5px;
 }
+.dg-abgaben {
+  margin: 0 auto;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  row-gap: 5px;
+}
