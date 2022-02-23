@@ -93,6 +93,7 @@ const kommDG = document.querySelector(".komms_DG");
 const wDgaWDg = document.querySelector(".w-dga-W_DG");
 const wDgaDg = document.querySelector(".w-dga_DG");
 const btnDgAbg = document.querySelector(".submit-DG-Abgaben");
+const dgGrid = document.querySelector('.dg-abgaben')
 // _GK
 const svDnaGk = document.querySelector(".sv-dna_GK");
 const svDgaGk = document.querySelector(".sv-dga_GK");
@@ -389,7 +390,7 @@ function lstRech(a, b, c, d) {
 }
 
 // button lst calc
-btnSubLstCalc.addEventListener("click", function () {
+btnSubLstCalc.addEventListener("click", () => {
   // setting incoma tax free value to 0
   lstFreiBetr = 0;
   // setting social insurance free value to 0
@@ -521,7 +522,10 @@ btnSubLstCalc.addEventListener("click", function () {
     svBetLstCalc.textContent = svRechAA(gesBruEnt.value - svFreiBetr).toFixed(
       2
     );
-  } else svBetLstCalc.textContent = svRechLeh(gesBruEnt.value - svFreiBetr).toFixed(2);
+  } else
+    svBetLstCalc.textContent = svRechLeh(gesBruEnt.value - svFreiBetr).toFixed(
+      2
+    );
 
   // this can turn off overtime pay calculator and forces 0
   if (ignSvBetrag.checked === true) {
@@ -638,7 +642,7 @@ function description() {
 }
 
 // deletes every content in the interactive and non interactive fields
-deleteAll.addEventListener("click", function () {
+deleteAll.addEventListener("click", () => {
   // interactive fields
   brutEnt.value = "";
   usHalf.value = "";
@@ -657,6 +661,9 @@ deleteAll.addEventListener("click", function () {
   anzMindKind.value = "";
   anzVollKind.value = "";
   PEkm.value = "";
+  wDgaWDg.value = "";
+  dzProzDg.value = "";
+  lstFa.value = "";
   KUWFNetCalc.value = "";
   betUmlNetCalc.value = "";
   sonsAbzNetCalc.value = "";
@@ -676,6 +683,24 @@ deleteAll.addEventListener("click", function () {
   faboErg.textContent = "";
   PEBetr.textContent = "";
   lst.textContent = "";
+  svDgaDg.textContent = "";
+  bvDg.textContent = "";
+  dbDg.textContent = "";
+  dzProzDg.textContent = "";
+  dzDg.textContent = "";
+  kommDG.textContent = "";
+  wDgaWDg.textContent = "";
+  wDgaDg.textContent = "";
+  svDnaGk.textContent = "";
+  svDgaGk.textContent = "";
+  bvGk.textContent = "";
+  sumGk.textContent = "";
+  sumGk.textContent = "";
+  dbFa.textContent = "";
+  dzFA.textContent = "";
+  sumFA.textContent = "";
+  kommGe.textContent = "";
+  wDgaGe.textContent = "";
   brutEntNetCalc.textContent = "";
   svNetCalc.textContent = "";
   lstNetCalc.textContent = "";
@@ -713,7 +738,7 @@ deleteAll.addEventListener("click", function () {
 });
 
 // shows/hides overtime pay section
-btnUsAnze.addEventListener("click", function () {
+btnUsAnze.addEventListener("click", () => {
   btnUsAnze.classList.toggle("blue-1");
   textBrutEnt.classList.toggle("hidden");
   textUsHalf.classList.toggle("hidden");
@@ -732,7 +757,7 @@ btnUsAnze.addEventListener("click", function () {
 });
 
 // shows/hides bonuses section
-btnZuAnze.addEventListener("click", function () {
+btnZuAnze.addEventListener("click", () => {
   btnZuAnze.classList.toggle("blue-1");
   freiZulLow.classList.toggle("hidden");
   freiZulHigh.classList.toggle("hidden");
@@ -816,6 +841,7 @@ function kommRech(num) {
   return Number(num) * 0.03;
 }
 
+// button employer tax calculator
 btnDgAbg.addEventListener("click", () => {
   svDgaDg.textContent = svDgaRech(gesBruEnt.value).toFixed(2);
   bvDg.textContent = bvRech(gesBruEnt.value).toFixed(2);
@@ -831,7 +857,7 @@ btnDgAbg.addEventListener("click", () => {
     Number(svDnaGk.textContent),
     Number(svDgaGk.textContent),
     Number(bvGk.textContent)
-  );
+  ).toFixed(2);
   // Finanzamt
   dbFa.textContent = dbDg.textContent;
   dzFA.textContent = dzDg.textContent;
@@ -839,8 +865,12 @@ btnDgAbg.addEventListener("click", () => {
     Number(lstFa.value),
     Number(dbFa.textContent),
     Number(dzFA.textContent)
-  );
+  ).toFixed(2);
   // Gemeinde
   kommGe.textContent = kommDG.textContent;
   wDgaGe.textContent = wDgaDg.textContent;
+});
+
+btnGgAnz.addEventListener("click", () => {
+  dgGrid.classList.toggle("hidden");
 });

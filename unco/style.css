@@ -25,14 +25,6 @@ h1 {
 h2 {
   margin: 0.5rem 0 0.5rem 0;
 }
-.lst-calc {
-  margin: 0 auto;
-  max-width: 500px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content;
-  row-gap: 5px;
-}
 .desc {
   text-align: right;
   display: flex;
@@ -74,14 +66,6 @@ h2 {
 }
 .bot-border {
   border-bottom: var(--grey-3) solid 1px;
-}
-.netto-calculator {
-  margin: 0 auto;
-  max-width: 500px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content;
-  row-gap: 5px;
 }
 .centered-text {
   grid-column: 1 / -1;
@@ -282,11 +266,14 @@ input[type="checkbox"] {
 .margin-rigth {
   margin-right: 5.5px;
 }
-.dg-abgaben {
+.grid{
   margin: 0 auto;
   max-width: 500px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content;
   row-gap: 5px;
+}
+.margin-top{
+  margin-top: .3rem;
 }

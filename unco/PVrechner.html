@@ -41,7 +41,7 @@
           Um Nutzerdefinierte Bonus ausrechnen zu können, muss man <i>Brutto Entgelt</i> und <i>Überstundenteiler</i> ausfüllen.
         </div>
       </div>
-      <div class="lst-calc">
+      <div class="lst-calc grid">
         <!-- subheading -->
         <h2 class="centered-text">Lohnsteuer berechnen</h2>
         <!-- radio button AA/Leh-->
@@ -275,11 +275,14 @@
       </div>
       <br />
       <br />
-        <div class="dg-abgaben">
-          <button class="btn-dg-anz btn-expand-content">Dienstgeber Abgaben</button>
+      <div>
+        <!-- subheading -->
+        <h2 class="centered-text">DG Abgaben berechnen</h2>
+        <button class="btn-dg-anz btn-expand-content">Dienstgeber Abgaben</button>
+        <div class="dg-abgaben grid hidden">
           <!-- sv dga -->
-          <span class="desc">SV-DGA: &nbsp;</span>
-          <span class="sv-dga_DG nonIntValue"></span>
+          <span class="desc margin-top">SV-DGA: &nbsp;</span>
+          <span class="sv-dga_DG margin-top nonIntValue"></span>
           <!-- BV -->
           <span class="desc">BV: &nbsp;</span>
           <span class="bv_DG nonIntValue"></span>
@@ -348,9 +351,10 @@
           <span class="w-dga_GE nonIntValue"></span>
           <button class="submit-DG-Abgaben submit-btn">Bestätigen</button>
         </div>
+      </div>
       <br />
       <br />
-      <div class="netto-calculator">
+      <div class="netto-calculator grid">
         <!-- subheading -->
         <h2 class="centered-text">Brutto Engelt ==> netto Engelt</h2>
         <!-- brutto income -->
