@@ -93,7 +93,7 @@ const kommDG = document.querySelector(".komms_DG");
 const wDgaWDg = document.querySelector(".w-dga-W_DG");
 const wDgaDg = document.querySelector(".w-dga_DG");
 const btnDgAbg = document.querySelector(".submit-DG-Abgaben");
-const dgGrid = document.querySelector('.dg-abgaben')
+const dgGrid = document.querySelector(".dg-abgaben");
 // _GK
 const svDnaGk = document.querySelector(".sv-dna_GK");
 const svDgaGk = document.querySelector(".sv-dga_GK");
@@ -874,4 +874,5 @@ btnDgAbg.addEventListener("click", () => {
 // shows/hides employer tax section
 btnGgAnz.addEventListener("click", () => {
   dgGrid.classList.toggle("hidden");
+  btnGgAnz.classList.toggle("blue-1");
 });
