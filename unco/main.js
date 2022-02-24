@@ -871,6 +871,7 @@ btnDgAbg.addEventListener("click", () => {
   wDgaGe.textContent = wDgaDg.textContent;
 });
 
+// shows/hides employer tax section
 btnGgAnz.addEventListener("click", () => {
   dgGrid.classList.toggle("hidden");
 });
