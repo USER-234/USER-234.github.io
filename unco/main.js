@@ -107,6 +107,7 @@ const sumFA = document.querySelector(".summe_FA");
 // _GE
 const kommGe = document.querySelector(".komms_GE");
 const wDgaGe = document.querySelector(".w-dga_GE");
+const sumGe = document.querySelector(".summe_GE");
 
 // ################################################
 // Netto Entgelt calculator connections
@@ -869,6 +870,10 @@ btnDgAbg.addEventListener("click", () => {
   // Gemeinde
   kommGe.textContent = kommDG.textContent;
   wDgaGe.textContent = wDgaDg.textContent;
+  sumGe.textContent = sumAll(
+    Number(kommGe.textContent),
+    Number(wDgaGe.textContent)
+  );
 });
 
 // shows/hides employer tax section
