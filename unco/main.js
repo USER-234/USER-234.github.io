@@ -824,7 +824,7 @@ function wDgaRech(wochen) {
 
 // SV-DGA calculator
 function svDgaRech(num) {
-  return Number(num) * 0.2113;
+  return Number(num) * 0.2123;
 }
 
 // BV calculator
