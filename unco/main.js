@@ -210,7 +210,7 @@ function restBetrRech(betrEin, betrZwei) {
 function uzPfliRech(halbInEur, halb, restBetr) {
   if (halb > 10) {
     return (
-      Number((Number(halbInEur) * (Number(halb) - 10)).toFixed(2)) +
+      Number((Number(halbInEur).toFixed(2) * (Number(halb) - 10)).toFixed(2)) +
       Number(restBetr)
     );
   }
