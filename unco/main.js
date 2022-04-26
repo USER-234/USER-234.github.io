@@ -189,7 +189,7 @@ function uezFrei100Rech(entg, uesT, voll) {
 
 // half of the overtime pay calulator
 function halfUbersRech(entg, uesT) {
-  return ((Number(entg) / Number(uesT)) / 2).toFixed(2);
+  return ((Number(entg) / Number(uesT)).toFixed(2) / 2).toFixed(2);
 }
 
 // calculates the max 50% fee free overtime pay and the max worked hour can be only 10
