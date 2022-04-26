@@ -1,3 +1,7 @@
+const brutto = 2688.7
+const teiler = 143
+console.log(halfUbersRech(brutto, teiler));
+
 // description
 const descTit = document.querySelector(".besch-tit");
 const descText = document.querySelector(".besch-text");
