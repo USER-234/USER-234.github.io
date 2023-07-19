@@ -1,0 +1,26 @@
+:root {
+  --color-1: #DA9652;
+  --color-2: #E0F4CD;
+  --color-3: #CA7A2B;
+  --color-4: #979F28;
+  --footer-color-1: #242424;
+  --footer-color-2: #b9b9b9;
+  --footer-color-3: var(--color-1);
+/*   --padding-top-1: 1.5rem;
+  --padding-top-2: 1rem;
+  --padding-side-1: 0.8rem; */
+}
+@font-face {
+  font-family: "Poppins";
+  /*  src: url(../fonts/Poppins/Poppins-Mediu.ttf); */
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
