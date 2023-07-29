@@ -3,6 +3,7 @@
   object-fit: cover;
   width: 100%;
   height: calc(100vh - 4rem);
+  height: 100vh;
   border-bottom: 0.5rem solid var(--color-1);
 }
 /************************************/
