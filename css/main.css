@@ -42,6 +42,8 @@
   align-items: center;
   gap: 10px 40px;
   padding: 6rem 0.8rem 6rem 0.8rem;
+  background-image: url(/Webseite/img/white-texture.jpg);
+  background-size: cover;
 }
 .introduction-text section {
   max-width: 60ch;
@@ -77,31 +79,30 @@
   display: flex;
   align-items: center;
   align-content: center;
-/*   z-index: -1 !important; */
   position: relative;
   padding: 0 0 6rem 0;
+  z-index: -1 !important;
 }
 .swiper {
   /*   width: 80%;
   width: 50rem; */
   width: 40%;
   height: fit-content;
+  position: relative;
 }
 .swiper-slide img {
   width: 100%;
   border-radius: 20px;
 }
 /* the controlling is made invisible due to bugs cousing them to not work */
-/* .swiper .swiper-button-prev,
+.swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   color: #ffffff00;
 }
-.swiper .swiper-pagination-bullet-active {
-  background-color: #ffffff00;
-}
+.swiper .swiper-pagination-bullet-active,
 .swiper-pagination-bullet {
   background-color: #ffffff00;
-} */
+}
 @media (max-width: 1120px) {
   .swiper {
     width: 80%;
