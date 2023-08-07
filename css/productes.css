@@ -1,5 +1,5 @@
-main{
-    margin-top: 4rem;
+main {
+  margin-top: 4rem;
 }
 .container {
   position: relative;
@@ -27,7 +27,7 @@ main{
 .container .product-container .card {
   /*         height: 250px;
       width: 350px; */
-  aspect-ratio: 1.4 / 1;
+  aspect-ratio: 1 / 1;
   width: 100%;
   /*   border: 2px solid black; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.198);
@@ -59,23 +59,29 @@ main{
     } */
 .product-detail {
   padding: 0.6rem 0.6rem 0.6rem 0.6rem;
+  padding: 0.8rem;
+  background-color: var(--color-1);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 .product-titel {
   margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 0.9;
+  line-height: 1.1;
   letter-spacing: -0.5px;
-  /* text-transform: uppercase; */
-  
+/*   text-transform: uppercase; */
+/*   height: max-content; */
+
 }
 .product-price {
-  margin: 0.5rem 0;
+  margin: 0.4rem 0 0.5rem 0;
   font-weight: bold;
 }
 .product-description {
   margin: 0;
-  color: #646464;
+  color: #505050;
+  line-height: 1.35;
 }
 
 .container .popup-image {
@@ -107,7 +113,8 @@ main{
   transform: translate(-50%, -50%);
   border: 5px solid white;
   border-radius: 14px;
-  width: 750px;
+/*   width: 750px; */
+height: 80%;
   object-fit: cover;
 }
 
