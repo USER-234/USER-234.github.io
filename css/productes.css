@@ -14,28 +14,152 @@ main {
   text-transform: capitalize;
 }
 /************************************/
-.filter label{
-/*   display: block; */
-  padding: 3px;
+
+/************************************/
+.price-range-slider-cnt input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.price-range-slider-cnt {
+  width: 300px;
+  /*   background: #fff; */
+  /*   border-radius: 14px; */
+  /*   padding: 20px 25px 40px; */
+/*   padding: 1rem; */
+  /*   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1); */
+  grid-column: span 2;
+}
+.price-range-slider-cnt h2 {
+  margin: 0;
+}
+/* .price-range-slider-cnt p {
+  margin: 0;
+} */
+.price-input {
+  width: 100%;
+  display: flex;
+  /*   margin: 1rem;
+  margin: 30px 0 35px;
+  margin: 2 2rem 2rem 2rem; */
+  margin: 1rem 0;
+  margin: 0rem 0 0.8rem 0;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  /*   height: min-content; */
+  align-items: center;
+}
+.field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  /*   font-size: 19px; */
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #999;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.price-input .separator {
+  /*   width: 130px; */
+  width: 5rem;
+  display: flex;
+  /*   font-size: 19px; */
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+.slider {
+  height: 5px;
+  position: relative;
+  background: var(--color-4);
+  background-color: #999;
+  border-radius: 5px;
+  /*  margin: 2rem 0 0 0; */
+}
+.slider .progress {
+  height: 100%;
+  /*   left: 25%;
+  background: var(--color-4);
+  right: 25%; */
+  position: absolute;
+  border-radius: 5px;
+  background: #17a2b8;
+  background-color: #505050;
+  background-color: black;
+  background-color: var(--color-6);
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #17a2b8;
+  background-color: black;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #17a2b8;
+  background-color: black;
+  background-color: var(--color-6);
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 /************************************/
+/************************************/
 .container .product-container {
-  /*         display: flex;
-      flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   gap: 1rem;
   justify-content: center;
-  /*         padding: 0.5rem; */
+  justify-items: center;
+  padding: 1rem;
 }
 
 .container .product-container .card {
-  /*         height: 250px;
-      width: 350px; */
   aspect-ratio: 1 / 1;
   width: 100%;
-  /*   border: 2px solid black; */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.198);
+  max-width: 30rem;
+  /*   border: 3px solid var(--color-6); */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 14px;
 }
 .img-wrapper {
@@ -57,6 +181,7 @@ main {
 
 .container .product-container .card img:hover {
   transform: scale(1.1);
+
   /* border: white 3px solid ; */
 }
 /* .container .product-container .card h2, .container .product-container .card p{
@@ -75,9 +200,11 @@ main {
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: -0.5px;
-/*   text-transform: uppercase; */
-/*   height: max-content; */
-
+  /*   text-transform: uppercase; */
+  /*   height: max-content; */
+  /*   border-bottom: 3px solid var(--color-2);
+  margin: 0 -0.8rem;
+  padding: 0 0.8rem 0.1rem 0.8rem; */
 }
 .product-price {
   margin: 0.4rem 0 0.5rem 0;
@@ -118,8 +245,8 @@ main {
   transform: translate(-50%, -50%);
   border: 5px solid white;
   border-radius: 14px;
-/*   width: 750px; */
-height: 80%;
+  /*   width: 750px; */
+  height: 80%;
   object-fit: cover;
 }
 
@@ -133,3 +260,109 @@ height: 80%;
   }
 }
 /************************************/
+.filter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+/*   column-gap: 0.1rem; */
+width: 320px;
+}
+.filter h2 {
+  grid-column: span 2;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+.filter h2::before{
+  content: "";
+  display: block;
+  height: 3px;
+  width: 5rem;
+  width: 50%;
+  margin: 0 0 -2px 0;
+  border-radius: 20px;
+  background-color: var(--color-2);
+}
+.filter h2::after{
+  content: "";
+  display: block;
+  height: 3px;
+  width: 5rem;
+  width: 50%;
+  margin: -2px 0 0 0;
+  border-radius: 20px;
+  background-color: var(--color-2);
+}
+.filter label {
+  display: block;
+  padding: 5px 0px 5px 1.8rem;
+  margin: 3px 0;
+  margin: 0.3rem 0;
+  background-color: var(--color-1);
+  border-radius: 14px;
+  width: 7.6rem;
+
+}
+.box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  /*         margin-bottom: 15px; */
+  cursor: pointer;
+  /*         font-size: 20px; */
+}
+/* Hide the default style of the checkbox */
+input[type="checkbox"] {
+  visibility: hidden;
+}
+/* Create a custom checkbox */
+.mark {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  height: 0.9rem;
+  width: 0.9rem;
+  background-color: #a9a9a9;
+  border-radius: 3px;
+}
+/* Specify the background color for the checkbox while hovering */
+/*       .box:hover input + .mark {
+  background-color: #1c87c9;
+} */
+/* Specify the background color for the checkbox when the checkbox is active */
+/*       .box input:active + .mark {
+  background-color: #ffcc00;
+} */
+/* Specify the background color for the checkbox when it is checked */
+.box input:checked + .mark {
+  background-color: var(--color-6);
+}
+/* Checkmark to be shown in checkbox */
+/* It will not be shown when not checked */
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Display checkmark when checked */
+.box input:checked + .mark:after {
+  display: block;
+}
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and showing only two border to make it look like a tick mark */
+.box .mark:after {
+  left: 4px;
+  bottom: 3px;
+  width: 3px;
+  height: 7px;
+  border: solid #333333;
+  border: solid #daa520;
+  border: solid #ff6b6b;
+  border: solid #6a0dad;
+  border: solid #ff7034;
+  border: solid #002855;
+  border: solid #e6e6e6;
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
