@@ -68,6 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+  const resetButton = document.querySelector(".reset-button"); // Added this line for the reset button
+
+  resetButton.addEventListener("click", function () {
+    checkboxes.forEach((checkbox) => (checkbox.checked = false)); // Clear checkboxes
+    rangeInput[0].value = rangeInput[0].min; // Reset price input values
+    rangeInput[1].value = rangeInput[1].max;
+    updateSliderPosition(); // Update slider positions
+    filterProductsAndPrice(rangeInput[0].min, rangeInput[1].max); // Apply default filtering
+  });
+  
   // Initialize the slider position on page load
   updateSliderPosition();
 });
