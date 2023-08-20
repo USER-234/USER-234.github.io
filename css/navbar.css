@@ -85,7 +85,7 @@ text-decoration: underline;
   }
   nav.mobile-navbar .logo-and-branding {
     display: flex;
-    background-color: var(--color-1);
+    background-color: white;
     align-items: center;
     padding: 0rem 1.5rem;
     z-index: 2;
@@ -109,7 +109,7 @@ text-decoration: underline;
     font-size: 2rem;
   }
   nav.mobile-navbar .links {
-    background-color: var(--color-1);
+    background-color: white;
     flex-direction: column;
     display: none;
     width: 100%;

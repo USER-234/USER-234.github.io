@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const rangeInput = document.querySelectorAll(".range-input input");
   const priceInput = document.querySelectorAll(".price-input input");
   const range = document.querySelector(".slider .progress");
+
   let priceGap = 1;
 
   function updateSliderPosition() {
@@ -68,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
   const resetButton = document.querySelector(".reset-button"); // Added this line for the reset button
 
   resetButton.addEventListener("click", function () {
@@ -78,106 +78,50 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSliderPosition(); // Update slider positions
     filterProductsAndPrice(rangeInput[0].min, rangeInput[1].max); // Apply default filtering
   });
-  
+
   // Initialize the slider position on page load
   updateSliderPosition();
-});
-/* 
-old code
 
-document.addEventListener("DOMContentLoaded", function () {
-  const checkboxes = document.querySelectorAll(".filter-checkbox");
-  const cards = document.querySelectorAll(".card");
-
-  function filterProducts() {
-    const selectedCategories = Array.from(checkboxes)
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.value);
-
-    cards.forEach((product) => {
-      const productCategories = product.classList;
-      if (selectedCategories.length === 0 || selectedCategories.some((category) => productCategories.contains(category))) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  }
-
-  checkboxes.forEach((checkbox) => checkbox.addEventListener("change", filterProducts));
-
-  // Check the state of checkboxes on page load and apply initial filtering
-  filterProducts();
-
-  // Add an event listener to window.onbeforeunload to clear checkbox states
-  window.addEventListener("beforeunload", function () {
-    checkboxes.forEach((checkbox) => (checkbox.checked = false));
-  });
-});
-
-
-
-
-const productCards = document.querySelectorAll(".card");
-const rangeInput = document.querySelectorAll(".range-input input"),
-  priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
-let priceGap = 1;
-
-function updateSliderPosition() {
-  const minVal = parseInt(rangeInput[0].value),
-    maxVal = parseInt(rangeInput[1].value);
-
-  priceInput[0].value = minVal;
-  priceInput[1].value = maxVal;
-  range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-  range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-
-  filterCardsByPrice(minVal, maxVal);
-}
-
-function filterCardsByPrice(minPrice, maxPrice) {
-  productCards.forEach((card) => {
-    const price = parseFloat(card.getAttribute("data-price"));
-    if (price >= minPrice && price <= maxPrice) {
-      card.style.display = "block";
+  filterToggle.addEventListener("click", () => {
+    if (filter.style.display === "grid") {
+      filter.style.display = "none";
+      icon.style.animation = "rotateUp 0.5s forwards";
     } else {
-      card.style.display = "none";
+      filter.style.display = "grid";
+      icon.style.animation = "rotateDown 0.5s forwards";
     }
   });
+  
+/*   if (window.innerWidth > 1120) {
+    filter.style.display = "grid";
+    console.log("test");
+  } */
+
+
+
+
+
+
+});
+const filterToggle = document.querySelector(".filter-toggle");
+const filter = document.querySelector(".filter");
+const icon = document.querySelector(".filter-toggle i");
+
+// Function to handle the display based on window width
+function handleDisplay() {
+  
+  if (window.innerWidth > 1120) {
+    filter.style.display = "grid";
+    console.log("test");
+  }
+  if (window.innerWidth <= 1120) {
+    filter.style.display = "none";
+    console.log("test2");
+  }
 }
 
-rangeInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minVal = parseInt(rangeInput[0].value),
-      maxVal = parseInt(rangeInput[1].value);
-    if (maxVal - minVal < priceGap) {
-      if (e.target.className === "range-min") {
-        rangeInput[0].value = maxVal - priceGap;
-      } else {
-        rangeInput[1].value = minVal + priceGap;
-      }
-    }
-    updateSliderPosition();
-  });
-});
+// Initial run of the function on page load
+handleDisplay();
 
-priceInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minPrice = parseInt(priceInput[0].value),
-      maxPrice = parseInt(priceInput[1].value);
-
-    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === "input-min") {
-        rangeInput[0].value = minPrice;
-      } else {
-        rangeInput[1].value = maxPrice;
-      }
-      updateSliderPosition();
-    }
-  });
-});
-
-// Initialize the slider position on page load
-updateSliderPosition();
-*/
+// Listen for the window resize event
+window.addEventListener("resize", handleDisplay);
