@@ -65,6 +65,7 @@
 }
 .slideshow h2 {
   background-color: var(--color-4);
+  filter: saturate(var(--bg-saturate));
   text-align: center;
   margin: 0;
   padding: 6rem 0 1.5rem 0;
@@ -73,6 +74,7 @@
 }
 .cnt-slideshow {
   background-color: var(--color-4);
+  filter: saturate(var(--bg-saturate));
   width: 100%;
   /*   height: 100vh; */
   /*   background-color: #222; */
@@ -112,6 +114,7 @@
 .opening-hours-wrapper {
   padding: 6rem 0;
   background-color: var(--color-6);
+filter: saturate(var(--bg-saturate));
 }
 .opening-hours-wrapper h2 {
   text-align: center;
@@ -138,6 +141,7 @@
 /************************************/
 .map {
   background-color: var(--color-2);
+  filter: saturate(var(--bg-saturate));
   padding: 0 0 12rem 0;
   border-top: 0.5rem solid var(--color-1);
   border-bottom: 0.5rem solid var(--color-1);
@@ -168,6 +172,7 @@
     "a b"
     "c d";
   background-color: var(--color-6);
+  filter: saturate(var(--bg-saturate));
 }
 .payment-delivery h2 {
   margin: 0;

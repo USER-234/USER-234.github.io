@@ -91,17 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
       icon.style.animation = "rotateDown 0.5s forwards";
     }
   });
-  
-/*   if (window.innerWidth > 1120) {
-    filter.style.display = "grid";
-    console.log("test");
-  } */
-
-
-
-
-
-
 });
 const filterToggle = document.querySelector(".filter-toggle");
 const filter = document.querySelector(".filter");
@@ -109,7 +98,6 @@ const icon = document.querySelector(".filter-toggle i");
 
 // Function to handle the display based on window width
 function handleDisplay() {
-  
   if (window.innerWidth > 1120) {
     filter.style.display = "grid";
     console.log("test");

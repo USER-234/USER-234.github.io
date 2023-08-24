@@ -391,7 +391,7 @@ input[type="range"]::-moz-range-thumb {
     padding: 0.5rem 1rem;
     cursor: pointer;
   }
-  .filter-toggle:hover{
+  .filter-toggle:hover {
     outline: 2px solid var(--color-6);
   }
   @keyframes rotateUp {
@@ -423,10 +423,10 @@ input[type="range"]::-moz-range-thumb {
     width: 90%;
     width: 100%;
   }
-  .reset-button{
+  .reset-button {
     width: 17rem;
   }
-  .container .product-container{
+  .container .product-container {
     margin: 1rem 0 0 0;
   }
 }

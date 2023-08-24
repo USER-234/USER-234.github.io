@@ -5,16 +5,17 @@ sötétzöld
 */
 :root {
   --color-1: #e4e4e4;
-  --color-2: #84dec0;
+  --color-2: #57deb1;
   --color-3: var(--color-2);
   --color-4: var(--color-2);
   --color-5: #d3d3d3;
-  --color-6: #f0af6e;
+  --color-6: #ed9c4a;
   --color-7: #999;
   --color-8: #505050;
   --footer-color-1: #242424;
   --footer-color-2: #b9b9b9;
   --footer-color-3: var(--color-1);
+  --bg-saturate: 0.7;
 }
 @font-face {
   font-family: "Poppins";
