@@ -83,7 +83,7 @@
   align-content: center;
   position: relative;
   padding: 0 0 6rem 0;
-  z-index: -1 !important;
+/*   z-index: -1 !important; */
 }
 .swiper {
   /*   width: 80%;
@@ -99,11 +99,13 @@
 /* the controlling is made invisible due to bugs cousing them to not work */
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-  color: #ffffff00;
+/*   color: #ffffff00; */
+  color: var(--color-7);
 }
 .swiper .swiper-pagination-bullet-active,
 .swiper-pagination-bullet {
-  background-color: #ffffff00;
+/*   background-color: #ffffff00; */
+  background-color: var(--color-7);
 }
 @media (max-width: 1120px) {
   .swiper {
