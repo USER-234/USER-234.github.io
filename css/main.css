@@ -1,3 +1,6 @@
+.hero{
+  overflow: hidden;
+}
 .hero-image img {
   object-fit: cover;
   width: 100%;
@@ -41,7 +44,7 @@
   align-items: center;
   gap: 10px 40px;
   padding: 6rem 0.8rem 6rem 0.8rem;
-  background-image: url(/Webseite/img/white-texture.webp);
+  background-image: url(/Webseite/img/white-texture-2000w.webp);
   background-size: cover;
 }
 .introduction-text section {
@@ -208,6 +211,10 @@
   text-align: center;
 }
 @media (max-width: 1000px) {
+  .introduction-wrapper {
+    background-image: url(/Webseite/img/white-texture-1000w.webp);
+  }
+
   .payment-delivery {
     padding: 6rem 0.8rem;
     display: grid;
@@ -271,7 +278,7 @@ body > main:nth-child(2) > h2:nth-child(1) {
 .cnt-imp .left div:nth-child(even) {
   padding: 0.5rem 0rem 0.5rem 0.5rem;
 }
-.cnt-imp .bottom{
+.cnt-imp .bottom {
   grid-column: span 2;
-  margin: 2rem 0 0 0 ;
+  margin: 2rem 0 0 0;
 }
