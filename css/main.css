@@ -1,16 +1,18 @@
-.hero{
+/* .hero{
   overflow: hidden;
   height: max-content;
-  border-bottom: 0.5rem solid var(--color-1);
-}
+} */
 .hero-image img {
   object-fit: cover;
   width: 100%;
   height: calc(100vh - 4rem);
   height: 100vh;
-  /*   filter: brightness(0.9); */
+  border-bottom: 0.5rem solid var(--color-1);
+  filter: brightness(0.9);
   position: relative;
   z-index: -1;
+  /* fixing a bug involving a background overflow */
+  margin:  0 0 -8px 0;
 }
 .hero-text {
   z-index: -1;
@@ -33,10 +35,6 @@
   font-family: "Pacifico";
   letter-spacing: 3px;
 }
-/************************************/
-/* main {
-  padding: 4rem 0 0 0;
-} */
 /************************************/
 .introduction-wrapper {
   display: flex;
