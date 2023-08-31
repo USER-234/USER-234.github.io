@@ -14,8 +14,7 @@
   position: absolute;
   width: 100%;
   bottom: 40vh;
-  text-shadow: 0px 0px 1rem black, 0px 0px 1rem black, 0px 0px 1rem black,
-    0px 0px 1rem black;
+  text-shadow: 0px 0px 1rem black, 0px 0px 1rem black, 0px 0px 1rem black, 0px 0px 1rem black;
   font-size: 5rem;
   font-size: clamp(1.5rem, 10vw, 5rem);
 }
@@ -42,7 +41,7 @@
   align-items: center;
   gap: 10px 40px;
   padding: 6rem 0.8rem 6rem 0.8rem;
-  background-image: url(/Webseite/img/white-texture.jpg);
+  background-image: url(/Webseite/img/white-texture.webp);
   background-size: cover;
 }
 .introduction-text section {
@@ -83,7 +82,7 @@
   align-content: center;
   position: relative;
   padding: 0 0 6rem 0;
-/*   z-index: -1 !important; */
+  /*   z-index: -1 !important; */
 }
 .swiper {
   /*   width: 80%;
@@ -99,12 +98,12 @@
 /* the controlling is made invisible due to bugs cousing them to not work */
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-/*   color: #ffffff00; */
+  /*   color: #ffffff00; */
   color: var(--color-7);
 }
 .swiper .swiper-pagination-bullet-active,
 .swiper-pagination-bullet {
-/*   background-color: #ffffff00; */
+  /*   background-color: #ffffff00; */
   background-color: var(--color-7);
 }
 @media (max-width: 1120px) {
@@ -116,7 +115,7 @@
 .opening-hours-wrapper {
   padding: 6rem 0;
   background-color: var(--color-6);
-filter: saturate(var(--bg-saturate));
+  filter: saturate(var(--bg-saturate));
 }
 .opening-hours-wrapper h2 {
   text-align: center;
@@ -144,7 +143,7 @@ filter: saturate(var(--bg-saturate));
 .map {
   background-color: var(--color-2);
   filter: saturate(var(--bg-saturate));
-  padding: 0 0 12rem 0;
+  padding: 0 0 6rem 0;
   border-top: 0.5rem solid var(--color-1);
   border-bottom: 0.5rem solid var(--color-1);
 }
@@ -238,4 +237,41 @@ filter: saturate(var(--bg-saturate));
   .payment-delivery h2:nth-child(3) {
     padding: 2rem 0 1rem 0;
   }
+}
+/************************************/
+/* imprint */
+body > main:nth-child(2) > h2:nth-child(1) {
+  margin: 6rem auto 2rem auto;
+  width: max-content;
+}
+.cnt-imp {
+  margin: 0 auto;
+  padding: 1rem 0.8rem;
+  background-color: var(--color-1);
+  max-width: 40rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 14px;
+}
+.cnt-imp .left div,
+.cnt-imp .right div {
+  padding: 0.5rem;
+}
+.cnt-imp .left div:nth-child(odd),
+.cnt-imp .right div:nth-child(odd) {
+  background-color: var(--color-2);
+  filter: saturate(var(--bg-saturate));
+}
+.cnt-imp .left div:nth-child(even),
+.cnt-imp .right div:nth-child(even) {
+  background-color: var(--color-6);
+  filter: saturate(var(--bg-saturate));
+}
+.cnt-imp .left div:nth-child(odd),
+.cnt-imp .left div:nth-child(even) {
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+}
+.cnt-imp .bottom{
+  grid-column: span 2;
+  margin: 2rem 0 0 0 ;
 }
