@@ -1,0 +1,136 @@
+main h1 {
+  margin: 5rem 0 0 0;
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+main h1::after {
+  content: "";
+  display: flex;
+  height: 4px;
+  width: 7ch;
+  background-color: var(--color-2);
+  justify-self: center;
+  margin: -0.5rem auto 0 auto;
+  font-size: 3rem;
+}
+.desktop-navbar > div:nth-child(2) > a:nth-child(5) {
+  text-shadow: 0px 0px 7px var(--color-6);
+}
+.contact-cnt {
+  background-color: rgba(255, 8, 8, 0);
+  max-width: 50rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  /*   align-items: center; */
+  /*   gap: 10px 40px; */
+  padding: 0.8rem;
+}
+.contact-details {
+  background-color: var(--color-6);
+  filter: saturate(var(--bg-saturate));
+  padding: 1rem 2rem;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.contact-cnt a {
+  all: unset;
+}
+.contact-cnt a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-2);
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+.soz-med-icons a {
+  background-color: var(--color-1);
+  color: black;
+  padding: 7px;
+  margin: 0 0.5rem 0 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.soz-med-icons a:hover {
+  background-color: var(--color-5);
+}
+.email-form {
+  background-color: var(--color-2);
+  filter: saturate(var(--bg-saturate));
+  padding: 1rem 2rem;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.email-form * {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.email-form input,
+.email-form textarea {
+  border: 2px solid var(--color-7);
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0.5rem;
+}
+
+.email-form button {
+  all: unset;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--color-1);
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 14px;
+}
+.email-form button:hover {
+  outline: 2px solid var(--color-6);
+}
+.email-form button:active {
+  background-color: var(--color-5);
+}
+@media (max-width: 800px) {
+  .contact-cnt {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto-fit);
+    justify-content: center;
+    padding: 0;
+  }
+  .contact-details {
+/*     border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 0px; */
+    border-radius: 0px;
+    padding: 1rem;
+  }
+  .email-form {
+    /*     border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 0px; */
+    border-radius: 0px;
+    padding: 1rem;
+  }
+  .email-form input,
+  .email-form textarea {
+    width: auto;
+  }
+  .email-form button {
+    width: 100%;
+  }
+}
+@media (max-width: 370px) {
+  .email-form input,
+  .email-form textarea {
+    width: 90%;
+  }
+  .email-form button {
+    width: 90%;
+  }
+}
