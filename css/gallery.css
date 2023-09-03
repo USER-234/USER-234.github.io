@@ -1,11 +1,10 @@
 .desktop-navbar > div:nth-child(2) > a:nth-child(3),
 #links > a:nth-child(3) {
-  text-shadow: 0px 0px 12px var(--color-8);
+  text-shadow: 0px 0px 12px var(--color-6);
 }
 main h1 {
-  margin: 4rem 0 0 0;
+  margin: 5rem 0 2rem 0;
   font-size: 3rem;
-  padding: 1rem;
   text-align: center;
 }
 main h1::after {
@@ -24,7 +23,7 @@ main h1::after {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1rem;
   padding: 0.8rem;
-  margin: 0 auto;
+  margin: 0 auto 6rem auto;
 }
 img {
   width: 100%;
@@ -69,8 +68,8 @@ img {
   border-radius: 14px;
   width: 750px;
   width: 900px;
-/*   width: 52%; */
-/*   height: 80%; */
+  /*   width: 52%; */
+  /*   height: 80%; */
   object-fit: cover;
 }
 @media (max-width: 768px) {

@@ -144,8 +144,9 @@ text-decoration: underline;
     border-top: 1px rgba(0, 0, 0, 0.2) solid;
   }
   nav.mobile-navbar .links a:hover {
-    text-shadow: 0px 0px 5px rgb(0, 0, 0);
-    color: white;
+/*     text-shadow: 0px 0px 5px rgb(0, 0, 0); */
+ /*    color: white; */
+    text-decoration: underline;
   }
 }
 
