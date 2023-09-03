@@ -1,7 +1,7 @@
-/* .hero{
-  overflow: hidden;
-  height: max-content;
-} */
+.desktop-navbar > div:nth-child(2) > a:nth-child(1),
+#links > a:nth-child(1) {
+  text-shadow: 0px 0px 12px var(--color-8);
+}
 .hero-image img {
   object-fit: cover;
   width: 100%;
