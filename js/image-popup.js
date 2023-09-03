@@ -21,6 +21,14 @@ document.querySelectorAll(".product-container img").forEach((image) => {
   };
 });
 
+// Attach the click event to each image in the gallery
+document.querySelectorAll(".pic-cnt img").forEach((image) => {
+  image.onclick = () => {
+    const imageSrc = image.getAttribute("src");
+    showPopupImage(imageSrc);
+  };
+});
+
 // Close the popup image when clicking on the "x" symbol
 document.querySelector(".popup-image span").onclick = () => {
   document.querySelector(".popup-image").style.display = "none";

@@ -1,3 +1,23 @@
+.desktop-navbar > div:nth-child(2) > a:nth-child(3),
+#links > a:nth-child(3) {
+  text-shadow: 0px 0px 12px var(--color-8);
+}
+main h1 {
+  margin: 4rem 0 0 0;
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+main h1::after {
+  content: "";
+  display: flex;
+  height: 4px;
+  width: 6ch;
+  background-color: var(--color-2);
+  justify-self: center;
+  margin: -0.5rem auto 0 auto;
+  font-size: 3rem;
+}
 .pic-cnt {
   max-width: 92rem;
   display: grid;
@@ -7,13 +27,58 @@
   margin: 0 auto;
 }
 img {
-  width: 300px;
   width: 100%;
   border: 2px solid black;
+  cursor: pointer;
 }
 @media (max-width: 700px) {
   .pic-cnt {
     grid-template-columns: 100%;
     gap: 1rem;
+  }
+}
+
+/************************************/
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.596);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: none;
+}
+.popup-image span {
+  position: absolute;
+  top: 4rem;
+  right: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: azure;
+  cursor: pointer;
+  z-index: 2;
+}
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  border-radius: 14px;
+  width: 750px;
+  width: 900px;
+/*   width: 52%; */
+/*   height: 80%; */
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .popup-image img {
+    width: 95%;
+  }
+  .product-container {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.5rem;
   }
 }

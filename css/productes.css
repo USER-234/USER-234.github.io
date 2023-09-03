@@ -95,7 +95,7 @@
 }
 .container .popup-image span {
   position: absolute;
-  top: 0;
+  top: 4rem;
   right: 10px;
   font-size: 40px;
   font-weight: bold;
