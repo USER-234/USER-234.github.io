@@ -1,6 +1,6 @@
 .desktop-navbar > div:nth-child(2) > a:nth-child(5),
 #links > a:nth-child(5) {
-  text-shadow: 0px 0px 12px var(--color-6);
+  text-shadow: 0px 0px 12px var(--color-4);
 }
 main h1 {
   margin: 5rem 0 2rem 0;
@@ -27,7 +27,7 @@ main h1::after {
   padding: 0.8rem;
 }
 .contact-details {
-  background-color: var(--color-6);
+  background-color: var(--color-4);
   filter: saturate(var(--bg-saturate));
   padding: 1rem 2rem;
   border-top-left-radius: 14px;
@@ -55,7 +55,7 @@ main h1::after {
   align-items: center;
 }
 .soz-med-icons a:hover {
-  background-color: var(--color-5);
+  background-color: var(--color-3);
 }
 .email-form {
   background-color: var(--color-2);
@@ -71,12 +71,11 @@ main h1::after {
 }
 .email-form input,
 .email-form textarea {
-  border: 2px solid var(--color-7);
+  border: 2px solid var(--color-5);
   font-family: "Poppins", Helvetica, sans-serif;
   font-size: 16px;
   padding: 0.5rem;
 }
-
 .email-form button {
   all: unset;
   width: 90%;
@@ -88,10 +87,10 @@ main h1::after {
   border-radius: 14px;
 }
 .email-form button:hover {
-  outline: 2px solid var(--color-6);
+  outline: 2px solid var(--color-4);
 }
 .email-form button:active {
-  background-color: var(--color-5);
+  background-color: var(--color-3);
 }
 @media (max-width: 800px) {
   .contact-cnt {
@@ -102,16 +101,10 @@ main h1::after {
     padding: 0;
   }
   .contact-details {
-    /*     border-top-left-radius: 14px;
-    border-top-right-radius: 14px;
-    border-bottom-left-radius: 0px; */
     border-radius: 0px;
     padding: 1rem;
   }
   .email-form {
-    /*     border-bottom-left-radius: 14px;
-    border-bottom-right-radius: 14px;
-    border-top-right-radius: 0px; */
     border-radius: 0px;
     padding: 1rem;
   }

@@ -1,6 +1,6 @@
 .desktop-navbar > div:nth-child(2) > a:nth-child(1),
 #links > a:nth-child(1) {
-  text-shadow: 0px 0px 12px var(--color-6);
+  text-shadow: 0px 0px 12px var(--color-4);
 }
 .hero-image img {
   object-fit: cover;
@@ -25,13 +25,13 @@
   font-size: clamp(1.5rem, 10vw, 5rem);
 }
 .hero-text .welcome-text {
-  color: var(--color-4);
+  color: var(--color-2);
   font-weight: bold;
   letter-spacing: -2px;
   margin: 0 0 -1rem 0;
 }
 .hero-text .brand {
-  color: var(--color-6);
+  color: var(--color-4);
   font-family: "Pacifico";
   letter-spacing: 3px;
 }
@@ -43,7 +43,7 @@
   align-items: center;
   gap: 10px 40px;
   padding: 6rem 0.8rem 6rem 0.8rem;
-  background-image: url(/Webseite/img/white-texture-2000w.webp);
+  background-image: url(/Webseite/img/paper-texture-bg-2000w.webp);
   background-size: cover;
 }
 .introduction-text section {
@@ -65,7 +65,7 @@
   border-bottom: 0.5rem solid var(--color-1);
 }
 .slideshow h2 {
-  background-color: var(--color-4);
+  background-color: var(--color-2);
   filter: saturate(var(--bg-saturate));
   text-align: center;
   margin: 0;
@@ -74,21 +74,16 @@
   font-size: clamp(1.5rem, 10vw, 2rem);
 }
 .cnt-slideshow {
-  background-color: var(--color-4);
+  background-color: var(--color-2);
   filter: saturate(var(--bg-saturate));
   width: 100%;
-  /*   height: 100vh; */
-  /*   background-color: #222; */
   display: flex;
   align-items: center;
   align-content: center;
   position: relative;
   padding: 0 0 6rem 0;
-  /*   z-index: -1 !important; */
 }
 .swiper {
-  /*   width: 80%;
-  width: 50rem; */
   width: 40%;
   height: fit-content;
   position: relative;
@@ -97,16 +92,13 @@
   width: 100%;
   border-radius: 20px;
 }
-/* the controlling is made invisible due to bugs cousing them to not work */
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-  /*   color: #ffffff00; */
-  color: var(--color-7);
+  color: var(--color-5);
 }
 .swiper .swiper-pagination-bullet-active,
 .swiper-pagination-bullet {
-  /*   background-color: #ffffff00; */
-  background-color: var(--color-7);
+  background-color: var(--color-5);
 }
 @media (max-width: 1120px) {
   .swiper {
@@ -116,7 +108,7 @@
 /************************************/
 .opening-hours-wrapper {
   padding: 6rem 0;
-  background-color: var(--color-6);
+  background-color: var(--color-4);
   filter: saturate(var(--bg-saturate));
 }
 .opening-hours-wrapper h2 {
@@ -174,7 +166,7 @@
   grid-template-areas:
     "a b"
     "c d";
-  background-color: var(--color-6);
+  background-color: var(--color-4);
   filter: saturate(var(--bg-saturate));
 }
 .payment-delivery h2 {
@@ -211,9 +203,8 @@
 }
 @media (max-width: 1000px) {
   .introduction-wrapper {
-    background-image: url(/Webseite/img/white-texture-1000w.webp);
+    background-image: url(/Webseite/img/paper-texture-bg-1000w.webp);
   }
-
   .payment-delivery {
     padding: 6rem 0.8rem;
     display: grid;
@@ -281,7 +272,7 @@ body > main:nth-child(2) > h1:nth-child(1)::after {
 }
 .cnt-imp .left div:nth-child(even),
 .cnt-imp .right div:nth-child(even) {
-  background-color: var(--color-6);
+  background-color: var(--color-4);
   filter: saturate(var(--bg-saturate));
 }
 .cnt-imp .left div:nth-child(odd),

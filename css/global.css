@@ -1,20 +1,16 @@
 :root {
   --color-1: #e4e4e4;
   --color-2: #57deb1;
-  --color-3: var(--color-2);
-  --color-4: var(--color-2);
-  --color-5: #d3d3d3;
-  --color-6: #ed9c4a;
-  --color-7: #999;
-  --color-8: #505050;
-  --footer-color-1: #242424;
-  --footer-color-2: #b9b9b9;
-  --footer-color-3: var(--color-1);
+  --color-3: #d3d3d3;
+  --color-4: #ed9c4a;
+  --color-5: #999;
+  --color-6: #505050;
+  --color-7: #242424;
+  --color-8: #b9b9b9;
   --bg-saturate: 0.7;
 }
 @font-face {
   font-family: "Poppins";
-  /*  src: url(../fonts/Poppins/Poppins-Mediu.ttf); */
   src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
 @font-face {

@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--footer-color-1);
+  background-color: var(--color-7);
   padding: 3rem 1rem;
 }
 
@@ -19,7 +19,7 @@ footer {
 .footer-desription {
   padding: 10px 10px 5px 10px;
   font-weight: bold;
-  color: var(--footer-color-2);
+  color: var(--color-8);
 }
 .footer-desription::after {
   content: "";
@@ -28,12 +28,12 @@ footer {
   width: 50px;
   margin: 4px 0 0 0;
   border-radius: 20px;
-  background-color: var(--footer-color-3);
+  background-color: var(--color-1);
 }
 
 .footer-content {
   padding: 10px;
-  color: var(--footer-color-2);
+  color: var(--color-8);
 }
 
 .small-vertical-space {
@@ -54,13 +54,13 @@ footer {
 
 .element:nth-child(3) a:hover, .element:nth-child(2) a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--footer-color-3);
+  text-decoration-color: var(--color-1);
   text-decoration-thickness: 1px;
 }
 
 .element:nth-child(4) a {
-  background-color: var(--footer-color-2);
-  color: var(--footer-color-1);
+  background-color: var(--color-8);
+  color: var(--color-7);
   padding: 7px;
   margin: 0 0.5rem 0 0;
   height: 20px;
@@ -73,7 +73,7 @@ footer {
 }
 
 .element:nth-child(4) a:hover {
-  background-color: var(--footer-color-3);
+  background-color: var(--color-1);
 }
 
 /* @media (max-width: 900px) {
